@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <title>变量：任务3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    // 在下方编写代码
+
+    const myName = 'Default';
+    myName = '李雷'
+
+    let myAge = '18';
+
+    // 不要编写此行以下的代码！
+
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+    para1.textContent = myName;
+    para2.textContent = `20年后我 ${myAge + 20} 岁。`;
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>可编辑画布示例</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      .a11y-label {
+        margin: 0;
+        text-align: right;
+        font-size: 0.7rem;
+        width: 98%;
+      }
+
+      body {
+        margin: 10px;
+        background: #f5f9fa;
+      }
+
+      textarea {
+        height: 150px;
+        background-color: #F4F7F8;
+        border: none;
+        border-left: 6px solid #558ABB;
+        color: #4D4E53;
+        width: 90%;
+        max-width: 700px;
+        padding: 10px 10px 0px;
+      }
+
+      .playable-buttons {
+        text-align: right;
+        width: 90%;
+        max-width: 700px;
+        padding: 5px 10px 5px 26px;
+      }
+
+      canvas {
+        background: white;
+        border: 1px solid #4D4E53;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>实时输出</h2>
+    <canvas id="canvas" width="400" height="250" class="playable-canvas">
+    </canvas>
+
+    <p>长 50 像素，宽 50 像素的矩形</p>
+
+    <h2>可编辑代码</h2>
+    <p class="a11y-label">点击 ESC 取消编辑状态（点击 Tab 可插入制表符）。</p>
+    <textarea id="code" class="playable-code" style="height: 150px;width: 95%">
+var x = 50; var y = 50;
+
+// 仅可编辑以下两行代码：
+x = 50;
+y = 50;
+
+ctx.fillStyle = 'green';
+ctx.fillRect(10, 10, x, y);
+    </textarea>
+
+    <div class="playable-buttons">
+      <input id="reset" type="button" value="重置" />
+    </div>
+  </body>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const para = document.querySelector('p');
+    const ctx = canvas.getContext('2d');
+    const textarea = document.getElementById('code');
+    const reset = document.getElementById('reset');
+    const edit = document.getElementById('edit');
+    let code = textarea.value;
+
+    function drawCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      eval(textarea.value);
+      para.textContent = '长 ' + x + ' 像素，宽 ' + y + ' 像素的矩形';
+    }
+
+    reset.addEventListener('click', function() {
+      textarea.value = code; drawCanvas();
+    });
+
+    textarea.addEventListener('input', drawCanvas);
+    window.addEventListener('load', drawCanvas);
+
+    // 阻止 Tab 键跳出文本框，仅在文本框中插入一个制表符。
+
+    textarea.onkeydown = function(e) {
+      if (e.keyCode === 9) {
+        e.preventDefault();
+        insertAtCaret('\t');
+      }
+
+      if (e.keyCode === 27) {
+        textarea.blur();
+      }
+    };
+
+    function insertAtCaret(text) {
+      const scrollPos = textarea.scrollTop;
+      const caretPos = textarea.selectionStart;
+      const front = (textarea.value).substring(0, caretPos);
+      const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+
+      textarea.value = front + text + back;
+      caretPos = caretPos + text.length;
+      textarea.selectionStart = caretPos;
+      textarea.selectionEnd = caretPos;
+      textarea.focus();
+      textarea.scrollTop = scrollPos;
+    }
+  </script>
+</html>
