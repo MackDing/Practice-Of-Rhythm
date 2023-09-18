@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>零花钱更新器示例</title>
+  </head>
+  <body>
+    <label for="shopping-check">酱油买回来了吗？</label>
+    <input type="checkbox" id="shopping-check">
+
+    <p></p>
+
+    <script>
+      const checkBox = document.querySelector('input');
+      const para = document.querySelector('p');
+      let shoppingDone = false;
+      let childsAllowance = 5;
+
+      checkBox.addEventListener('change', function() {
+        checkBox.disabled = true;
+        shoppingDone = true;
+        updateAllowance();
+      });
+
+      function updateAllowance() {
+        if(shoppingDone === true) {
+          childsAllowance = 10;
+        }
+
+        para.textContent = '本周小孩儿挣了 ' + childsAllowance + ' 元零花钱。';
+      }
+
+      updateAllowance();
+    </script>
+  </body>
+</html>

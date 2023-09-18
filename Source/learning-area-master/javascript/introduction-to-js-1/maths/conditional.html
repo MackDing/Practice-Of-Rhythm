@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>条件语句示例 1</title>
+  </head>
+  <body>
+    <button>开机</button>
+    <p>机器已关闭。</p>
+  </body>
+
+  <script>
+    const btn = document.querySelector('button');
+    const txt = document.querySelector('p');
+
+    btn.addEventListener('click', updateBtn);
+
+    function updateBtn() {
+      if(btn.textContent === '开机') {
+        btn.textContent = '关机';
+        txt.textContent = '机器已开启！';
+      } else {
+        btn.textContent = '开机';
+        txt.textContent = '机器已关闭。';
+      }
+    }
+  </script>
+</html>
