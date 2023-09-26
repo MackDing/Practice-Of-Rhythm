@@ -38,10 +38,37 @@ li {
   font-size: 20px;
 }
 
-footer p {
+/* footer p {
   font-size: 16px;
+} */
+
+/* article head p {
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-style: 18px;
 }
 
-head p {
-  font-style: italic;
+
+#copyright {
+  font-style: 16px;
+}
+
+
+.related-author {
+  font-style: 18px;
+  font-weight: bold;
+}
+
+
+/* ul {
+  list-style: none;
+} */
+
+
+
+.related {
+    list-style: none;
 }
