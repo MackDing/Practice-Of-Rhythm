@@ -19,9 +19,10 @@
 - [X] [Learn-Python3-The-Hard-Way](https://www.bookstack.cn/read/LearnPython3TheHardWay/spilt.1.learn-py3.md)
 - [X] [Learn-OpenCV-3hours](https://www.bilibili.com/video/BV16K411W7x9/?spm_id_from=333.999.0.0)
 - [ ] [GitHub-Python-100-Days](https://github.com/jackfrued/Python-100-Days)
-- [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
 - [ ] [Playwright](https://playwright.dev/docs/intro)
+- [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
 - [ ] [Hello algo](https://www.hello-algo.com/)
+- [ ] Python一行流：像专家一样写代码
 
 - other
 
