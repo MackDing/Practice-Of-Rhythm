@@ -32,7 +32,13 @@
 - [ ] [Hello algo](https://www.hello-algo.com/)
 - [ ] Python一行流：像专家一样写代码
 
-- other
+- Go
+
+- [ ] Go-colly
+
+
+
+- Resource
 
 > [Udemy](https://www.udemy.com/)
 > [freeCodeCamp.org](https://coderadio.freecodecamp.org/)
