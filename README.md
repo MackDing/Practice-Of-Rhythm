@@ -1,6 +1,14 @@
 #### practice-of-Coding
 
 > Practice is the sole criterion of truth.
+>
+>
+> * Make English as your working language.
+> * Practice makes perfect.
+> * All experience comes from mistakes.
+> * Talk is cheap show me the code.
+> * Either outstanding or out.
+> * Stay foolish Stay hungry.
 
 - C++
 
