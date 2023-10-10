@@ -2,7 +2,6 @@
 
 > Practice is the sole criterion of truth.
 >
->
 > * Make English as your working language.
 > * Practice makes perfect.
 > * All experience comes from mistakes.
@@ -31,10 +30,6 @@
 - [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
 - [ ] [Hello algo](https://www.hello-algo.com/)
 - [ ] Python一行流：像专家一样写代码
-
-- Go
-
-- [ ] Go-colly
 
 
 
