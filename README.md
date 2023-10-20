@@ -8,6 +8,7 @@
 > * Talk is cheap show me the code.
 > * Either outstanding or out.
 > * Stay foolish Stay hungry.
+> * Three questions to ask at work: Am I happy? Am I rich? Is it meaningful?
 
 - C++
 
@@ -15,6 +16,7 @@
 
 - Web
 
+- [ ] [Responsive Web Design](https://www.freecodecamp.org/learn/2022/responsive-web-design/)
 - [ ] [HTML+CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
 - [ ] [JS](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [MDN](https://developer.mozilla.org/zh-CN/docs/Learn)
@@ -30,7 +32,6 @@
 - [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
 - [ ] [Hello algo](https://www.hello-algo.com/)
 - [ ] Python一行流：像专家一样写代码
-
 
 
 - Resource
