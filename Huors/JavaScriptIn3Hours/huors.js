@@ -228,8 +228,24 @@ for (var n = 0; n < 101; n++)
 console.log(sum);
 
 
-var ourArr = [9, 10, 11, 12];
-console.log(ourArr.length);
+// count Numbers from 1 to 100 are added
+var count = 0;
+for (var i = 1; i <= 100; i++) {
+  count += i;
+}
+console.log(`count is: ${count}`);
+
+// Even numbers from 1 to 100 are added
+var sum = 0;
+for (var i = 1; i <= 100; i++) {
+  if (i % 2 === 0) {
+    sum += i;
+  }
+}
+console.log(`sum is: ${sum}`);
+
+var ourArr = [9, 10, 11, 12, 13, 14];
+console.log(`ourArr.length is: ${ourArr.length}`);
 
 function multiplyAll(arr) {
   var product = 1;
@@ -241,16 +257,64 @@ function multiplyAll(arr) {
   return product;
 }
 var product = multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
-
 console.log(`product is: ${product}`);
 
 
 var myArray = [];
 vari = 10;
-
 do {
   myArray.push(i);
   i++;
 } while (i < 5);
+console.log(`myArray, i are: ${myArray} ${i}`);
 
-console.log(myArray, i);
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+console.log(`randomNumberBetween0and19 are: ${randomNumberBetween0and19}`);
+
+function randomWholeNRange(mymin, myMax) {
+  return Math.floor(Math.random() * (myMax - mymin + 1)) + mymin;
+}
+var myRandom = randomWholeNRange(5, 15);
+console.log(`myRandom are: ${myRandom}`);
+
+
+function covertToInteger(str) {
+  return parseInt(str, 2);
+}
+let string = covertToInteger("56");
+console.log(string);
+console.log(typeof string);
+
+// condition ? statement-if-ture : statement-if-false;
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
+  return a, b;
+}
+console.log(checkEqual(1, 2));
+
+
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+console.log(checkSign(10));
+console.log(checkSign(-10));
+console.log(checkSign(0));
+
+function checkScope() {
+  "use strict";
+  let i = "function scope";
+  if (i === "function scope") {
+    i = "block scope";
+    return i;
+  }
+  return i;
+}
+console.log(checkScope());
+
+
+
+
+
