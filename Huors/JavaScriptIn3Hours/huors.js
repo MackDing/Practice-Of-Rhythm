@@ -317,3 +317,73 @@ console.log(checkScope());
 
 const magic = () => new Date();
 console.log(magic());
+
+// merge array
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+const realNumberArray = [4, 5.6, 'cto', -9.8, 3.14, 42, 6, 8.34, -2, "nba"];
+const squareList = (arr) => {
+  const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(num => num * num);
+  return squaredIntegers;
+};
+console.log(`squareList(realNumberArray) are: ${squareList(realNumberArray)}`);
+
+
+const sum1 = (function () {
+  return function sum1(...args) {
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(sum1(1, 2, 3, 4, 5, 6, 7, 8, 9));
+console.log(sum1([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+const arr1 = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
+let arr2;
+(function () {
+  arr2 = [...arr1];
+  arr1[0] = 'potato';
+  console.log(arr1);
+})();
+console.log(`arr2 are: ${arr2}`);
+
+
+var voxel = { x: 3.6, y: 7.4, z: 6.54 };
+var x = voxel.x;
+var y = voxel.y;
+var z = voxel.z;
+const { x: e, y: f, z: g } = voxel; // a=3.6, b=7.4, c=6.54
+
+const AVG_TEMPERATURES = {
+  today: 77.5,
+  tomorrow: 79
+};
+
+function getTempOfTmrw(avgTemperatures) {
+  "use strict";
+  const { tomorrow: tempOfTomorrow } = avgTemperatures;
+  return tempOfTomorrow;
+}
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
+
+const [mm, nn, , oo] = [1, 2, 3, 4, 5, 6, 7];
+console.log(mm, nn, oo);
+
+// Immediately Invoked Function Expression，IIFE
+let aa = 8, bb = 6;
+(() => {
+  "use strict";
+  console.log(aa, bb);
+  [aa, bb] = [bb, aa];
+  console.log(aa, bb);
+})();
+console.log(`aa is: ${aa}`);
+console.log(bb);
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+  "use strict";
+  const [, , ...arr] = list;
+  return arr;
+}
+console.log(removeFirstTwo(source), source);
