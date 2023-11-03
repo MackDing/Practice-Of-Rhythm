@@ -537,5 +537,3 @@ export default function subtract(x, y) { return x - y; }
 import subtract from "./script.js";
 subtract(7, 4)
  */
-
-
