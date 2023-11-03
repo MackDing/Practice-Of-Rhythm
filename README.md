@@ -23,6 +23,7 @@
 - [ ] [MDN](https://developer.mozilla.org/zh-CN/docs/Learn)
 - [ ] [Github-30-Days-JS](https://github.com/Asabeneh/30-Days-Of-JavaScript)
 - [ ] [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
+- [ ] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
 
 - Python
 
