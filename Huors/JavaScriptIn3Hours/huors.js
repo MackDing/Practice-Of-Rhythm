@@ -461,3 +461,81 @@ function makeClass() {
 const Vegetable = makeClass();
 const carrot = new Vegetable('carrot');
 console.log(carrot.name);
+
+class book {
+  constructor(author) {
+    this._author = author;
+  }
+  get writer() {
+    return this._author;
+  }
+  set writer(updatedAuthor) {
+    this._author = updatedAuthor;
+  }
+}
+
+// 创建一个立即执行的函数表达式（IIFE），它包含一个类的定义。
+function makeClass() {
+  // 定义一个名为 "Thermostat" 的类
+  class Thermostat {
+    constructor(temp) {
+      // 类的构造函数，接受一个参数 "temp"，用于初始化温度属性。
+      // 将输入的华氏温度转换为摄氏温度并存储在私有属性 "_temp" 中。
+      this._temp = 5 / 9 * (temp - 32);
+    }
+    // 定义 "temperature" 的 getter 方法，用于获取温度。
+    get temperature() {
+      return this._temp;
+    }
+    // 定义 "temperature" 的 setter 方法，用于更新温度。
+    set temperature(updatedTemp) {
+      this._temp = updatedTemp;
+    }
+    // 返回定义的 "Thermostat" 类，以便后续使用。
+  } return Thermostat;
+}
+// 创建一个名为 "Thermostat" 的变量，并将其赋值为 IIFE 返回的 "Thermostat" 类。
+const Thermostat = makeClass();
+// 使用 "Thermostat" 类创建一个名为 "thermos" 的实例，初始温度为 76 华氏度。
+const thermos = new Thermostat(76);
+// 使用 setter 方法将温度更新为 26 摄氏度。
+thermos.temperature = 26;
+// 使用 getter 方法获取更新后的温度。
+let temp = thermos.temperature;
+// 打印最终温度值（26 摄氏度）。
+console.log(temp);
+
+/*
+export const capitailizeString = str => str.toUpperCase();
+
+improt { capitailizeString; } from "./script.js";
+const cap = capitailizeString("hello!");
+console.log(cap);
+*/
+
+/*
+const capitailizeString = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+export { capitailizeString };
+export const foo = "bar";
+export const bar = "foo"
+*/
+
+
+/* 
+import * as capitalizeString from "filenName";
+*/
+
+
+/* 
+export default function subtract(x, y) { return x - y; }
+*/
+
+
+/*
+import subtract from "./script.js";
+subtract(7, 4)
+ */
+
+
