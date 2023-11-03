@@ -88,11 +88,11 @@ var player = testObj[playerNumber];
 console.log(player);
 
 
-const person = {
+const personal = {
   name: 'Tom',
   age: '22',
 };
-const { name, age } = person;
+const { name, age } = personal;
 console.log(name); // 'Tom'
 console.log(age);  // '22'
 
@@ -387,3 +387,77 @@ function removeFirstTwo(list) {
   return arr;
 }
 console.log(removeFirstTwo(source), source);
+
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.45,
+  min: -0.56,
+  average: 35.85
+};
+const half = (function () {
+  return function half({ max, min }) {
+    return (max + min) / 2.0;
+  };
+})();
+(() => { console.log(stats, half(stats)); })();
+
+
+const person = {
+  name: "Zodiac Hasbro",
+  age: 56
+};
+const greeting = `Hello, my name is ${person.name} I am ${person.age} years old.`;
+console.log(greeting);
+
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function markList(arr) {
+  const resultDisplayArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    resultDisplayArray.push(`<li class="list-group-item">${arr[i]}</li>`);
+  }
+  return resultDisplayArray;
+}
+console.log(markList(result.failure));
+
+
+const createPerson = (name, age, gender) => ({ name, age, gender });
+console.log(createPerson("Zodiac Hasbro", 56, "male"));
+
+
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+    return this.gear;
+  }
+};
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+
+var SpaceShuttle = function (targetPlanet) {
+  this.targetPlanet = targetPlanet;
+};
+var zeus = new SpaceShuttle('Jupiter');
+console.log(zeus.targetPlanet);
+
+
+function makeClass() {
+  class Vegetable {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable('carrot');
+console.log(carrot.name);
