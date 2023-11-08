@@ -22,8 +22,8 @@
 - [ ] [JS](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [MDN](https://developer.mozilla.org/zh-CN/docs/Learn)
 - [ ] [Github-30-Days-JS](https://github.com/Asabeneh/30-Days-Of-JavaScript)
-- [ ] [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
-- [ ] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
+- [X] [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
+- [X] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
 
 - Python
 
