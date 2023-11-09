@@ -506,25 +506,25 @@ let temp = thermos.temperature;
 console.log(temp);
 
 /*
-export const capitailizeString = str => str.toUpperCase();
+export const capitalizeString = str => str.toUpperCase();
 
-improt { capitailizeString; } from "./script.js";
-const cap = capitailizeString("hello!");
+import { capitalizeString; } from "./script.js";
+const cap = capitalizeString("hello!");
 console.log(cap);
 */
 
 /*
-const capitailizeString = (string) => {
+const capitalizeString = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
-export { capitailizeString };
+export { capitalizeString };
 export const foo = "bar";
 export const bar = "foo"
 */
 
 
 /* 
-import * as capitalizeString from "filenName";
+import * as capitalizeString from "fileName";
 */
 
 
