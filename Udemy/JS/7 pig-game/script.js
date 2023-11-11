@@ -72,7 +72,6 @@ btnRoll.addEventListener('click', function () {
       switchPlayer();
     }
   }
-
 });
 
 btnHold.addEventListener('click', function () {
