@@ -40,5 +40,6 @@
 
 - Resource
 
+> [quick reference](https://quickref.me/)
 > [Udemy](https://www.udemy.com/)
 > [freeCodeCamp.org](https://coderadio.freecodecamp.org/)
