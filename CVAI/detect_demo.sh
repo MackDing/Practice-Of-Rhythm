@@ -4,11 +4,13 @@ docker pull ultralytics/yolov5:latest
 
 docker run --ipc=host -it -v /data:/data --gpus all ultralytics/yolov5:latest
 
+docker run --ipc=host -it -v /mnt/d/data:/data ultralytics/yolov5:latest
+
 pip install -r requirements.txt
 
 // train
 
-python train.py --img 640 --batch 8 --epochs 5 --data coco128.yaml --weights yolov5s.pt
+python train.py --img 640 --batch 8 --epochs 100 --data coco128.yaml --weights yolov5s.pt
 
 // detect
 
