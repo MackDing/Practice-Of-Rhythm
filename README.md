@@ -9,6 +9,7 @@
 > * Either outstanding or out.
 > * Stay foolish Stay hungry.
 > * Three questions to ask at work: Am I happy? Am I rich? Is it meaningful?
+> * The journey is the reward.
 
 - Programming-languages
 - [ ] [programming-languages](https://www.coursera.org/learn/programming-languages)
