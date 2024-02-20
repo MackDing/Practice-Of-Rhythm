@@ -31,6 +31,7 @@ python detect.py --weights runs/train/exp/weights/best.pt --source ./data/images
 
 // detect.py
 python detect.py --source 0
+python detect.py --source rtmp://172.31.189.233:1935/stream/123456 --weights best.pt --conf 0.4 --view-img
 
 # --weights （或 -w）: 指定预训练模型权重的路径。默认为 'yolov5s.pt'
 # --source：输入源。可以是图像、视频文件的路径，也可以是0、1分别代表电脑的摄像头；
@@ -40,6 +41,7 @@ python detect.py --source 0
 # --device：用于指定运行设备，如："cpu", "0", "0,1,2,3"等；
 # --view-img：可视化检测结果；
 # --save-txt：是否将结果以文本格式保存；
+# --conf 0.4：是设定置信度阈值为0.4，即只有预测的置信度大于0.4的对象才会被检测出来
 # --save-conf：是否在保存的文本文件中包含置信度信息；
 # --classes：只检测某些特定类别，例如--classes 0 2 3；
 # --agnostic-nms：进行非极大值抑制时，是否将所有类别视为一样；
