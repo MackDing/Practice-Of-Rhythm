@@ -120,3 +120,15 @@ const greet = function (greeting) {
 const greeterHey = greet('Hey'); // 调用greet函数并传入参数"Hey"，greet会返回一个新的函数。我们将这个新的函数保存到了名为greeterHey的变量中。
 greeterHey('Jonas');
 greeterHey('Max');
+
+greet('Hello')('Jonas');
+
+// Challenge Arrow function
+// const greetArr = greeting => {
+//   return name => {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+greetArr('Hello')('Jonas');
+
