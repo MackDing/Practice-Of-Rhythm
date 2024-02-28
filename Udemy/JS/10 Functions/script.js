@@ -109,14 +109,14 @@ document.body.addEventListener('click', high5);
 ['Jonas', 'Martha', 'Adam', 'Max'].forEach(high5);
  */
 
-const greet = function (greeting) { // 这部分定义了一个名为 greet 的函数，这个函数接收一个参数 greeting。
-  return function (name) {  // 这部分定义了 greet 函数的返回值。返回值是一个新的函数，这个函数接收一个参数 name，并打印出 ${greeting} ${name}。
+const greet = function (greeting) {
+  // 这部分定义了一个名为 greet 的函数，这个函数接收一个参数 greeting。
+  return function (name) {
+    // 这部分定义了 greet 函数的返回值。返回值是一个新的函数，这个函数接收一个参数 name，并打印出 ${greeting} ${name}。
     console.log(`${greeting} ${name}`);
   };
 };
 
-const greeterHey = greet('Hey'); // 这行代码通过调用 greet 函数并传入参数 'Hey'，创建了一个新的函数 greeterHey。
+const greeterHey = greet('Hey'); // 调用greet函数并传入参数"Hey"，greet会返回一个新的函数。我们将这个新的函数保存到了名为greeterHey的变量中。
 greeterHey('Jonas');
 greeterHey('Max');
-
-
