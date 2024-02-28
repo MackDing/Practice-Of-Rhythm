@@ -972,3 +972,108 @@ Afterwards, test with your own test data!
 
 GOOD LUCK 😀
 */
+
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
+// const text = document.querySelector('textarea').value;
+
+/* 
+let textarea = document.createElement('textarea'); // HTML元素，并将其赋值给变量textarea
+textarea.style.width = '800px'; // 设定默认宽度为800像素
+textarea.style.height = '300px'; // 设定默认高度为300像素
+document.body.append(textarea); // 将新创建的textarea元素添加到页面中
+
+let button = document.createElement('button');
+button.style.width = '50px';
+button.style.height = '50px';
+document.body.append(button);
+
+// const text = document.querySelector('textarea').value;
+
+document.querySelector('button').addEventListener('click', function () {
+  // 给按钮添加一个点击事件的监听器。每当按钮被点击，click事件发生，那么就会执行该函数中的代码。
+  const text = document.querySelector('textarea').value; // 通过querySelector选取了输入框的内容并赋值给变量text。注意这里我们取的是初始时textarea的值，也就是空字符串。
+  const rows = text.split('\n'); // 将输入框的内容按照每行分割，存放在数组rows中
+  console.log(rows);
+  for (const [i, row] of rows.entries()) {
+    // rows.entries()返回的是一个新的数组迭代器对象，这个迭代器会返回数组的键值对。通过数组的解构赋值[i, row] of rows.entries()获取到行索引i和行内容row。
+    const [first, second] = row.toLowerCase().trim().split('_'); // 将每行文本转化为小写、删除两端的空白字符，然后以 _ 为界进行分割。
+    // console.log(row, first, second);
+    const output = `${first}${second.replace(
+      // 模板字符串，将两个分割后的字符串首字母大写后拼接在一起。
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(`${output.padEnd(20)}${'🎱'.repeat(i + 1)}`); //将上述的字符串进行一些格式化处理，padEnd使其总长度为20，不足的部分用空格填充，然后在字符串的后面增加i+1个 '🎱'表情。
+  }
+});
+ */
+///////////////////////////////////////
+// String Methods Practice
+
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+// 🔴 Delayed Departure from FAO to TXL (11h25)
+//              Arrival from BRU to FAO (11h45)
+//   🔴 Delayed Arrival from HEL to FAO (12h05)
+//            Departure from FAO to LIS (12h30)
+
+const getCode = str => str.slice(0, 3).toUpperCase(); // slice下标取值转成大写
+for (const flight of flights.split('+')) {
+  // 通过'+'分割flights
+  const [type, from, to, time] = flight.split(';'); // 结构=通过';'分割flights
+  const output = `${type.startsWith('_Delayed') ? '🎰' : ''}${
+    type //  startsWith判断'_Delayed',输出'🎰'
+      .replaceAll('_', ' ') // replaceAll'_' to ' '
+  } from ${getCode(from)} to ${getCode(to)} (${time.replace(
+    ':',
+    'h'
+  )})`.padStart(43);
+  console.log(output);
+}
+
+// => Arrow function demo
+const greet = () => console.log('Hello World!');
+greet(); // 输出：Hello World!
+
+const greetName = name => console.log(`Hello ${name}`);
+greetName('John'); // 输出：Hello John
+
+const add = (a, b) => a + b;
+console.log(add(1, 2)); // 输出：3
+
+const addAndLog = (a, b) => {
+  const sum = a + b;
+  console.log(`Sum is ${sum}`);
+  return sum;
+};
+addAndLog(3, 4); // 输出：Sum is 7
+
+const addAndLog1 = (a, b) => {
+  const sum = a + b;
+  console.log(`Sum is ${sum}`);
+  return sum;
+};
+addAndLog1(3, 4); // 输出：Sum is 7
+
+const getPoint = (x, y) => ({ x, y });
+console.log(getPoint(3, 4)); // 输出：{ x: 3, y: 4 }
+
+// callback function
+setTimeout(function () {
+  console.log('Two seconds have passed!');
+}, 2000);
+
+function greet1(name, callback) {
+  console.log(`Hello, ${name}`);
+  callback();
+}
+
+greet1('John Doe', function () {
+  console.log('This is a callback function');
+});
+
+// getData('http://my.api/data', function myCallback(data) {
+//   console.log('Here is the data I loaded', data);
+// });
