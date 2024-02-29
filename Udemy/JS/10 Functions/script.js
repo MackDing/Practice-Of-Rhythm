@@ -109,6 +109,7 @@ document.body.addEventListener('click', high5);
 ['Jonas', 'Martha', 'Adam', 'Max'].forEach(high5);
  */
 
+/* 
 const greet = function (greeting) {
   // 这部分定义了一个名为 greet 的函数，这个函数接收一个参数 greeting。
   return function (name) {
@@ -130,5 +131,57 @@ greet('Hello')('Jonas');
 //   };
 // };
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
-greetArr('Hello')('Jonas');
+greetArr('Hello')('Jonas'); 
+*/
 
+const lufthansa = {
+  airline: 'lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  // book: function () {},
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+lufthansa.book(239, 'Jonas Schmedtmann');
+lufthansa.book(239, 'Jonas Smith');
+console.log(lufthansa);
+console.log('*'.repeat(99));
+
+const eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+// Does Not work
+// book(23, 'Sarah Williams');
+
+book.call(eurowings, 23, 'Sarah Williams');
+console.log(eurowings);
+
+book.call(lufthansa, 239, 'Mary Cooper');
+console.log(lufthansa);
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  iataCode: 'LX',
+  bookings: [],
+};
+
+book.call(swiss, 583, 'Mary Cooper');
+console.log(swiss);
+
+// Apply method
+const flightData = [583, 'George Cooper'];
+book.apply(swiss, flightData);
+console.log(swiss);
+
+// Call method
+book.call(swiss, ...flightData);
+console.log(swiss);
