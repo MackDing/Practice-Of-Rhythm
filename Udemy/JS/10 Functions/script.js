@@ -209,7 +209,7 @@ bookEW23('Martha Cooper');
 // let bound = greeting.bind(obj);
 // console.log(bound("New", "York", "USA"));
 // // In general, the difference between call and apply is that the arguments are written differently, while bind returns a new function that can be executed later.
-
+/* 
 //With Event Listeners
 lufthansa.planes = 300;
 console.log(lufthansa);
@@ -224,7 +224,8 @@ lufthansa.buyPlane = function () {
 document
   .querySelector('.buy')
   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
-
+   */
+/* 
 // partial application
 const addTax = (rate, value) => value + value * rate;
 console.log(addTax(0.23, 100));
@@ -261,7 +262,7 @@ console.log('arrowFunc '.repeat(11));
 const addTaxRate1 = rate => value => value + value * rate;
 const AddVAT3 = addTaxRate1(0.23);
 console.log(AddVAT3(100));
-
+ */
 // const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 ///////////////////////////////////////
@@ -297,3 +298,11 @@ BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 
 GOOD LUCK 😀
 */
+
+const poll = {
+  question: 'What is your favorite programming language?',
+  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+  // This generates [0, 0, 0, 0]. More in the next section 😃
+  answers: new Array(4).fill(0),
+  registerNewAnswer:123,
+};
