@@ -133,7 +133,7 @@ greet('Hello')('Jonas');
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 greetArr('Hello')('Jonas'); 
 */
-
+/* 
 const lufthansa = {
   airline: 'lufthansa',
   iataCode: 'LH',
@@ -195,7 +195,8 @@ bookEW(23, 'Steven Williams');
 
 const bookEW23 = book.bind(eurowings, 23);
 bookEW23('Jonas Schmedtmann');
-bookEW23('Martha Cooper');
+bookEW23('Martha Cooper'); 
+*/
 
 // let obj = {name: "Tom"};
 // let greeting = function(a,b,c){
@@ -304,5 +305,34 @@ const poll = {
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
   // This generates [0, 0, 0, 0]. More in the next section 😃
   answers: new Array(4).fill(0),
-  registerNewAnswer:123,
+  registerNewAnswer() {
+    // Get answer
+    const answer = Number(
+      prompt(
+        `${this.question}\n${this.options.join('\n')}\n(Write option number)`
+      )
+    );
+    console.log(answer);
+
+    // Register answer
+    typeof answer === 'number' &&
+      answer < poll.options.length &&
+      this.answers[answer]++;
+    this.displayResults()
+    this.displayResults('string')
+
+  },
 };
+// poll.registerNewAnswer();
+
+const p = {
+  cc: new Array(3).fill(5),
+  dd() {
+    console.log(this.cc);
+  },
+};
+p.dd();
+
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.registerNewAnswer.bind(poll));
