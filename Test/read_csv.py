@@ -2,11 +2,13 @@ import pandas as pd
 
 
 def print_unique_projects(filename):
+    # 需要排除的项目列表，全部转换为小写
     exclude_projects = ['LT-DAO', 'LT-DTO', 'LT-constant',
                         'LT-converter', 'LT-model', 'LT-utility']
     exclude_projects = [project.lower() for project in exclude_projects]
+    # 项目分类，全部转换为小写
     category_dict = {
-        'Back End': ['parameter-service-legacy-cloud', 'psi-service', 'wqs-service', 'aims-service', 'external-service'],
+        'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service'],
         'Front End': ['aca', 'parameter-web', 'psi-web', 'Public-API', 'back-office', 'aims-web'],
         'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud']
     }
@@ -34,8 +36,7 @@ def print_unique_projects(filename):
     all_projects = [
         project for project in all_projects if project not in exclude_projects]
 
-    # 打印到控制台，每行展示一个
-    # # 按照类别打印项目
+    # 按照类别打印项目
     for category, projects in category_dict.items():
         print(f'\n{category}' + ':')
         for project in projects:
@@ -48,5 +49,4 @@ def print_unique_projects(filename):
             print(project)
 
 
-# print_unique_projects(r'D:\QIMA\Github\practice-of-Rhythm\Test\QIMA.csv')
 print_unique_projects(r"D:\QIMA\Github\practice-of-Rhythm\Test\QIMA.csv")
