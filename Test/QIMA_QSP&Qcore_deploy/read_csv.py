@@ -1,3 +1,20 @@
+
+"""
+version:1.0.0
+1.连接到你的Jenkins服务器
+2.输入job & branch 执行部署
+3.显示粗发状态
+version:2.0.0
+1.导入本地文件解析
+2.（Back End、Front End）release版本库
+3.（Back End、Front End）release版格式转换
+4.（Back End、Front End）执行部署PP & EKS services部署PP
+5.状态机
+6.执行部署Production
+7.Date&log
+8.Teams机器人接入
+"""
+
 import pandas as pd
 
 
