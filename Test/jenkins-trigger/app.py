@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 import jenkins
 import time
 
+
 app = Flask(__name__)
 
 url = 'https://jenkins.qima.com/'
