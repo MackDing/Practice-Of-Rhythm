@@ -22,21 +22,29 @@ def trigger_job():
     if request.method == 'POST':
         job_branch_pairs = request.form['job_branch_pairs']
         for pair in job_branch_pairs.split(', '):
-            job_name, branch_name = pair.split(':')
-            job_name = env + '/' + job_name
-
-            next_build_number = server.get_job_info(
-                job_name)['nextBuildNumber']
-            server.build_job(job_name, {'BRANCH': branch_name})
+            if ':' in pair:
+                job_name, branch_name = pair.split(':')
+                job_name = env + '/pp-' + job_name
+                print(job_name)
+            try:
+                next_build_number = server.get_job_info(
+                    job_name)['nextBuildNumber']
+                server.build_job(job_name, {'BRANCH': branch_name})
+            except jenkins.JenkinsException:
+                results.append(f"Job: {job_name} does not exist.")
 
             time.sleep(5)
-
-            if server.get_job_info(job_name)['nextBuildNumber'] == next_build_number + 1:
-                results.append(f"Job: {job_name} with branch: {
-                               branch_name} is triggered.")
+            try:
+                job_info = server.get_job_info(job_name)
+            except jenkins.JenkinsException:
+                results.append(f"Job: {job_name} does not exist.")
             else:
-                results.append(f"Job: {job_name} with branch: {
-                               branch_name} is not triggered.")
+                if server.get_job_info(job_name)['nextBuildNumber'] == next_build_number + 1:
+                    results.append(f"Job: {job_name} with branch: {
+                        branch_name} is triggered.")
+                else:
+                    results.append(f"Job: {job_name} with branch: {
+                        branch_name} is not triggered.")
 
     return render_template('index.html', results=results)
 
