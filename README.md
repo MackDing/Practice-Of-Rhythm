@@ -10,6 +10,12 @@
 > - Stay foolish Stay hungry.
 > - Three questions to ask at work: Am I happy? Am I rich? Is it meaningful?
 > - The journey is the reward.
+> - Hindsight leads to better choices.
+> - Embrace failure as a part of success.
+> - Be open to the small things.
+> - Find your why.
+> - Overcome fear and doubt.
+> - Learn resilience.
 
 - Programming-languages
 
