@@ -1,4 +1,5 @@
 #### practice-of-Coding (Time boxing)
+### Smart People learn from everything and everyone, Average People from their experiences, Stupid People already have all the answers. --Socrates
 
 > Practice is the sole criterion of truth.
 >
