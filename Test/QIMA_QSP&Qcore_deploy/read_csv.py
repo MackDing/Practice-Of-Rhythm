@@ -1,18 +1,37 @@
 
 """
+QA Deploy script design
 version:1.0.0
-1.连接到你的Jenkins服务器
-2.输入job & branch 执行部署
-3.显示粗发状态
+1.通过token请求Jenkins API
+2.输入job & branch 执行部署（单个||批量）
+3.断言触发状态
+
+version:1.0.1
+5.web前端 或 exe执行文件
+6.显示构建部署执行结果
+
+version:1.0.2
+7.数据初始化-Jenkins PP & Pro 服务名称
+
 version:2.0.0
-1.导入本地文件解析
+1.导入Excel文件解析
 2.（Back End、Front End）release版本库
 3.（Back End、Front End）release版格式转换
 4.（Back End、Front End）执行部署PP & EKS services部署PP
-5.状态机
-6.执行部署Production
-7.Date&log
-8.Teams机器人接入
+5.状态机（Optional）
+6.PP-env 可视化单个或者批量部署 
+
+version:3.0.0
+6.Pro-env执行build
+7.Pro-env执行deploy
+
+version:3.0.1
+8.Date&log
+
+version:3.0.2
+9.Teams机器人接入（定时自动发送通知）
+10.Teams机器人接入（根据个team回复进行自动拉取release并部署到PP）
+
 """
 
 import pandas as pd

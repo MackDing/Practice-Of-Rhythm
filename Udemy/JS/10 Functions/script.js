@@ -496,5 +496,4 @@ GOOD LUCK 😀
   });
 })();
 
-
-// call,apply,bind,closure
+// call, apply, bind, closure
