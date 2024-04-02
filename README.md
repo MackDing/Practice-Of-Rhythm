@@ -19,7 +19,7 @@
 > - Learn resilience.
 
 - Scrum
-- [-] [scrum-guide](https://scrumguides.org/scrum-guide.html)
+- [x] [scrum-guide](https://scrumguides.org/scrum-guide.html)
 
 - Programming-languages
 
