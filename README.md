@@ -18,6 +18,9 @@
 > - Overcome fear and doubt.
 > - Learn resilience.
 
+- Scrum
+- [-] [scrum-guide](https://scrumguides.org/scrum-guide.html)
+
 - Programming-languages
 
 - [ ] [programming-languages](https://www.coursera.org/learn/programming-languages)
