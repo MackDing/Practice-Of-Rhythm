@@ -112,8 +112,15 @@ const createUserNames = function (accs) {
 };
 
 createUserNames(accounts);
-console.log(accounts);
+// console.log(accounts);
 // console.log(createUserNames(accounts)); //undefined
+
+const calcPrintBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+calcPrintBalance(account1.movements);
 
 // FILTER
 console.log('FILTER' + '-'.repeat(33));
@@ -133,18 +140,31 @@ console.log(withdrawals);
 
 // REDUCE (accumulator -> SNOWBALL)
 console.log('REDUCE' + '-'.repeat(33));
-// console.log(movements);
+console.log(movements);
 // const balance = movements.reduce(function (acc, cur, i, arr) {
 //   console.log(`Iteration i:${i}, acc: ${acc}, cur: ${cur}, arr: ${arr}`);
+//   //   //Iteration i:0, acc: 0, cur: 200, arr: 200,450,-400,3000,-650,-130,70,1300
+//   //   //Iteration i:1, acc: 200, cur: 450, arr: 200,450,-400,3000,-650,-130,70,1300
+//   //   //Iteration i:2, acc: 650, cur: -400, arr: 200,450,-400,3000,-650,-130,70,1300
+//   //   //Iteration i:3, acc: 250, cur: 3000, arr: 200,450,-400,3000,-650,-130,70,1300
+//   //   //...
 //   return acc + cur;
-// }, 0);
+// }, movements[0]);
+// console.log(balance);
 
-const balance = movements.reduce((acc, cur) => acc + cur, 0);
-console.log(balance);
+const balance1 = movements.reduce((acc, cur) => acc + cur, 0);
+console.log(balance1);
 
 let balance2 = 0;
 for (const mov of movements) balance2 += mov;
 console.log(balance2);
+
+// Maximum value
+const max = movements.reduce((acc, cur) => {
+  if (acc > cur) return acc;
+  else return cur;
+}, movements[0]);
+console.log(max);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
