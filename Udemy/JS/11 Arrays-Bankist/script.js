@@ -99,6 +99,53 @@ const displayMovements = movements => {
 };
 displayMovements(account1.movements);
 
+// MAP
+console.log('MAP' + '-'.repeat(33));
+const createUserNames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+
+createUserNames(accounts);
+console.log(accounts);
+// console.log(createUserNames(accounts)); //undefined
+
+// FILTER
+console.log('FILTER' + '-'.repeat(33));
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const deposits = movements.filter(function (mov, index, array) {
+  return mov > 0;
+});
+console.log(movements);
+console.log(deposits);
+
+const depositFor = [];
+for (const mov of movements) if (mov > 0) depositFor.push(mov);
+console.log(depositFor);
+
+const withdrawals = movements.filter(mov => mov < 0);
+console.log(withdrawals);
+
+// REDUCE (accumulator -> SNOWBALL)
+console.log('REDUCE' + '-'.repeat(33));
+// console.log(movements);
+// const balance = movements.reduce(function (acc, cur, i, arr) {
+//   console.log(`Iteration i:${i}, acc: ${acc}, cur: ${cur}, arr: ${arr}`);
+//   return acc + cur;
+// }, 0);
+
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+console.log(balance);
+
+let balance2 = 0;
+for (const mov of movements) balance2 += mov;
+console.log(balance2);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -263,7 +310,7 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 
 GOOD LUCK 😀
 */
-
+/* 
 const checkDogs = (dogsJulia, dogsKate) => {
   // console.log(dogsJulia, dogsKate);
   dogsJulia = dogsJulia.slice(1, -2);
@@ -279,6 +326,31 @@ const checkDogs = (dogsJulia, dogsKate) => {
 checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
 console.log('-'.repeat(33));
 checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+ */
+/* 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const eurToUsd = 1.1;
 
-// slice,splice
+const movementsUSD = movements.map(mov => mov * eurToUsd);
+console.log(movements);
+console.log(movementsUSD);
 
+const movementsUSDfor = [];
+for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+console.log(movementsUSDfor);
+
+// const members = ['Taylor', 'Donald', 'Don', 'Natasha', 'Bobby'];
+// const announcements = members.map(member => {
+//   return member + ' joined the contest.';
+// });
+// console.log(announcements);
+
+const movementsDescriptions = movements.map(
+  (movement, index) =>
+    `Movement ${index + 1}: You ${
+      movement > 0 ? 'deposited' : 'withdrew'
+    } ${Math.abs(movement)}`
+);
+console.log(movementsDescriptions);
+ */
+// slice, splice, map, filter, reduce ,set
