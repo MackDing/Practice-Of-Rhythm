@@ -32,12 +32,12 @@
 - Web
 
 - [ ] [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
-- [ ] [Responsive Web Design](https://www.freecodecamp.org/learn/2022/responsive-web-design/)
 - [x] [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
 - [ ] [HTML+CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
 - [ ] [Github-30-Days-JS](https://github.com/Asabeneh/30-Days-Of-JavaScript)
 - [x] [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
 - [x] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
+- [ ] [web3](https://www.bilibili.com/video/BV1E94y1m7J5/?spm_id_from=333.999.0.0)
 
 - Python
 
