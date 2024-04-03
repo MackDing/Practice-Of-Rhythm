@@ -239,11 +239,9 @@ currenciesUnique.forEach((value, _, map) => {
 // 由于在Set中键和值是等价的，所以输出的结果是元素值和其本身，如"USD: USD"。
  */
 
-
 //https://banklist.netlify.app/
 //js@1111
 //jd@2222
-
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -265,3 +263,22 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 
 GOOD LUCK 😀
 */
+
+const checkDogs = (dogsJulia, dogsKate) => {
+  // console.log(dogsJulia, dogsKate);
+  dogsJulia = dogsJulia.slice(1, -2);
+  const dogs = dogsJulia.concat(dogsKate);
+  // console.log(dogsJulia, dogsKate);
+  // console.log(dogs);
+  dogs.forEach((dog, i) => {
+    const status =
+      dog >= 3 ? `an adult, and is ${dog} years old` : 'still a puppy 🐶';
+    console.log(`Dog number ${i + 1} is ${status}`);
+  });
+};
+checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+console.log('-'.repeat(33));
+checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+
+// slice,splice
+
