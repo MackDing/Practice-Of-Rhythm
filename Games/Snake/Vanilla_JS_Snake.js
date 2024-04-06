@@ -9,11 +9,11 @@ let dom_canvas = document.createElement("canvas");
 document.querySelector("#canvas").appendChild(dom_canvas);
 let CTX = dom_canvas.getContext("2d");
 
-const W = (dom_canvas.width = 400);
-const H = (dom_canvas.height = 400);
+const W = (dom_canvas.width = 800);
+const H = (dom_canvas.height = 800);
 
 let snake,
-  food,
+  foods,
   currentHue,
   cells = 20,
   cellSize,
@@ -126,12 +126,12 @@ let helpers = {
     return [
       Math.round(red * 255),
       Math.round(green * 255),
-      Math.round(blue * 255)
+      Math.round(blue * 255),
     ];
   },
   lerp(start, end, t) {
     return start * (1 - t) + end * t;
-  }
+  },
 };
 
 let KEY = {
@@ -162,7 +162,7 @@ let KEY = {
       },
       false
     );
-  }
+  },
 };
 
 class Snake {
@@ -173,7 +173,7 @@ class Snake {
     this.index = i;
     this.delay = 5;
     this.size = W / cells;
-    this.color = "white";
+    this.color = "red"; //set color default "white"
     this.history = [];
     this.total = 1;
   }
@@ -223,6 +223,7 @@ class Snake {
       this.dir = new helpers.Vec(dir, 0);
     }
   }
+
   selfCollision() {
     for (let i = 0; i < this.history.length; i++) {
       let p = this.history[i];
@@ -231,23 +232,35 @@ class Snake {
       }
     }
   }
+
   update() {
     this.walls();
     this.draw();
     this.controlls();
+    // if (!this.delay--) {
+    //   if (helpers.isCollision(this.pos, food.pos)) {
+    //     incrementScore();
+    //     particleSplash();
+    //     food.spawn();
+    //     this.total++;
+    //   }
     if (!this.delay--) {
-      if (helpers.isCollision(this.pos, food.pos)) {
-        incrementScore();
-        particleSplash();
-        food.spawn();
-        this.total++;
+      for (let food of foods) {
+        // 修改的地方
+        if (helpers.isCollision(this.pos, food.pos)) {
+          //如果蛇头碰到某个食物
+          incrementScore();
+          particleSplash(food.pos); // 传递当前碰到的食物的位置
+          food.spawn(); // 对应的食物重新生成
+          this.total++;
+        }
       }
       this.history[this.total - 1] = new helpers.Vec(this.pos.x, this.pos.y);
       for (let i = 0; i < this.total - 1; i++) {
         this.history[i] = this.history[i + 1];
       }
       this.pos.add(this.dir);
-      this.delay = 5;
+      this.delay = 20; // SPEED default 5
       this.total > 3 ? this.selfCollision() : null;
     }
   }
@@ -324,11 +337,13 @@ function incrementScore() {
   dom_score.innerText = score.toString().padStart(2, "0");
 }
 
-function particleSplash() {
+function particleSplash(position) {
+  // 修改的地方
   for (let i = 0; i < splashingParticleCount; i++) {
     let vel = new helpers.Vec(Math.random() * 6 - 3, Math.random() * 6 - 3);
-    let position = new helpers.Vec(food.pos.x, food.pos.y);
-    particles.push(new Particle(position, currentHue, food.size, vel));
+    // let position = new helpers.Vec(food.pos.x, food.pos.y);
+    particles.push(new Particle(position, currentHue, cellSize, vel));
+    // particles.push(new Particle(position, currentHue, food.size, vel));
   }
 }
 
@@ -343,6 +358,15 @@ function initialize() {
   cellSize = W / cells;
   snake = new Snake();
   food = new Food();
+  //
+  foods = [];
+  for (let i = 0; i < 35; i++) {
+    let foodPiece = new Food();
+    foodPiece.spawn(); // 调用食物自己的 spawn 函数来随机位置
+    foods.push(foodPiece);
+  }
+
+  //
   dom_replay.addEventListener("click", reset, false);
   loop();
 }
@@ -353,7 +377,13 @@ function loop() {
     requestID = setTimeout(loop, 1000 / 60);
     helpers.drawGrid();
     snake.update();
-    food.draw();
+    // food.draw();
+    //
+    for (let food of foods) {
+      // 修改的地方
+      food.draw(); //
+    }
+    //
     for (let p of particles) {
       p.update();
     }
@@ -363,6 +393,23 @@ function loop() {
     gameOver();
   }
 }
+
+// function loop() {
+//   clear();
+//   if (!isGameOver) {
+//     requestID = setTimeout(loop, (1000 / 60) * speedCoefficient);
+//     helpers.drawGrid();
+//     snake.update();
+//     food.draw();
+//     for (let p of particles) {
+//       p.update();
+//     }
+//     helpers.garbageCollector();
+//   } else {
+//     clear();
+//     gameOver();
+//   }
+// }
 
 function gameOver() {
   maxScore ? null : (maxScore = score);
@@ -377,11 +424,28 @@ function gameOver() {
   CTX.fillText(`MAXSCORE   ${maxScore}`, W / 2, H / 2 + 80);
 }
 
+// function reset() {
+//   foods = [];
+//   dom_score.innerText = "00";
+//   score = "00";
+//   snake = new Snake();
+//   food.spawn();
+//   KEY.resetState();
+//   isGameOver = false;
+//   clearTimeout(requestID);
+//   loop();
+// }
 function reset() {
+  foods = [];
+  for (let i = 0; i < 35; i++) {
+    let foodPiece = new Food();
+    foodPiece.spawn(); // 同样在重设游戏的时候调用 spawn
+    foods.push(foodPiece);
+  }
   dom_score.innerText = "00";
   score = "00";
   snake = new Snake();
-  food.spawn();
+  // food.spawn();
   KEY.resetState();
   isGameOver = false;
   clearTimeout(requestID);
