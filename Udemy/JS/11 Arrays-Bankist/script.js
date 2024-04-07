@@ -61,11 +61,12 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const displayMovements = movements => {
+const displayMovements = (movements, sort = false) => {
   containerMovements.innerHTML = '';
   // .textContent = 0
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
 
-  movements.forEach((mov, i) => {
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const html = `
@@ -80,44 +81,13 @@ const displayMovements = movements => {
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
-
-  // for (const [i, mov] of movements.entries()) {
-  //   const type = mov > 0 ? 'deposit' : 'withdrawal';
-
-  //   const html = `
-  //   <div class="movements__row">
-  //     <div class="movements__type movements__type--${type}">${
-  //     i + 1
-  //   } ${type}</div>
-
-  //     <div class="movements__value">${Math.abs(mov)}</div>
-  //   </div>
-  //   `;
-
-  //   containerMovements.insertAdjacentHTML('afterbegin', html);
-  // }
 };
 // displayMovements(account1.movements);
 
-// MAP
-console.log('MAP' + '-'.repeat(33));
-const createUserNames = function (accs) {
-  accs.forEach(function (acc) {
-    acc.username = acc.owner
-      .toLowerCase()
-      .split(' ')
-      .map(name => name[0])
-      .join('');
-  });
-};
-
-createUserNames(accounts);
-// console.log(accounts);
-// console.log(createUserNames(accounts)); //undefined
-
-const calcDisplayBalance = function (movements) {
-  const balance = movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance}€`;
+const calcDisplayBalance = function (acc) {
+  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+  // acc.balance = balance;
+  labelBalance.textContent = `${acc.balance}€`;
 };
 
 const calcDisplaySummary = function (acc) {
@@ -135,7 +105,7 @@ const calcDisplaySummary = function (acc) {
     .filter(mov => mov > 0)
     .map(deposit => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
-      console.log(arr);
+      // console.log(arr);
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
@@ -144,8 +114,34 @@ const calcDisplaySummary = function (acc) {
 
 // calcDisplaySummary(account1.movements);
 
+// MAP
+console.log('MAP' + '-'.repeat(33));
+const createUserNames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+createUserNames(accounts);
+// console.log(accounts);
+// console.log(createUserNames(accounts)); //undefined
+
+const updateUI = function (acc) {
+  // Display movements
+  displayMovements(acc.movements);
+
+  // Display balance
+  calcDisplayBalance(acc);
+
+  // Display summary
+  calcDisplaySummary(acc);
+};
+
 // FILTER
-// console.log('FILTER' + '-'.repeat(33));
+console.log('FILTER' + '-'.repeat(33));
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // const deposits = movements.filter(function (mov, index, array) {
 //   return mov > 0;
@@ -161,7 +157,7 @@ const calcDisplaySummary = function (acc) {
 // console.log(withdrawals);
 
 // // REDUCE (accumulator -> SNOWBALL)
-// console.log('REDUCE' + '-'.repeat(33));
+console.log('REDUCE' + '-'.repeat(33));
 // console.log(movements);
 
 // const balance = movements.reduce(function (acc, cur, i, arr) {
@@ -189,33 +185,104 @@ const calcDisplaySummary = function (acc) {
 // }, movements[0]);
 // console.log(max);
 
-// Event handler
+// Event handlers
 let currentAccount;
+
 btnLogin.addEventListener('click', function (e) {
-  // Prevent from  submitting
+  // Prevent form from submitting
   e.preventDefault();
+
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
   console.log(currentAccount);
+
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
-    // display welcome and message
+    // Display UI welcome and message
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
     }`;
     containerApp.style.opacity = 100;
+
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
     // loses focus
     inputLoginPin.blur();
-    // display movements
-    displayMovements(currentAccount.movements);
-    // display balance
-    calcDisplayBalance(currentAccount.movements);
-    // display summary
-    calcDisplaySummary(currentAccount);
+
     // console.log('LOGIN');
+
+    // update UI
+    updateUI(currentAccount);
   }
+});
+
+btnTransfer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  const receiverAcc = accounts.find(
+    acc => acc.username === inputTransferTo.value
+  );
+  // console.log(amount, receiverAcc);
+  inputTransferAmount.value = inputTransferTo.value = '';
+
+  if (
+    amount > 0 &&
+    // receiverAcc &&
+    currentAccount.balance >= amount &&
+    receiverAcc?.username !== currentAccount.username
+  ) {
+    console.log('Transfer valid');
+    // Doing the transfer
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
+
+    // Update UI
+    updateUI(currentAccount);
+  }
+});
+
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    // add movement
+    currentAccount.movements.push(amount);
+
+    // update UI
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = '';
+});
+
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      acc => acc.username === currentAccount.username
+    );
+    console.log(index);
+    // .indexOf(23)
+
+    // Delete account
+    accounts.splice(index, 1);
+
+    // Hide UI
+    containerApp.style.opacity = 0;
+  }
+
+  inputCloseUsername.value = inputClosePin.value = '';
+});
+
+let sorted = false;
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
 });
 
 /////////////////////////////////////////////////
@@ -228,7 +295,7 @@ btnLogin.addEventListener('click', function (e) {
 //   ['GBP', 'Pound sterling'],
 // ]);
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -472,20 +539,20 @@ GOOD LUCK 😀
 // console.log(avg1, avg2);
 
 // PIPELINE
-console.log('PIPELINE' + '-'.repeat(11));
+// console.log('PIPELINE' + '-'.repeat(11));
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-const eurToUsd = 1.1;
-// PIPELINE
-const totalDepositsUSD = movements
-  .filter(mov => mov > 0)
-  .map((mov, i, arr) => {
-    console.log(arr);
-    return mov * eurToUsd;
-  })
-  // .map(mov => mov * eurToUsd)
-  .reduce((acc, mov) => acc + mov, 0);
-console.log(totalDepositsUSD);
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const eurToUsd = 1.1;
+
+// const totalDepositsUSD = movements
+//   .filter(mov => mov > 0)
+//   .map((mov, i, arr) => {
+//     console.log(arr);
+//     return mov * eurToUsd;
+//   })
+//   // .map(mov => mov * eurToUsd)
+//   .reduce((acc, mov) => acc + mov, 0);
+// console.log(totalDepositsUSD);
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -520,11 +587,140 @@ const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 console.log(avg1, avg2);
  */
 
-const firstWithdrawal = movements.find(mov => mov < 0);
-console.log(movements);
-console.log(firstWithdrawal);
+// const firstWithdrawal = movements.find(mov => mov < 0);
+// console.log(movements);
+// console.log(firstWithdrawal);
 
-console.log(accounts);
-const account = accounts.find(acc => acc.owner === 'Jessica Davis');
-console.log(account);
-// slice, splice, map, filter, reduce ,set
+// console.log(accounts);
+// const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+// console.log(account);
+
+// findIndex
+console.log('findIndex' + '-'.repeat(11));
+// let array = [5, 12, 8, 130, 44];
+
+// let result = array.findIndex(element => element > 110);
+
+// console.log(result); // 输出 "3"
+
+// SOME
+// console.log(movements);
+// console.log(movements.includes(-130));
+// console.log(movements.includes(-135));
+
+// console.log(movements.some(mov => mov === -130));
+
+// const aneDeposits = movements.some(mov => mov > 2999);
+// const aneDeposits1 = movements.some(mov => mov > 3000);
+
+// console.log(aneDeposits, aneDeposits1);
+
+// EVERY
+// console.log(movements.every(mov => mov > 0));
+// console.log(account4.movements);
+// console.log(account4.movements.every(mov => mov > 0));
+
+/*
+// Separate callback
+const deposit = mov => mov > 0;
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
+
+// flat
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat(2));
+
+const accountMovements = accounts.map(acc => acc.movements);
+console.log(accountMovements);
+const allMovements = accountMovements.flat();
+console.log(allMovements);
+
+// const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+// console.log(overallBalance);
+
+const overallBalance1 = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance1);
+
+// flatMap
+const overallBalance2 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance2);
+
+// SORT
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+console.log(owners.sort());
+console.log(owners);
+
+console.log(movements);
+console.log(movements.sort());
+
+// return < 0, A, B (keep order)
+// return > 0, B, A (switch order)
+movements.sort((a, b) => a - b);
+
+// movements.sort((a, b) => {
+//   if (a > b) return 1;
+//   if (a < b) return -1;
+console.log(movements);
+
+movements.sort((a, b) => b - a);
+//   movements.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+// });
+console.log(movements);
+*/
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+console.log([1, 2, 3, 4, 5, 6, 7]);
+console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+
+const x = new Array(7);
+console.log(x);
+// console.log(x.map(() => 5));
+// x.fill(1);
+x.fill(23, 3, 5);
+console.log(x);
+
+arr.fill(23, 4, 6);
+console.log(arr);
+
+// Array.from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (_curr, i) => i + 1);
+console.log(z);
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value')
+  );
+  console.log(movementsUI).map(el => Number(el.textContent.replace('€', '')));
+  console.log(movementsUI);
+});
+
+// ******** DRY Principle - Don't Repeat Yourself（不要重复自己）********
+// slice, splice, map, filter, reduce ,set, findIndex, sort, fill
+
+/* 
+DRY Principle(Don't Repeat Yourself)：避免重复代码，将共享的代码部分提取出来构建复用性函数或模块。
+KISS Principle(Keep It Simple, Stupid)：保持代码简单易懂，避免过度复杂化。
+YAGNI Principle(You Ain't Gonna Need It)：不要设计目前看来未来可能会用到，但是现在不需要的功能。
+SOLID：Principle 面向对象设计和编程的五个基本原则，包括单一职责原则(Single Responsibility Principle)、开闭原则(Open-Closed Principle)、里氏替换原则(Liskov Substitution Principle)、接口隔离原则(Interface Segregation Principle)和依赖倒置原则(Dependency Inversion Principle)。
+SOC Principle(Separation of Concerns)：关注点分离，设计程序时将不同的职责区分开，以提高程序的模块化。
+DIP Principle(Dependency Inversion Principle)：高层模块不应该依赖于低层模块，它们都应该依赖于抽象。 抽象不应该依赖于具体细节，具体细节应该依赖于抽象。
+LSP Principle(Liskov Substitution Principle)：子类型必须能够替换它们的基类型。
+LoD Principle(Law of Demeter)：一个对象应当对其他对象有尽可能少的了解，只和最直接的朋友发生交互。
+OCP Principle(Open-Closed Principle)：软件实体(类、模块、函数等等)应该可以扩展，但是不可修改。
+ISP Principle(Interface Segregation Principle)：使用多个特定的接口，而不使用单一的总接口，即客户端不应该被强迫依赖于它们不用的方法。
+TDD(Test-Driven Development：首先编写单元测试，然后编写使测试通过的代码，这样可以保证代码的正确性。 
+  */
