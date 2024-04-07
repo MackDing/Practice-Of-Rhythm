@@ -685,10 +685,14 @@ console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
 const x = new Array(7);
 console.log(x);
+console.log('-'.repeat(11));
 // console.log(x.map(() => 5));
 // x.fill(1);
 x.fill(23, 3, 5);
 console.log(x);
+
+const ss = new Array(7).fill(76, 1, 2, 1);
+console.log(ss);
 
 arr.fill(23, 4, 6);
 console.log(arr);
