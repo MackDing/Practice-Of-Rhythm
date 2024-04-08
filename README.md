@@ -1,4 +1,5 @@
 #### practice-of-Coding (Time boxing)
+
 ##### Smart People learn from everything and everyone, Average People from their experiences, Stupid People already have all the answers. --Socrates
 
 > Practice is the sole criterion of truth.
@@ -19,6 +20,7 @@
 > - Learn resilience.
 
 - Scrum
+
 - [x] [scrum-guide](https://scrumguides.org/scrum-guide.html)
 
 - Programming-languages
@@ -60,3 +62,7 @@
 > [freeCodeCamp.org](https://coderadio.freecodecamp.org/)
 >
 > [pythontutor.com](https://pythontutor.com/)
+
+- KISS Principle (Keep it simple and easy to understand, avoid over-complexity.)
+- DRY principle (Don't Duplicate Code): Avoid duplicating code, extract shared code sections to build reusable functions or modules.
+- YAGNI Principle (You Aren't Gonna Need It): Don't design functionality that you think you might use in the future, but don't need now.
