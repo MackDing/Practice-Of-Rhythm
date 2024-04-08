@@ -245,6 +245,7 @@ btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
 
   const amount = Number(inputLoanAmount.value);
+
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     // add movement
     currentAccount.movements.push(amount);
@@ -677,8 +678,25 @@ movements.sort((a, b) => b - a);
 //     if (a < b) return 1;
 // });
 console.log(movements);
+
+let isOriginal = true;
+let originalString = "Hello, World!";
+let reversedString = originalString.split("").reverse().join("");
+
+const reverseMode = () => {
+  let output = isOriginal ? originalString : reversedString;
+  console.log(output);
+  isOriginal = !isOriginal; // 反转模式
+}
+
+// 运行这个函数几次来看反转效果
+reverseMode(); // 输出：Hello, World!
+reverseMode(); // 输出：!dlroW ,olleH
+reverseMode(); // 输出：Hello, World!
+reverseMode(); // 输出：!dlroW ,olleH
 */
 
+/*
 const arr = [1, 2, 3, 4, 5, 6, 7];
 console.log([1, 2, 3, 4, 5, 6, 7]);
 console.log(new Array(1, 2, 3, 4, 5, 6, 7));
@@ -706,11 +724,201 @@ console.log(z);
 
 labelBalance.addEventListener('click', function () {
   const movementsUI = Array.from(
-    document.querySelectorAll('.movements__value')
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', ''))
   );
-  console.log(movementsUI).map(el => Number(el.textContent.replace('€', '')));
   console.log(movementsUI);
+
+  const movementsUI2 = [...document.querySelectorAll('.movements__value')];
 });
+*/
+const WHICH_ARRAY_METHOD_TO_USE = './WHICH_ARRAY_METHOD_TO_USE.png';
+
+console.log('Array Methods Practice' + ' *'.repeat(11));
+/*
+///////////////////////////////////////
+// Array Methods Practice
+
+console.log(accounts);
+console.log(accounts.flatMap(acc => acc.movements));
+// 1.
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+
+console.log(bankDepositSum);
+
+// 2.
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(mov => mov >= 1000).length;
+
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   // .reduce((count, cur) => (cur >= 1000 ? count+1 : count), 0);
+//   .reduce((count, cur) => (cur >= 1000 ? ++count : count), 0);
+
+const numDeposits1000 = accounts
+  .flatMap(acc => acc.movements)
+  // .reduce((count, cur) => (cur >= 1000 ? count+1 : count), 0);
+  .reduce((count, cur) => (cur >= 1000 ? ++count : count), 0);
+
+console.log(numDeposits1000);
+
+// Prefixed ++ operator
+let a = 10;
+// console.log(a++);
+console.log(++a);
+console.log(a);
+
+// const maxValue = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce((max, current) => Math.max(max, current));
+// console.log(maxValue); // 输出数组 a 中的最大值
+
+// const minValue = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce((min, current) => Math.min(min, current));
+// console.log(minValue); // 输出数组 a 中的最小值
+
+// 3.
+const { deposits, withdrawals } = accounts
+  .flatMap(acc => acc.movements)
+  .reduce(
+    (sums, cur) => {
+      // cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+      sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
+      return sums;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+console.log(deposits, withdrawals);
+
+// 4.
+// this is a nice title -> This Is a Nice Title
+const coverTitleCase = function (title) {
+  const capitalize = str => str[0].toUpperCase() + str.slice(1);
+  const exceptions = ['a', 'an', 'and', 'the', 'but', 'or', 'on', 'in', 'with'];
+
+  const titleCase = title
+    .toLowerCase()
+    .split(' ')
+    .map(word => (exceptions.includes(word) ? word : capitalize(word)))
+    .join(' ');
+
+  return capitalize(titleCase);
+};
+
+console.log(coverTitleCase('this is a nice title'));
+console.log(coverTitleCase('this is a LONG title but not too long'));
+console.log(coverTitleCase('this is a nice title'));
+console.log(coverTitleCase('and this is another title with an EXAMPLE'));
+*/
+
+///////////////////////////////////////
+// Coding Challenge #4
+
+/* 
+Julia and Kate are still studying dogs, and this time they are studying if dogs are eating too much or too little.
+Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite.
+Eating an okay amount means the dog's current food portion is within a range 10% above and 10% below the recommended portion (see hint).
+
+1. Loop over the array containing dog objects, and for each dog, calculate the recommended food portion and add it to the object as a new property. Do NOT create a new array, simply loop over the array. Formula: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to be in kg)
+2. Find Sarah's dog and log to the console whether it's eating too much or too little. HINT: Some dogs have multiple owners, so you first need to find Sarah in the owners array, and so this one is a bit tricky (on purpose) 🤓
+3. Create an array containing all owners of dogs who eat too much ('ownersEatTooMuch') and an array with all owners of dogs who eat too little ('ownersEatTooLittle').
+4. Log a string to the console for each array created in 3., like this: "Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
+5. Log to the console whether there is any dog eating EXACTLY the amount of food that is recommended (just true or false)
+6. Log to the console whether there is any dog eating an OKAY amount of food (just true or false)
+7. Create an array containing the dogs that are eating an OKAY amount of food (try to reuse the condition used in 6.)
+8. Create a shallow copy of the dogs array and sort it by recommended food portion in an ascending order (keep in mind that the portions are inside the array's objects)
+
+HINT 1: Use many different tools to solve these challenges, you can use the summary lecture to choose between them 😉
+HINT 2: Being within a range 10% above and below the recommended portion means: current > (recommended * 0.90) && current < (recommended * 1.10). Basically, the current portion should be between 90% and 110% of the recommended portion.
+
+TEST DATA:
+const dogs = [
+  { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+  { weight: 8, curFood: 200, owners: ['Matilda'] },
+  { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+  { weight: 32, curFood: 340, owners: ['Michael'] }
+];
+
+GOOD LUCK 😀
+*/
+const dogs = [
+  { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+  { weight: 8, curFood: 200, owners: ['Matilda'] },
+  { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+  { weight: 32, curFood: 340, owners: ['Michael'] },
+];
+
+// 1.
+for (let i = 0; i < dogs.length; i++) {
+  dogs[i].recFood = Math.trunc(dogs[i].weight ** 0.75 * 28);
+}
+console.log(dogs);
+// 1.1
+const dog = dogs.map(dog => dog);
+console.log(`This is a dog`);
+console.log(dog);
+console.log('-'.repeat(11));
+// 1.2
+const addRecommendedFood = dogs.map(dog => ({
+  ...dog,
+  recFood: Math.trunc(dog.weight ** 0.75 * 28),
+}));
+console.log(addRecommendedFood);
+// 1.3
+let recFood = dogs.map(dog => {
+  let RecommendFood = Math.trunc(dog.weight ** 0.75 * 28);
+  return { ...dog, refFood: RecommendFood };
+});
+console.log(recFood);
+// 1.4
+dogs.forEach(dog => (dog.recFood = Math.trunc(dog.weight ** 0.75 * 28)));
+console.log(dogs);
+
+// 2.
+const dogSarah = dog.find(dog => dog.owners.includes('Sarah'));
+console.log(dogSarah);
+console.log(
+  `Sarah's dog is eating ${
+    dogSarah.curFood > dogSarah.recFood ? 'much' : 'little'
+  }`
+);
+
+// 3.
+const ownersEatTooMuch = dogs
+  .filter(dog => dog.curFood > dog.recFood)
+  .flatMap(dog => dog.owners);
+console.log(ownersEatTooMuch);
+
+const ownersEatTooLittle = dogs
+  .filter(dog => dog.curFood < dog.recFood)
+  .flatMap(dog => dog.owners);
+console.log(ownersEatTooLittle);
+
+//"Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
+console.log(`${ownersEatTooMuch.join(' and ')}'s dogs eat too much !`);
+console.log(`${ownersEatTooLittle.join(' and ')}'s dogs eat too little !`);
+
+// 5.
+console.log(dogs.some(dog => dog.curFood === dog.recFood));
+
+// 6.
+// current > (recommended * 0.90) && current < (recommended * 1.10)
+// console.log(dogs.some(dog => dog.curFood > dog.recFood < dog.recFood * 1.1));
+const checkEatingOkay = dog => dog.curFood > dog.recFood < dog.recFood * 1.1;
+console.log(dogs.some(checkEatingOkay));
+
+// 7.
+console.log(dogs.filter(checkEatingOkay));
+
+// 8.
+// sort it by recommended food portion in an ascending order [1, 2, 3]
+const dogSorted = dogs.slice().sort((a, b) => a.recFood - b.recFood);
+console.log(dogSorted);
 
 // ******** DRY Principle - Don't Repeat Yourself（不要重复自己）********
 // slice, splice, map, filter, reduce ,set, findIndex, sort, fill
@@ -718,8 +926,15 @@ labelBalance.addEventListener('click', function () {
 /* 
 DRY Principle(Don't Repeat Yourself)：避免重复代码，将共享的代码部分提取出来构建复用性函数或模块。
 KISS Principle(Keep It Simple, Stupid)：保持代码简单易懂，避免过度复杂化。
-YAGNI Principle(You Ain't Gonna Need It)：不要设计目前看来未来可能会用到，但是现在不需要的功能。
-SOLID：Principle 面向对象设计和编程的五个基本原则，包括单一职责原则(Single Responsibility Principle)、开闭原则(Open-Closed Principle)、里氏替换原则(Liskov Substitution Principle)、接口隔离原则(Interface Segregation Principle)和依赖倒置原则(Dependency Inversion Principle)。
+YAGNI Principle(You Aren't Gonna Need It)：不要设计目前看来未来可能会用到，但是现在不需要的功能。
+
+SOLID Principle： 面向对象设计和编程的五个基本原则:
+单一职责原则(Single Responsibility Principle)、
+开闭原则(Open-Closed Principle)、
+里氏替换原则(Liskov Substitution Principle)、
+接口隔离原则(Interface Segregation Principle)
+依赖倒置原则(Dependency Inversion Principle)。
+
 SOC Principle(Separation of Concerns)：关注点分离，设计程序时将不同的职责区分开，以提高程序的模块化。
 DIP Principle(Dependency Inversion Principle)：高层模块不应该依赖于低层模块，它们都应该依赖于抽象。 抽象不应该依赖于具体细节，具体细节应该依赖于抽象。
 LSP Principle(Liskov Substitution Principle)：子类型必须能够替换它们的基类型。
