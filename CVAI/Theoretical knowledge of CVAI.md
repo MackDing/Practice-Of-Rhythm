@@ -1,4 +1,4 @@
-# CVAI Theory of Knowledge
+# Theoretical knowledge of CVAI
 
 ![1712813117250](image/CVAITheoryofKnowledge/1712813117250.png)
 
