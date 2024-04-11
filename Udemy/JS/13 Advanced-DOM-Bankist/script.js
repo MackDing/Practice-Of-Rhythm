@@ -18,8 +18,12 @@ const closeModal = function () {
   overlay.classList.add('hidden');
 };
 
-for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener('click', openModal);
+// for (let i = 0; i < btnsOpenModal.length; i++)
+//   btnsOpenModal[i].addEventListener('click', openModal);
+
+btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
+
+// console.log('./HOW_THE_DOM_API_IS_ORGANIZED_BEHIND_THE_SCENES.png');
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
