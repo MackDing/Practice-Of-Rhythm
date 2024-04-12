@@ -1,11 +1,14 @@
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
+from nltk.corpus import words as nltk_words
 from collections import Counter
 import string
+import re
 import os
 import docx
 import pdfplumber
-
+import nltk
+nltk.download('words')
 
 def get_script_path():
     return os.path.dirname(os.path.realpath(__file__))
@@ -32,13 +35,27 @@ def load_text(fname):
     return text
 
 
+def is_english_word(word):
+    # 这个函数检查一个字符串是否是英语单词
+    # nltk.corpus.words.words()返回一个包含所有英语单词的列表：
+    if word in nltk_words.words():
+        return True
+    return False
+
+
 def word_count(text):
     text = text.lower()
     text = text.translate(str.maketrans('', '', string.punctuation))
     words = word_tokenize(text)
+    words = [word for word in words if not re.match(r'http[s]?://', word)]
     words = [word for word in words if word not in stopwords.words('english')]
-    # filter out any tokens not containing letters
     words = [word for word in words if word.isalpha()]
+
+    # 将邮箱过滤语句替换为检查每个单词是否是英语单词的语句
+    words = [word for word in words if is_english_word(word)]
+
+    words = [word for word in words if len(word) > 1]
+
     word_counts = Counter(words)
     return word_counts
 
@@ -59,6 +76,5 @@ def main(input_files, output_file):
 
 
 if __name__ == "__main__":
-    main([r"D:\QIMA\Github\practice-of-Rhythm\Books\2020-Scrum-Guide-US.pdf"],
+    main(["../Books/Ethereum_Whitepaper_-_Buterin_2014.pdf"],
          "sorted_words.txt")
-
