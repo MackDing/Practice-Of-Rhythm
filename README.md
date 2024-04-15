@@ -19,7 +19,7 @@
 > - Overcome fear and doubt.
 > - Learn resilience.
 
-- Scrum
+### Scrum
 
 - [x] [scrum-guide](https://scrumguides.org/scrum-guide.html)
 
@@ -27,7 +27,7 @@
 
 - [ ] [programming-languages](https://www.coursera.org/learn/programming-languages)
 
-- Web
+### Web
 
 - [x] [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
 - [ ] [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
@@ -37,7 +37,7 @@
 - [x] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
 - [ ] [web3](https://www.bilibili.com/video/BV1E94y1m7J5/?spm_id_from=333.999.0.0)
 
-- Python
+### Python
 
 - [x] [Learn-Python3-The-Hard-Way](https://www.bookstack.cn/read/LearnPython3TheHardWay/spilt.1.learn-py3.md)
 - [x] [Learn-OpenCV-3hours](https://www.bilibili.com/video/BV16K411W7x9/?spm_id_from=333.999.0.0)
@@ -47,11 +47,11 @@
 - [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
 - [ ] [Playwright](https://playwright.dev/docs/intro)
 
-- C++
+### C++
 
 - [ ] [C++](https://www.youtube.com/watch?v=SfGuIVzE_Os&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=5)
 
-- Resource
+### Resource
 
 > [quick reference](https://quickref.me/)
 >
