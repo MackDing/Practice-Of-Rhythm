@@ -128,7 +128,7 @@ Mercedes.brake();
 
 // class expression
 // const PersonCL = class {};
-
+/* 
 // class declaration
 class PersonCl {
   constructor(fullName, birthYear) {
@@ -201,7 +201,9 @@ console.log(account.latest);
 
 account.latest = 50;
 console.log(account.movements);
-
+ */
+/* 
+// Inheritance Between "Classes": Object.create
 const PersonProto = {
   calcAge() {
     console.log(2037 - this.birthYear);
@@ -223,8 +225,22 @@ console.log(steven.__proto__ === PersonProto);
 const sarah = Object.create(PersonProto);
 
 sarah.init("Sarah", 1979);
-sarah.calcAge9;
+sarah.calcAge();
 
+const StudentProto = Object.create(PersonProto);
+StudentProto.init = function (firstName, birthYear, course) {
+  PersonProto.init.call(this, firstName, birthYear);
+  this.course = course;
+};
+
+StudentProto.introduce = function () {
+  console.log(`My name is ${this.fullName} and I study ${this.course}`);
+};
+const jay = Object.create(StudentProto);
+jay.init("Jay", 2010, "Computer Science");
+jay.introduce();
+jay.calcAge();
+ */
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -287,7 +303,7 @@ console.log(mack);
 // }
 // obj.name = 'Bob';  // 调用了 setter
 // console.log(obj._name);  // "Bob"
-
+/* 
 const Person = function (firstName, birthYear) {
   this.firstName = firstName;
   this.birthYear = birthYear;
@@ -324,7 +340,7 @@ console.log(mike instanceof Object);
 
 Student.prototype.constructor = Student;
 console.dir(Student.prototype.constructor);
-
+ */
 ///////////////////////////////////////
 // Coding Challenge #3
 
@@ -338,6 +354,7 @@ DATA CAR 1: 'Tesla' going at 120 km/h, with a charge of 23%
 
 GOOD LUCK 😀
 */
+/* 
 const Car = function (make, speed) {
   console.log(this);
   // Instance properties
@@ -359,15 +376,6 @@ const EV = function (make, speed, charge) {
   Car.call(this, make, speed);
   this.charge = charge;
 };
-// class EV extends Car {
-//   constructor(make, speed, charge) {
-//     super(make, speed);
-//     this.charge = charge;
-//   }
-//   chargeBattery(chargeTo) {
-//     this.charge = chargeTo;
-//   }
-// }
 
 // Linking the prototype
 EV.prototype = Object.create(Car.prototype);
@@ -384,6 +392,7 @@ EV.prototype.accelerate = function () {
   );
 };
 const Tesla = new EV("Tesla", 120, 23);
+
 Tesla.chargeBattery(30);
 console.log(Tesla);
 Tesla.brake();
@@ -411,3 +420,121 @@ Dog.prototype.speak = function () {
 
 let dog = new Dog("Rex");
 console.log(dog.speak()); // Rex barks.
+
+////////////////
+class CarCl {
+  constructor(make, speed) {
+    console.log(this);
+    // Instance properties
+    this.make = make;
+    this.speed = speed;
+  }
+  accelerate() {
+    this.speed += 10;
+    console.log(`${this.make} going at ${this.speed} km/h`);
+  }
+  brake() {
+    this.speed -= 5;
+    console.log(`${this.make} going at ${this.speed} km/h`);
+  }
+}
+
+class EVCl extends CarCl {
+  constructor(make, speed, charge) {
+    // Instance properties
+    super(make, speed);
+    console.log(this);
+    this.charge = charge;
+  }
+  chargeBattery(chargeTo) {
+    this.charge = chargeTo;
+  }
+  accelerate() {
+    this.speed += 20;
+    this.charge--;
+    console.log(
+      `${this.make} going at ${this.speed} km/h, with a charge of ${this.charge}`
+    );
+  }
+  accelerateParent() {
+    super.accelerate();
+  }
+}
+
+// Linking the prototype
+// EVCl.prototype = Object.create(Car.prototype);
+
+const tesla = new EVCl("tesla", 120, 23);
+
+tesla.chargeBattery(30);
+console.log(tesla);
+tesla.brake();
+
+tesla.accelerate(); // Calls EVCl's accelerate method
+tesla.accelerateParent(); // Calls CarCl's accelerate method
+ */
+/* 
+class StudentCl extends PersonCl {
+  constructor(fullName, birthYear, course) {
+    // Always needs to happen first!
+    super(fullName, birthYear);
+    this.course = course;
+  }
+  introduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+  calcAge() {
+    console.log(
+      `I'm ${
+        2037 - this.birthYear
+      } years old, but as a student I feel more like ${
+        2037 - this.birthYear + 10
+      }`
+    );
+  }
+}
+
+const martha = new StudentCl("Martha Jones", 2012, "Computer Science");
+martha.introduce();
+martha.calcAge();
+ */
+
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+    this.movement = [];
+    this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+  // Public interface
+  deposit(val) {
+    this.movement.push(val);
+  }
+  withdraw(val) {
+    this.deposit(-val);
+  }
+  approveLoan(val) {
+    return true;
+  }
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log(`Loan approved`);
+    }
+  }
+}
+
+const acc1 = new Account("jonas", "EUR", 1111);
+
+// acc1.movement.push(250);
+// acc1.movement.push(-140);
+acc1.deposit(250);
+acc1.withdraw(140);
+acc1.requestLoan(1000);
+acc1.approveLoan(1000);
+
+console.log(acc1);
+console.log(acc1.pin);
