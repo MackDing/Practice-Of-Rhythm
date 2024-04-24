@@ -218,7 +218,7 @@ TEST COORDINATES 2: -33.933, 18.474
 https://geocode.xyz/
 GOOD LUCK 😀
 */
-
+/* 
 function whereAmI(lat, lng) {
   const apiUrl = `https://geocode.xyz/${lat},${lng}?geoit=json`;
 
@@ -273,3 +273,81 @@ function whereAmI(lat, lng) {
 whereAmI(52.508, 13.381);
 // whereAmI(19.037, 72.873);
 // whereAmI(-33.933, 18.474);
+ */
+
+/* 
+console.log('Test start');
+setTimeout(() => {
+  console.log('0 sec timer');
+}, 0);
+Promise.resolve('Resolved promise 1').then(res => console.log(res));
+// “Test start” -> "Test end" -> "Resolved promise 1" -> "0 sec timer"
+
+Promise.resolve('Resolved promise 2').then(res => {
+  for (let i = 0; i < 1000000000; i++) {}
+  console.log(res);
+});
+console.log('Test end');
+ */
+
+const lotteryPromise = new Promise(function (resolve, reject) {
+  console.log('Lottery draw is happening 🔮');
+  setTimeout(function () {
+    if (Math.random() >= 0.5) {
+      resolve('You WIN 🎰');
+    } else {
+      reject(new Error('You lost 🧘‍♀️🧘‍♀️🧘‍♀️🧘‍♀'));
+    }
+  }, 2000);
+});
+
+lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+// Promisifying setTimeout
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+wait(1)
+  .then(() => {
+    console.log('1 second passed');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('2 second passed');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('3 second passed');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('4 second passed');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('5 second passed');
+    return wait(1);
+  })
+  .then(() => console.log('6 second passed'));
+
+// setTimeout(() => {
+//   console.log('1 second passed');
+//   setTimeout(() => {
+//     console.log('2 second passed');
+//     setTimeout(() => {
+//       console.log('3 second passed');
+//       setTimeout(() => {
+//         console.log('4 second passed');
+//         setTimeout(() => {
+//           console.log('5 second passed');
+//         }, 1000);
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
+
+Promise.resolve('abc').then(x => console.log(x));
+Promise.reject(new Error('problem!')).catch(x => console.error(x));
