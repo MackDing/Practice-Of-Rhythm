@@ -215,5 +215,61 @@ TEST COORDINATES 1: 52.508, 13.381 (Latitude, Longitude)
 TEST COORDINATES 2: 19.037, 72.873
 TEST COORDINATES 2: -33.933, 18.474
 
+https://geocode.xyz/
 GOOD LUCK 😀
 */
+
+function whereAmI(lat, lng) {
+  const apiUrl = `https://geocode.xyz/${lat},${lng}?geoit=json`;
+
+  if (typeof lat !== 'number' || isNaN(lat)) {
+    throw new Error('Invalid latitude');
+  }
+  if (typeof lng !== 'number' || isNaN(lng)) {
+    throw new Error('Invalid longitude');
+  }
+
+  return fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Request failed with status code ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (!data) {
+        throw new Error('Data is null');
+      }
+      if (!data.city || !data.country) {
+        throw new Error('Missing city or country');
+      }
+
+      console.log(`You are in ${data.city}, ${data.country}`);
+
+      return fetch(`https://restcountries.eu/rest/v2/name/${data.country}`);
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Request failed with status code ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (!data || data.length !== 1) {
+        throw new Error('Invalid data from countries API');
+      }
+
+      renderCountry(data[0]);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
+    });
+}
+
+// Example usage
+whereAmI(52.508, 13.381);
+// whereAmI(19.037, 72.873);
+// whereAmI(-33.933, 18.474);
