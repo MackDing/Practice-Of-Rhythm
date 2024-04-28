@@ -219,7 +219,7 @@ https://geocode.xyz/
 GOOD LUCK 😀
 */
 /* 
-function whereAmI(lat, lng) {
+const whereAmI = function (lat, lng) {
   const apiUrl = `https://geocode.xyz/${lat},${lng}?geoit=json`;
 
   if (typeof lat !== 'number' || isNaN(lat)) {
@@ -290,6 +290,7 @@ Promise.resolve('Resolved promise 2').then(res => {
 console.log('Test end');
  */
 
+/*
 const lotteryPromise = new Promise(function (resolve, reject) {
   console.log('Lottery draw is happening 🔮');
   setTimeout(function () {
@@ -351,3 +352,75 @@ wait(1)
 
 Promise.resolve('abc').then(x => console.log(x));
 Promise.reject(new Error('problem!')).catch(x => console.error(x));
+console.log(x);
+*/
+
+// console.log('Getting position');
+
+const getPosition = function () {
+  return new Promise((resolve, reject) => {
+    // navigator.geolocation.getCurrentPosition(
+    //   position => resolve(position),
+    //   err => reject(err)
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+getPosition().then(pos => console.log(pos));
+
+const whereAmI = function () {
+  getPosition().then(pos => {
+    const { latitude: lat, longitude: lng } = pos.coords;
+  });
+
+  const apiUrl = `https://geocode.xyz/${lat},${lng}?geoit=json`;
+
+  if (typeof lat !== 'number' || isNaN(lat)) {
+    throw new Error('Invalid latitude');
+  }
+  if (typeof lng !== 'number' || isNaN(lng)) {
+    throw new Error('Invalid longitude');
+  }
+
+  return fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Request failed with status code ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (!data) {
+        throw new Error('Data is null');
+      }
+      if (!data.city || !data.country) {
+        throw new Error('Missing city or country');
+      }
+
+      console.log(`You are in ${data.city}, ${data.country}`);
+
+      return fetch(`https://restcountries.eu/rest/v2/name/${data.country}`);
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Request failed with status code ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (!data || data.length !== 1) {
+        throw new Error('Invalid data from countries API');
+      }
+
+      renderCountry(data[0]);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
+    });
+};
+
+btn.addEventListener('click', whereAmI);
