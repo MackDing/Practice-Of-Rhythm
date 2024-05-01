@@ -357,18 +357,8 @@ console.log(x);
 
 // console.log('Getting position');
 
-const getPosition = function () {
-  return new Promise((resolve, reject) => {
-    // navigator.geolocation.getCurrentPosition(
-    //   position => resolve(position),
-    //   err => reject(err)
-    // );
-    navigator.geolocation.getCurrentPosition(resolve, reject);
-  });
-};
-
-getPosition().then(pos => console.log(pos));
-
+// getPosition().then(pos => console.log(pos));
+/* 
 const whereAmI = function () {
   getPosition().then(pos => {
     const { latitude: lat, longitude: lng } = pos.coords;
@@ -424,3 +414,53 @@ const whereAmI = function () {
 };
 
 btn.addEventListener('click', whereAmI);
+ */
+
+const getPosition = function () {
+  return new Promise((resolve, reject) => {
+    // navigator.geolocation.getCurrentPosition(
+    //   position => resolve(position),
+    //   err => reject(err)
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+const whereAmI = async country => {
+  try {
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+    console.log(lat, lng);
+    const resGeo = await fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
+    if (!resGeo.ok) throw new Error('Problem getting location data');
+    console.log(`resGeo:${resGeo}`);
+    const dataGeo = await resGeo.json();
+    console.log(`this is: ${dataGeo}`);
+    console.log(dataGeo.country);
+    // Country
+    // fetch(`https://restcountries.eu/rest/v2/name/${country}`).then(res =>
+    //   console.log(res)
+    // );
+    const res = await fetch(
+      `https://restcountries.com/v3.1/name/${dataGeo.country}`
+    );
+    if (!res.ok) throw new Error('Problem getting country');
+
+    const data = await res.json();
+    renderCountry(data[0]);
+  } catch (err) {
+    console.log(err);
+    renderError(`Something went wrong 💥 ${err.message}`);
+  }
+};
+
+whereAmI();
+console.log('FIRST');
+
+// try {
+//   let y = 1;
+//   const x = 2;
+//   y = 3;
+// } catch (error) {
+//   alert(error.message);
+// }
