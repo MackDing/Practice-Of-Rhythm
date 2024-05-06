@@ -27,15 +27,15 @@ https://restcountries.com/v3.1/alpha/170
 const renderCountry = function (data, className = '') {
   const html = `
 <article class="country ${className}">
-<img class="country__img" src="${data.flags?.svg}" />
+<img class="country__img" src="${data.flags.svg}" />
 <div class="country__data">
-  <h3 class="country__name">${data.name?.common}</h3>
-  <h4 class="country__region">${data?.region}</h4>
+  <h3 class="country__name">${data.name.common}</h3>
+  <h4 class="country__region">${data.region}</h4>
   <p class="country__row"><span>👫</span>${(+data.population / 1000000).toFixed(
     1
   )} people</p>
-  <p class="country__row"><span>🗣️</span>${data.languages?.eng}</p>
-  <p class="country__row"><span>💰</span>${data.currencies?.USD?.name}</p>
+  <p class="country__row"><span>🗣️</span>${data.languages.at(0)}</p>
+  <p class="country__row"><span>💰</span>${data.currencies.at(0).name}</p>
 </div>
 </article>`;
 
