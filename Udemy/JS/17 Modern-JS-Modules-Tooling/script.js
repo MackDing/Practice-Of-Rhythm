@@ -28,14 +28,13 @@ console.log(cart);
 // console.log(data);
 // console.log('Something');
 
-
 // luke yolo json mojo yuki
 // 丁语菲 丁语琪 丁语程 丁语曼 丁语茹 丁语辰 丁语琛 丁语诗 丁语芯 丁语绮 丁语棠 丁语宸 丁语祺 丁语凡 丁语行 丁语希/熙/熹 丁语赞 丁语筑 丁语礼 丁语笙/深 丁语东 丁语安 丁语圳
 
-// girl
-// 丁语菲 丁语诗 丁语绮/琪/祺 丁语曼 丁语橙/澄 
+// girl1
+// 丁语菲 丁语诗 丁语绮/琪/祺 丁语曼 丁语橙/澄
 
-// boy
+// boy1
 // 丁语棠 丁语程/辰/琛/宸 丁语凡 丁语行/航 丁语希/熙/熹
 
 const getLastPost = async function () {
