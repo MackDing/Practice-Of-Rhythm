@@ -37,13 +37,12 @@ console.log(cart);
 // boy1
 // 丁语棠 丁语程/辰/琛/宸 丁语凡 丁语行/航 丁语希/熙/熹
 
-const getLastPost = async function () {
+async function getLastPost() {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   const data = await res.json();
   //   console.log(data);
-
   return { title: data.at(-1).title, text: data.at(-1).body };
-};
+}
 
 const lastPost = getLastPost();
 console.log(lastPost);
