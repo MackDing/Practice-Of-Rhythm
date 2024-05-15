@@ -68,7 +68,7 @@ const ShoppingCart2 = (function () {
   };
 
   const orderStock = function (product, quantity) {
-    cart.push({ product, quantity });
+    
     console.log(`${quantity} ${product} ordered from supplier`);
   };
   return {
