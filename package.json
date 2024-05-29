@@ -1,5 +1,14 @@
 {
+  "scripts": {
+    "start": "parcel \"/Users/ding/Documents/Code/Github/practice-of-Rhythm/Udemy/JS/17 Modern-JS-Modules-Tooling/index.html\"",
+    "build": "parcel build \"/Users/ding/Documents/Code/Github/practice-of-Rhythm/Udemy/JS/17 Modern-JS-Modules-Tooling/index.html\""
+  },
   "dependencies": {
-    "jsonpath": "^1.1.1"
+    "jsonpath": "^1.1.1",
+    "leaflet": "^1.9.4",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
   }
 }

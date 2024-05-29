@@ -35,7 +35,7 @@ console.log(cart);
 // 丁语菲 丁语诗 丁语绮/琪/祺 丁语曼 丁语橙/澄
 
 // boy1
-// 丁语棠 丁语程/辰/琛/宸 丁语凡 丁语行/航 丁语希/熙/熹
+// 丁语棠/堂 丁语程/辰/琛/宸 丁语凡 丁语行/航 丁语希/熙/熹
 /* 
 async function getLastPost() {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -54,6 +54,7 @@ const lastPost2 = await getLastPost();
 console.log(lastPost2);
  */
 
+/* 
 const ShoppingCart2 = (function () {
   const cart = [];
   const shippingCost = 10;
@@ -83,3 +84,47 @@ ShoppingCart2.addToCart('apple', 4);
 ShoppingCart2.addToCart('pizza', 2);
 console.log(ShoppingCart2);
 console.log(ShoppingCart2.shippingCost);
+ */
+
+/* 
+// Export
+export.addToCart = function (product, quantity) {
+  cart.push({ product, quantity });
+  console.log(
+    `${quantity} ${product} added to cart (shipping cost is ${shippingCost})`
+  );
+};
+
+// Import
+const {addToCart}=require('./shoppingCart.js')
+*/
+
+// https://leafletjs.com/download.html
+// https://lodash.com/
+
+// import cloneDeep from '../../../node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
+// import cloneDeep from 'lodash';
+
+const state = {
+  cart: [
+    { product: 'bread', quantity: 5 },
+    { product: 'pizza', quantity: 5 },
+  ],
+  user: { loggedIn: true },
+};
+const stateClone = Object.assign({}, state);
+const stateDeepClone = cloneDeep(state);
+
+state.user.loggedIn = false;
+console.log(stateClone);
+console.log(stateDeepClone);
+
+if (module.hot) {
+  module.hot.accept();
+}
+
+// https://parceljs.org/
+// npm i parcel -g
+
+// https://babeljs.io/
