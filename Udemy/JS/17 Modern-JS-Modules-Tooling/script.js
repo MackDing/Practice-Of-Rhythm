@@ -128,3 +128,25 @@ if (module.hot) {
 // npm i parcel -g
 
 // https://babeljs.io/
+
+class Person {
+  #greeting = 'Hey';
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    console.log(`${this.#greeting} is ${this.name}`);
+  }
+}
+
+const jonas = new Person('Jonas');
+
+console.log('Jonas' ?? null);
+
+console.log(cart.find(el => el.quantity >= 2));
+
+import 'core-js/stable';
+// import 'core-js/stable/array/find';
+// import 'core-js/stable/promise';
+
+// Polifilling async functions
+import 'regenerator-runtime/runtime';
