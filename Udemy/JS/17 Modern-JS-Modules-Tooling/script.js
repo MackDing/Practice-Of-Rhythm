@@ -150,3 +150,7 @@ import 'core-js/stable';
 
 // Polifilling async functions
 import 'regenerator-runtime/runtime';
+
+
+
+// IMPERATIVE & DECLARATIVE
