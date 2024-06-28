@@ -1,3 +1,4 @@
+import pandas as pd
 
 """
 QA Deploy script design
@@ -33,8 +34,6 @@ version:3.0.2
 10.Teams机器人接入（根据个team回复进行自动拉取release并部署到PP）
 
 """
-
-import pandas as pd
 
 
 def print_unique_projects(filename):
@@ -85,4 +84,4 @@ def print_unique_projects(filename):
             print(project)
 
 
-print_unique_projects(r"D:\QIMA\Github\practice-of-Rhythm\Test\QIMA.csv")
+print_unique_projects(r"../QIMA (4).csv")
