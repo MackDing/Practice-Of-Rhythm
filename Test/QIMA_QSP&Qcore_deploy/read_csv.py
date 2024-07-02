@@ -37,20 +37,20 @@ version:3.0.2
 
 
 def print_unique_projects(filename):
-    # 需要排除的项目列表，全部转换为小写
+    # exclude projects to lower case
     exclude_projects = ['LT-DAO', 'LT-DTO', 'LT-constant',
                         'LT-converter', 'LT-model', 'LT-utility']
     exclude_projects = [project.lower() for project in exclude_projects]
-    # 项目分类，全部转换为小写
+    # projects category，lower case
     category_dict = {
-        'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service'],
-        'Front End': ['aca', 'parameter-web', 'psi-web', 'Public-API', 'back-office', 'aims-web'],
+        'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service', 'data-service', 'document-service', 'irp-service', 'reports-service'],
+        'Front End': ['aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console'],
         'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud']
     }
     category_dict = {category: [project.lower() for project in projects]
                      for category, projects in category_dict.items()}
 
-    # 读取CSV文件
+    # read CSV file
     df = pd.read_csv(filename)
 
     # 存储所有的项目
@@ -84,4 +84,4 @@ def print_unique_projects(filename):
             print(project)
 
 
-print_unique_projects(r"../QIMA (4).csv")
+print_unique_projects(r"Test/QIMA (4).csv")
