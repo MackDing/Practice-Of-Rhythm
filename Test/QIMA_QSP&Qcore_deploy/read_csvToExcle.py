@@ -16,9 +16,9 @@ version:1.0.2
 
 version:2.0.0
 1.导入Excel文件解析
-2.（Back End、Front End）release版本库
-3.（Back End、Front End）release版格式转换
-4.（Back End、Front End）执行部署PP & EKS services部署PP
+2.release版本库
+3.release版格式转换
+4.执行部署PP & EKS services部署PP
 5.状态机（Optional）
 6.PP-env 可视化单个或者批量部署 
 
