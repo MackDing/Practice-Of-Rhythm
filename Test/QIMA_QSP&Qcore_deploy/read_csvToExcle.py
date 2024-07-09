@@ -43,8 +43,8 @@ def print_unique_projects(filename):
     exclude_projects = [project.lower() for project in exclude_projects]
     # projects category，lower case
     category_dict = {
-        'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service', 'data-service', 'document-service', 'irp-service', 'reports-service'],
-        'Front End': ['aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console'],
+        'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service', 'data-service', 'document-service', 'irp-service', 'reports-service', 'customer-service', 'exchange-service-cloud', 'final-report-service', 'file-service', 'iptb-service'],
+        'Front End': ['aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console', 'backoffice-portal-web', 'checklist-web', 'gi-web', 'auditor-app', 'cia-new'],
         'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud']
     }
     category_dict = {category: [project.lower() for project in projects]
@@ -84,4 +84,4 @@ def print_unique_projects(filename):
             print(project)
 
 
-print_unique_projects(r"Test/QIMA (4).csv")
+print_unique_projects(r"Test/QIMA (2).csv")
