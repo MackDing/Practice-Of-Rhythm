@@ -68,10 +68,14 @@ So take it off
 Fine
 Oh,my god!Put on a shirt
 I don't know what you want from me
+
 All right,check your numbers!Make me rich.
+
 Anyway,he doesn't drive
 Maybe one day he'll take a bus and you'll get to meet him
+
 So,like,you guys all have jobs?
+
 Oh,God,here he comes
 Who?
 This little guy in his 40s here every friday
@@ -85,12 +89,16 @@ Well,I-I haven't met her yet
 but her name is Anu
 My father says she comes from a good family
 She's in her 30s
+
 Although I was hoping to have sex tonight
+
 You see?Now you're making Sophie uncomfortable
+
 You and my wife are friends
 That's why it's weird,George
 But nothing actually happened
 There's no reason to feel guilty
+
 You could ask,but I won't tell
 Why not?
 Cause it's embarrassing
@@ -120,15 +128,22 @@ Holy moly
 It's good,huh?
 Unbelievable
 Yeah,when I was,like,eight.
+
 Well,I was hoping to avoid this
+
 Karl
 you're making Tommy uncomfortable
+
 The last time I slept with your husband
 was the day your child died
+
 Can I put makeup on you
 Why does everyone ask me that
+
 I met Victor three months ago.I mean,I'm crazy about him
+
 It's just that I've been so tired lately
+
 Actually,I've been playing a lot of love songs lately
 I should put on pants
 Our boys have grown up.I--uh...
@@ -183,23 +198,33 @@ Why not?
 Because I already did.
 Are we sure about this?I mean,if we get caught...
 Yes.It's very risky.
+
 How did the victim die?
+
 Oh.They just needed to get to know one another better.
 I am so glad that we did this.
 Yeah,me,too.
 I've been feeling a lot of stress lately
+
 Yeah.
 I started when I was a teenager.
+
 I hope to have a very happy life in this house
+
 I need to get to know you again
+
 I was just trying to make you happy
+
 Well,I wouldn't want you to feel uncomfortable.
 Yeah,you would.
+
 I just feel so guilty
 I know people will be disappointed
 No,no,don't feel guilty
+
 You're not jealous of Leonard,are you?
 Me?No.
+
 Daddy slept in my room last night.
 You are gonna take off my clothes.
 Wow!They must put a lot of makeup on you.
