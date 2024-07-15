@@ -43,9 +43,9 @@ def print_unique_projects(filename):
     exclude_projects = [project.lower() for project in exclude_projects]
     # projects category，lower case
     category_dict = {
-        'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service', 'data-service', 'document-service', 'irp-service', 'reports-service', 'customer-service', 'exchange-service-cloud', 'final-report-service', 'file-service', 'iptb-service'],
-        'Front End': ['aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console', 'backoffice-portal-web', 'checklist-web', 'gi-web', 'auditor-app', 'cia-new'],
-        'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud']
+        'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service', 'data-service', 'document-service', 'irp-service', 'reports-service', 'customer-service', 'final-report-service', 'file-service', 'iptb-service'],
+        'Front End': ['aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console', 'backoffice-portal-web', 'checklist-web', 'gi-web', 'auditor-app', 'cia-new', 'B2b-service'],
+        'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud', 'lt-external-service-cloud', 'ai-service-cloud', 'e-signature-service-cloud', 'exchange-service-cloud', 'exchange-worker-service-cloud', 'finance-service-cloud']
     }
     category_dict = {category: [project.lower() for project in projects]
                      for category, projects in category_dict.items()}
