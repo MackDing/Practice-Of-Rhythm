@@ -39,13 +39,18 @@ But I don't know anything about pharmaceuticals
 So you're feeling guilty
 Very much so
 Well,don't be jealous,babe
+
 Take off your shirt
 What?Fine.
+
 What do you mean
 Everyone is acting weird
+
 You can try,but you'll never catch me
+
 Edie.Um,I'm not embarrassed
 If anything,I'm flattered
+
 She's a victim.I hate victims
 Phil
 I'm so glad that you're here
