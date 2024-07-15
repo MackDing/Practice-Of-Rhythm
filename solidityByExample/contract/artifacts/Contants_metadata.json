@@ -7,7 +7,20 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "count",
+				"name": "MY_ADDRESS",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MY_UINT",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -20,19 +33,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "decrement",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "get",
+				"name": "TestAddress",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -40,7 +46,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "increment",
+				"name": "mod",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -59,7 +65,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidityByExample/contract/002FirstApplication.sol": "Counter"
+			"solidityByExample/contract/005Constent.sol": "Contants"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -73,12 +79,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidityByExample/contract/002FirstApplication.sol": {
-			"keccak256": "0x83259fc36f8bb8b8e9b4e8655aea44fdc9218851816ff6b424271230d87b665c",
+		"solidityByExample/contract/005Constent.sol": {
+			"keccak256": "0xd73d673c582ca43f0ee5ab09e8035fa782884a5789b5a9984401631a22113243",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3cd98f4db272cbf887539984b27c2a71b5a58f02666e59a274029cdea5f777f0",
-				"dweb:/ipfs/QmbUoFeygEmj1zk8vJXu5DkSU2Dsbk8da83oS7VdqUCgz7"
+				"bzz-raw://072eaea5debcc1a58d47dd96d7bc777a0ef0af244cb01ef368c3a4632db229c2",
+				"dweb:/ipfs/Qmdzx3M6G8ww2vcwjHmfLMZdU6vPbygBmqpb2deSucpaGH"
 			]
 		}
 	},
