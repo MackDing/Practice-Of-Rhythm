@@ -7,12 +7,12 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "count",
+				"name": "a",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "int32",
 						"name": "",
-						"type": "uint256"
+						"type": "int32"
 					}
 				],
 				"stateMutability": "view",
@@ -20,19 +20,17 @@
 			},
 			{
 				"inputs": [],
-				"name": "decrement",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "get",
+				"name": "doSomething",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -40,9 +38,15 @@
 			},
 			{
 				"inputs": [],
-				"name": "increment",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "text",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -59,7 +63,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidityByExample/contract/002FirstApplication.sol": "Counter"
+			"solidityByExample/contract/004Variales.sol": "Variables"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -73,12 +77,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidityByExample/contract/002FirstApplication.sol": {
-			"keccak256": "0x83259fc36f8bb8b8e9b4e8655aea44fdc9218851816ff6b424271230d87b665c",
+		"solidityByExample/contract/004Variales.sol": {
+			"keccak256": "0xd725afad60f901b89aeb86e0b27f571f86d312056b453e0ad090ff43e4ed859a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3cd98f4db272cbf887539984b27c2a71b5a58f02666e59a274029cdea5f777f0",
-				"dweb:/ipfs/QmbUoFeygEmj1zk8vJXu5DkSU2Dsbk8da83oS7VdqUCgz7"
+				"bzz-raw://7a3defb9e20fea4bb65aafa51e1b7fbfd42fd6e3bc7ad47d1be24ea2dcff4557",
+				"dweb:/ipfs/Qmb7UGJ5fcQQMM85YBQH41wUR6YQDBpmKGie7uzTWWZaPr"
 			]
 		}
 	},
