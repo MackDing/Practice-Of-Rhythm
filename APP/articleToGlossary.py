@@ -8,7 +8,12 @@ import os
 import docx
 import pdfplumber
 import nltk
-nltk.download('words')
+
+# 下载所需的 NLTK 数据包
+nltk.download('punkt')       # 用于 word_tokenize
+nltk.download('stopwords')   # 用于 stopwords
+nltk.download('words')       # 用于 words
+
 
 def get_script_path():
     return os.path.dirname(os.path.realpath(__file__))
