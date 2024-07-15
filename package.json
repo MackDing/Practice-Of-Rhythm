@@ -1,5 +1,6 @@
 {
-  "scripts": {
+  "scripts": { 
+    "prepare": "husky install",
     "start": "parcel \"/Users/ding/Documents/Code/Github/practice-of-Rhythm/Udemy/JS/17 Modern-JS-Modules-Tooling/index.html\"",
     "build": "parcel build \"/Users/ding/Documents/Code/Github/practice-of-Rhythm/Udemy/JS/17 Modern-JS-Modules-Tooling/index.html\""
   },
@@ -11,6 +12,14 @@
     "regenerator-runtime": "^0.14.1"
   },
   "devDependencies": {
+    "husky": "^9.0.11",
     "parcel": "^2.12.0"
-  }
+  },
+  "name": "practice-of-rhythm",
+  "description": "> Practice is the sole criterion of truth.\r >\r > - Make English as your working language.\r > - Practice makes perfect.\r > - All experience comes from mistakes.\r > - Talk is cheap show me the code.\r > - Either outstanding or out.\r > - Stay foolish Stay hungry.\r > - Three questions to ask at work: Am I happy? Am I rich? Is it meaningful?\r > - The journey is the reward.\r > - Hindsight leads to better choices.\r > - Embrace failure as a part of success.\r > - Be open to the small things.\r > - Find your why.\r > - Overcome fear and doubt.\r > - Learn resilience.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
