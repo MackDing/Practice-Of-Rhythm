@@ -25,7 +25,7 @@ stored on the blockchain
     uint numa = 88;
 
     function doSomething() public view returns(uint,address) {
-        uint numb = 99; // Unused
+        // uint numb = 99; // Unused
 
 
         uint time = block.timestamp;

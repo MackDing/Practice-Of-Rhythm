@@ -47,11 +47,11 @@
 	},
 	"sources": {
 		"solidityByExample/contract/001HelloWorld.sol": {
-			"keccak256": "0xcd9ba6a31c63be2e8477a6bb77c2f25e0f980c2d22b9402ad804dac640e4dac6",
+			"keccak256": "0xd9ff29e34cb08d5ba0d8a1353911abd823397b7062015a3784d4c92f5e57afe6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d353d6a288ff733a4ea6bac1ce72896b933794fdeb0a7241ba843b6ac255aa88",
-				"dweb:/ipfs/QmUZSXqY5A7cu7X2t21RdERjRtufbTwBPofQA7hA4zAcLs"
+				"bzz-raw://e1f1c8c857cc533640e6d93c55f1409f4636edcb4a92ee883c9fcfbb4b10bc8d",
+				"dweb:/ipfs/QmRydguFfsEr32xc71cT3TUoHfuB5QFJsmHfHAQCa2uMGE"
 			]
 		}
 	},
