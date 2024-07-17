@@ -7,7 +7,7 @@ contract Ether {
     // 1rth = 10 ** 18, Wei is the smallest unit of gas on Ethereum 
     uint public oneWei = 1 wei;
 
-    bool public isOneWei = (1 wei == 1);  // == >= <= !=
+    bool public isOneWei = (1 wei == 1);  // `==`, `!=`, `<`, `>`, `<=` and `>=`
 
     uint public  oneEther = 1 ether;
 
