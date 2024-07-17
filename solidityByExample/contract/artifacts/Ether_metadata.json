@@ -86,11 +86,11 @@
 	},
 	"sources": {
 		"solidityByExample/contract/008EtherAndWei.sol": {
-			"keccak256": "0xbf47f43a3ac3d5e804062ee7df1a2829c70a47da4bea03f34e73d8298b3d40e1",
+			"keccak256": "0x888bbb1f24dd87be1fb6a38f92fe320e4fea4f257f2e242100f92bed5167bb73",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://99b78c361cca584e1e3cf8936fda5c58f2505739d2fa4f9754714df5dd006183",
-				"dweb:/ipfs/QmaPxZPgmBAMUAv383Hgadu7Se5LmzjGXZrPxGfirPe8bJ"
+				"bzz-raw://894c677ccce8124124eb91fc4635f797785089950c184828c23e3639ee642da5",
+				"dweb:/ipfs/QmSQUuky8fNgGhjqqDBig8jMxjeguJWj5hDgWhRTipnvuK"
 			]
 		}
 	},
