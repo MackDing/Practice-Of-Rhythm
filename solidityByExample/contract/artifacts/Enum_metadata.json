@@ -7,50 +7,10 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "cancel",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "get",
-				"outputs": [
-					{
-						"internalType": "enum Enum.Status",
-						"name": "",
-						"type": "uint8"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "reset",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "enum Enum.Status",
-						"name": "_status",
-						"type": "uint8"
-					}
-				],
-				"name": "set",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "status",
 				"outputs": [
 					{
-						"internalType": "enum Enum.Status",
+						"internalType": "enum Status",
 						"name": "",
 						"type": "uint8"
 					}
@@ -72,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidityByExample/contract/015Enum.sol": "Enum"
+			"solidityByExample/contract/015EnumImport.sol": "Enum"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -86,12 +46,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidityByExample/contract/015Enum.sol": {
-			"keccak256": "0xd95db2d670b766595083b30af91bd4dd058e12d93a9dd0059450faecf418df25",
+		"solidityByExample/contract/015EnumDeclaration.sol": {
+			"keccak256": "0x8b2ffddaf6f7a280690208114e3cd022e1bf6f3e746e57648a61df6f788eb98c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7efef625b41074540fa5c066d70f4b25ade630c86f4f9bd866da88b46acf0ec1",
-				"dweb:/ipfs/Qmd7GNPxinVAKpSWXgmTXmDUbeoEBw3BM9fmWDPcTTvMf8"
+				"bzz-raw://9584a9123c8262a0b50a5402ee286b3db96c7333d9d1bcfaa74b4da0334727e9",
+				"dweb:/ipfs/QmQckZwYqVhoeGgQfnX5kxi7rQ4ueP3VRASsy9FSD6hf3W"
+			]
+		},
+		"solidityByExample/contract/015EnumImport.sol": {
+			"keccak256": "0x98d4c04740d2260e37a931cb0dafbeb2dcb9884f75012e0e610f8fa5c3e255be",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://87d88545a01eed16c8ba82e52ad1f6494b77cd4ab57b03b6ca1b9d0632d8e801",
+				"dweb:/ipfs/QmUnfhHKAMjPMscDkQ2CYuSTKX1i4syWw14gv8uSDUZqFY"
 			]
 		}
 	},

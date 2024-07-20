@@ -9,39 +9,26 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_age",
+						"name": "balance",
 						"type": "uint256"
 					},
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "withdrawAmount",
+						"type": "uint256"
 					}
 				],
-				"name": "addPerson",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
+				"name": "InsufficientBalance",
+				"type": "error"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "num",
+				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"name": "person",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "age",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -49,14 +36,8 @@
 			},
 			{
 				"inputs": [],
-				"name": "retrieve",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
+				"name": "testAssert",
+				"outputs": [],
 				"stateMutability": "view",
 				"type": "function"
 			},
@@ -64,13 +45,39 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_favoriteNumber",
+						"name": "_withdrawAmount",
 						"type": "uint256"
 					}
 				],
-				"name": "store",
+				"name": "testCustomError",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_i",
+						"type": "uint256"
+					}
+				],
+				"name": "testRequire",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_i",
+						"type": "uint256"
+					}
+				],
+				"name": "testRevert",
+				"outputs": [],
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -87,7 +94,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidityByExample/contract/021SimpleStorage.sol": "SimpleStorage"
+			"solidityByExample/contract/018Error.sol": "Error"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -101,12 +108,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidityByExample/contract/021SimpleStorage.sol": {
-			"keccak256": "0xf53b1c966c8977ee8152bd376099b9ee2f0ead3d77b3026be6f56b9cd6f46498",
+		"solidityByExample/contract/018Error.sol": {
+			"keccak256": "0x063fc81a7f37391772fc50794dfdf24009fa5fbdc8bf789bc8d35c9e5a605d2b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://82820b4d63a6c0c0bb5c9e8debc47f3b6d06fa345a5bc9790b3858b611873afc",
-				"dweb:/ipfs/QmaFhdk1VpY2GWg9MeoCfHHP5oqtoVx2jX4JAJgmM3Sxo3"
+				"bzz-raw://ebae56b9a0b7733bc3c4b476789ac51ccc1eca60354ec761795107429bf10991",
+				"dweb:/ipfs/QmSoHBDw2ZDqGKaLj3dX67fTUJSEP2yYWgbHaCxVyBCPBU"
 			]
 		}
 	},
