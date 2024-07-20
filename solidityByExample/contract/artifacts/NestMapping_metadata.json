@@ -11,9 +11,14 @@
 						"internalType": "address",
 						"name": "_add",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_num",
+						"type": "uint256"
 					}
 				],
-				"name": "deleteNum",
+				"name": "deleteNestMapping",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -22,54 +27,69 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
-					}
-				],
-				"name": "getByAdd",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "myMap",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_addr",
+						"name": "_add",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_i",
+						"name": "_num",
 						"type": "uint256"
 					}
 				],
-				"name": "set",
+				"name": "getNestMapping",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "nestedMapping",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_add",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_num",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_boo",
+						"type": "bool"
+					}
+				],
+				"name": "setNestMapping",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -88,7 +108,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidityByExample/contract/012Map.sol": "Mapping"
+			"solidityByExample/contract/012Map.sol": "NestMapping"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
