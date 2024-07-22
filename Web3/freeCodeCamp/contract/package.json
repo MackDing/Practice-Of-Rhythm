@@ -1,0 +1,20 @@
+{
+  "name": "contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-waffle": "^1.0.0",
+    "chai": "^5.1.1",
+    "ethereum-waffle": "^3.4.4",
+    "hardhat": "^2.22.6",
+    "hardhat-gas-reporter": "^2.0.0",
+    "solidity-coverage": "^0.8.12"
+  }
+}
