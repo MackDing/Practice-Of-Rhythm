@@ -3,45 +3,45 @@ pragma solidity ^0.8.8;
 
 contract SimpleStorage {
     // // boolean, uint, int, address, bytes
-    // bool hasFavoriateBool = true;
-    // uint256 FavoriateNumber = 5;
-    // string favoriateNumberIntText = "Five";
+    // bool hasFavoriteBool = true;
+    // uint256 FavoriteNumber = 5;
+    // string favoriteNumberIntText = "Five";
     // int256 favoriteInt = -5;
     // address myAddress = 0x1AC55d145062C48ddda47f1AB2C5b7B0129842d5;
-    // bytes32 favoriateBytes = "cat";
+    // bytes32 favoriteBytes = "cat";
 
-    uint256 favoriateNumber;
-    uint256 public brothersFavoriateNumber;
+    uint256 favoriteNumber;
+    uint256 public brothersFavoriteNumber;
 
-    mapping(string => uint256)public nameToFavoriateNumber;
+    mapping(string => uint256)public nameToFavoriteNumber;
 
     struct People {
-        uint256 favoriateNumber;
+        uint256 favoriteNumber;
         string name;
     }
 
-    // uint256 public favoriateNumberList;
+    // uint256 public favoriteNumberList;
     People[] public people;
 
-    function store(uint256 _favoriateNumber) public  {
-        // favoriateNumber = _favoriateNumber + 1;
-        favoriateNumber = _favoriateNumber;
+    function store(uint256 _favoriteNumber) public  {
+        // favoriteNumber = _favoriteNumber + 1;
+        favoriteNumber = _favoriteNumber;
     }
 
-    // viewm pure
+    // view pure
     function retrieve() public view returns(uint256) {
-        return favoriateNumber;
+        return favoriteNumber;
     }
 
-    // dalldata, memory, storage
-    function addPerson(string memory _name, uint256 _favoriateNumber) public {
-        // people.push(People(_favoriateNumber, _name));
-        // People memory newPerson =People({favoriateNumber: _favoriateNumber, name: _name});
-        // People memory newPerson =People(_favoriateNumber, _name); 
+    // calldata, memory, storage
+    function addPerson(string memory _name, uint256 _favoriteNumber) public {
+        // people.push(People(_favoriteNumber, _name));
+        // People memory newPerson =People({favoriteNumber: _favoriteNumber, name: _name});
+        // People memory newPerson =People(_favoriteNumber, _name); 
         // people.push(newPerson);  
-        people.push(People(_favoriateNumber, _name));  
+        people.push(People(_favoriteNumber, _name));  
 
-        nameToFavoriateNumber[_name] = _favoriateNumber;  
+        nameToFavoriteNumber[_name] = _favoriteNumber;  
     }
 
 }
@@ -65,7 +65,7 @@ contract SimpleStorage {
 
 /*
     EVM Overview
-    - EVM can access and store infomation in six places:
+    - EVM can access and store information in six places:
     1. Stack
     2. ***Memory
     3. ***CStorage
