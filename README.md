@@ -1,6 +1,6 @@
 ### practice-of-Coding (Time boxing)
 
-![Phil Karlton](./Phil Karlton.jpg)
+![Phil Karlton](/Phil Karlton.jpg)
 
 ##### Smart People learn from everything and everyone, Average People from their experiences, Stupid People already have all the answers. --Socrates
 
