@@ -13,7 +13,7 @@ contract SimpleStorage {
     uint256 favoriteNumber;
     uint256 public brothersFavoriteNumber;
 
-    mapping(string => uint256)public nameToFavoriteNumber;
+    mapping(string => uint256) public nameToFavoriteNumber;
 
     struct People {
         uint256 favoriteNumber;
@@ -23,13 +23,13 @@ contract SimpleStorage {
     // uint256 public favoriteNumberList;
     People[] public people;
 
-    function store(uint256 _favoriteNumber) public  {
+    function store(uint256 _favoriteNumber) public {
         // favoriteNumber = _favoriteNumber + 1;
         favoriteNumber = _favoriteNumber;
     }
 
     // view pure
-    function retrieve() public view returns(uint256) {
+    function retrieve() public view returns (uint256) {
         return favoriteNumber;
     }
 
@@ -37,18 +37,16 @@ contract SimpleStorage {
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         // people.push(People(_favoriteNumber, _name));
         // People memory newPerson =People({favoriteNumber: _favoriteNumber, name: _name});
-        // People memory newPerson =People(_favoriteNumber, _name); 
-        // people.push(newPerson);  
-        people.push(People(_favoriteNumber, _name));  
+        // People memory newPerson =People(_favoriteNumber, _name);
+        // people.push(newPerson);
+        people.push(People(_favoriteNumber, _name));
 
-        nameToFavoriteNumber[_name] = _favoriteNumber;  
+        nameToFavoriteNumber[_name] = _favoriteNumber;
     }
-
 }
 
-
-    // view, pure
-    /*
+// view, pure
+/*
     状态变量访问：
     view 函数可以读取状态变量，但不能修改。
     pure 函数不能读取或修改状态变量，仅依赖于传入的参数和内部计算。
@@ -72,4 +70,4 @@ contract SimpleStorage {
     4. ***Calldata
     5. Code
     6. Logs
- */   
+ */
