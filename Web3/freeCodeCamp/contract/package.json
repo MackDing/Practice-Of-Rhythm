@@ -1,7 +1,7 @@
 {
   "name": "contract",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,11 +10,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.7",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
     "@nomiclabs/hardhat-waffle": "^1.0.0",
     "chai": "^5.1.1",
     "ethereum-waffle": "^3.4.4",
+    "ethers": "^6.13.1",
     "hardhat": "^2.22.6",
     "hardhat-gas-reporter": "^2.0.0",
     "solidity-coverage": "^0.8.12"
+  },
+  "directories": {
+    "test": "test"
   }
 }
