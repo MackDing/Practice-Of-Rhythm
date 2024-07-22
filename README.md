@@ -1,6 +1,6 @@
 ### practice-of-Coding (Time boxing)
 
-![这是图片](/Phil Karlton.jpg "Magic Gardens")
+![Phil Karlton](./Phil Karlton.jpg "Magic Gardens")
 
 ##### Smart People learn from everything and everyone, Average People from their experiences, Stupid People already have all the answers. --Socrates
 
