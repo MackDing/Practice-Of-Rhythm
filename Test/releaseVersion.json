@@ -1,0 +1,67 @@
+{
+    "data": [
+        {
+            "date": {
+                "Release Plan": "2024-07-30",
+                "Create & Freeze Release Branch": "2024-07-26"
+            },
+            "ReleaseVersion": {
+                "commons": "1.05.206-SNAPSHOT",
+                "psi-service": "release-8.82",
+                "wqs-service": "release-1.0.77",
+                "aims-service": "release-5.2.2",
+                "irp-service": "release-8.82",
+                "aca": "release-1.12.40",
+                "irp-web": "release-8.82",
+                "psi-web": "release-8.82",
+                "public-api": "release-1.2.187",
+                "back-office": "release-8.80",
+                "aims-web": "release-5.2.2",
+                "exchange-console": "release-1.2.2",
+                "checklist-web": "release-8.80"
+            }
+        },
+        {
+            "date": {
+                "Release Plan": "2024-07-23",
+                "Create & Freeze Release Branch": "2024-07-19"
+            },
+            "ReleaseVersion": {
+                "commons": "1.05.205-SNAPSHOT",
+                "psi-service": "release-8.81",
+                "wqs-service": "release-1.0.76",
+                "aims-service": "release-5.2.1",
+                "irp-service": "release-8.81",
+                "aca": "release-1.12.39",
+                "irp-web": "release-8.81",
+                "psi-web": "release-8.81",
+                "public-api": "release-1.2.186",
+                "back-office": "release-8.79",
+                "aims-web": "release-5.2.1",
+                "exchange-console": "release-1.2.1",
+                "checklist-web": "release-8.79"
+            }
+        },
+        {
+            "date": {
+                "Release Plan": "2024-07-16",
+                "Create & Freeze Release Branch": "2024-07-12"
+            },
+            "ReleaseVersion": {
+                "commons": "1.5.204-SNAPSHOT",
+                "psi-service": "release-8.80",
+                "wqs-service": "release-1.0.75",
+                "aims-service": "release-5.2.0",
+                "irp-service": "release-8.80",
+                "aca": "release-1.12.38",
+                "irp-web": "release-8.80",
+                "psi-web": "release-8.80",
+                "public-api": "release-1.2.185",
+                "back-office": "release-8.78",
+                "aims-web": "release-5.2.0",
+                "exchange-console": "release-1.2.0",
+                "checklist-web": "release-8.78"
+            }
+        }
+    ]
+}
