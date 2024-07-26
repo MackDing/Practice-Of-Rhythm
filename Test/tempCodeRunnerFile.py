@@ -88,26 +88,29 @@ def should_add_new_entry(data, use_date_logic):
     current_date = get_current_date().date()
     current_weekday = current_date.weekday()
 
+    last_entry = data["data"][0]
+    last_release_plan_date = datetime.strptime(
+        last_entry["date"]["Release Plan"], '%Y-%m-%d').date()
+
+    # 检查是否超期
+    if (current_date - last_release_plan_date).days > 7:
+        return True, True  # 需要添加新条目并且超期
+
     if current_weekday == 4:  # If today is Friday
         friday_this_week = current_date
-        # print(f"Today is Friday, friday_this_week is: {friday_this_week}")
     elif current_weekday < 4:  # If today is Monday to Thursday
         friday_this_week = current_date + timedelta(days=4 - current_weekday)
-        # print(f"Monday to Thursday, friday_this_week is: {friday_this_week}")
     else:  # If today is Saturday or Sunday
         friday_this_week = current_date - timedelta(days=(current_weekday - 4))
-        # print(f"Saturday to Sunday, friday_this_week is: {friday_this_week}")
 
     # 检查是否已经存在当前周五的 Create & Freeze Release Branch
     for item in data["data"]:
         freeze_branch_date = datetime.strptime(
             item["date"]["Create & Freeze Release Branch"], '%Y-%m-%d').date()
-        # print(f"Create & Freeze Release Branch is: {freeze_branch_date}")
         if freeze_branch_date == friday_this_week:
-            return False
+            return False, False
 
-    return True
-
+    return True, False
 
 # 计算新的"Release Plan"
 
@@ -130,21 +133,32 @@ def calculate_next_freeze_branch(next_release_plan_date):
 # 处理新条目
 
 
-def create_new_entry(data):
+def create_new_entry(data, overdue=False):
     last_entry = data["data"][0]
-    new_release_plan_date = calculate_next_release_plan(
-        last_entry["date"]["Release Plan"])
-    new_create_freeze_date = calculate_next_freeze_branch(
-        new_release_plan_date)
 
-    new_entry = {
-        "date": {
-            "Release Plan": new_release_plan_date,
-            "Create & Freeze Release Branch": new_create_freeze_date
-        },
-        "ReleaseVersion": {}
-    }
+    if overdue:
+        current_date_str = get_current_date().strftime('%Y-%m-%d')
+        new_entry = {
+            "date": {
+                "Release Plan": current_date_str,
+                "Create & Freeze Release Branch": current_date_str
+            },
+            "ReleaseVersion": {}
+        }
+    else:
+        new_release_plan_date = calculate_next_release_plan(
+            last_entry["date"]["Release Plan"])
+        new_create_freeze_date = calculate_next_freeze_branch(
+            new_release_plan_date)
+        new_entry = {
+            "date": {
+                "Release Plan": new_release_plan_date,
+                "Create & Freeze Release Branch": new_create_freeze_date
+            },
+            "ReleaseVersion": {}
+        }
 
+    # 设置版本号
     for key, version in last_entry["ReleaseVersion"].items():
         if key == "commons":
             new_entry["ReleaseVersion"][key] = increment_commons_version(
@@ -155,6 +169,8 @@ def create_new_entry(data):
         else:
             new_entry["ReleaseVersion"][key] = increment_version(version)
 
+    new_entry["overdue"] = overdue
+
     return new_entry
 
 # 主函数
@@ -163,8 +179,9 @@ def create_new_entry(data):
 def main(file_path, use_date_logic=False):  # 默认 use_date_logic 为 False
     data = read_json(file_path)
 
-    if should_add_new_entry(data, use_date_logic):
-        new_entry = create_new_entry(data)
+    should_add, overdue = should_add_new_entry(data, use_date_logic)
+    if should_add:
+        new_entry = create_new_entry(data, overdue)
         data["data"].insert(0, new_entry)  # 将新条目插入到最前面
         save_json(data, file_path)
     else:

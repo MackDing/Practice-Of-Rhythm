@@ -1,87 +1,91 @@
 import pandas as pd
+import json
+import datetime
+from datetime import timedelta
 
-"""
-QA Deploy script design
-version:1.0.0
-1.通过token请求Jenkins API
-2.输入job & branch 执行部署（单个||批量）
-3.断言触发状态
+# Excluded projects in lower case
+exclude_projects = ['LT-DAO', 'LT-DTO', 'LT-constant',
+                    'LT-converter', 'LT-model', 'LT-utility']
+exclude_projects = [project.lower() for project in exclude_projects]
 
-version:1.0.1
-5.web前端 或 exe执行文件
-6.显示构建部署执行结果
-
-version:1.0.2
-7.数据初始化-Jenkins PP & Pro 服务名称
-
-version:2.0.0
-1.导入Excel文件解析
-2.release版本库
-3.release版格式转换
-4.执行部署PP & EKS services部署PP
-5.状态机（Optional）
-6.PP-env 可视化单个或者批量部署 
-
-version:3.0.0
-6.Pro-env执行build
-7.Pro-env执行deploy
-
-version:3.0.1
-8.Date&log
-
-version:3.0.2
-9.Teams机器人接入（定时自动发送通知）
-10.Teams机器人接入（根据个team回复进行自动拉取release并部署到PP）
-
-"""
+# Projects category in lower case
+category_dict = {
+    'Commons': ['commons'],
+    'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service', 'data-service', 'document-service', 'irp-service', 'reports-service', 'customer-service', 'final-report-service', 'file-service', 'iptb-service'],
+    'Front End': ['claim-cloud', 'aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console', 'backoffice-portal-web', 'checklist-web', 'gi-web', 'auditor-app', 'cia-new', 'B2b-service'],
+    'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud', 'lt-external-service-cloud', 'ai-service-cloud', 'e-signature-service-cloud', 'exchange-service-cloud', 'exchange-worker-service-cloud', 'finance-service-cloud']
+}
+category_dict = {category: [project.lower() for project in projects]
+                 for category, projects in category_dict.items()}
 
 
-def print_unique_projects(filename):
-    # exclude projects to lower case
-    exclude_projects = ['LT-DAO', 'LT-DTO', 'LT-constant',
-                        'LT-converter', 'LT-model', 'LT-utility']
-    exclude_projects = [project.lower() for project in exclude_projects]
-    # projects category，lower case
-    category_dict = {
-        'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service', 'data-service', 'document-service', 'irp-service', 'reports-service', 'customer-service', 'final-report-service', 'file-service', 'iptb-service'],
-        'Front End': ['aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console', 'backoffice-portal-web', 'checklist-web', 'gi-web', 'auditor-app', 'cia-new', 'B2b-service'],
-        'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud', 'lt-external-service-cloud', 'ai-service-cloud', 'e-signature-service-cloud', 'exchange-service-cloud', 'exchange-worker-service-cloud', 'finance-service-cloud']
-    }
-    category_dict = {category: [project.lower() for project in projects]
-                     for category, projects in category_dict.items()}
-
-    # read CSV file
+def get_unique_projects(filename):
+    """
+    Read unique projects from the CSV file that match the 'Affects Project' criteria.
+    """
     df = pd.read_csv(filename)
-
-    # 存储所有的项目
     all_projects = []
 
-    # 循环遍历所有的列
+    # Loop through all columns
     for column in df.columns:
-        # 检查当前列名是否包含 "Affects Project"
         if 'Affects Project' in column:
-            # 去除重复的项目并添加到all_projects列表中
             unique_projects = df[column].dropna().unique()
             unique_projects = [project.lower() for project in unique_projects]
             all_projects.extend(unique_projects)
 
-    # 去除重复
+    # Remove duplicates
     all_projects = list(set(all_projects))
-    # 移除被排除的项目
-    all_projects = [
+    # Remove excluded projects
+    filtered_projects = [
         project for project in all_projects if project not in exclude_projects]
 
-    # 按照类别打印项目
-    for category, projects in category_dict.items():
-        print(f'\n{category}' + ':')
-        for project in projects:
-            if project in all_projects:
-                print(project)
+    # Initialize categorized projects dict
+    categorized_projects = {'Commons': [],
+                            'QSP': [], 'EKS': [], 'Other Services': []}
 
-    print('\nOther projects:')
-    for project in all_projects:
-        if not any(project in projects for projects in category_dict.values()):
+    # Categorize projects
+    for category, projects in category_dict.items():
+        for project in projects:
+            if project in filtered_projects:
+                if category == 'Commons':
+                    categorized_projects['Commons'].append(project)
+                elif category == 'Back End' or category == 'Front End':
+                    categorized_projects['QSP'].append(project)
+                elif category == 'EKS services':
+                    categorized_projects['EKS'].append(project)
+
+    # Categorize other projects
+    for project in filtered_projects:
+        if (project not in categorized_projects['Commons'] and
+                project not in categorized_projects['QSP'] and
+                project not in categorized_projects['EKS']):
+            categorized_projects['Other Services'].append(project)
+
+    return categorized_projects
+
+
+def print_json_projects(categorized_projects):
+    """
+    Print the categorized projects as a JSON dictionary.
+    """
+    print(json.dumps(categorized_projects, indent=4))
+
+
+def print_projects_by_category(categorized_projects):
+    """
+    Print projects by category.
+    """
+    for category, projects in categorized_projects.items():
+        print(f'\n{category}:')
+        for project in projects:
             print(project)
 
 
-print_unique_projects(r"Test/QIMA_QSP&Qcore_deploy/QIMA (2).csv")
+# Replace with your actual CSV file path
+categorized_projects = get_unique_projects(r"Test/py (QIMA).csv")
+
+# Print JSON dictionary
+print_json_projects(categorized_projects)
+
+# Print projects by category
+# print_projects_by_category(categorized_projects)
