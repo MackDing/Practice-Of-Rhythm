@@ -1,7 +1,8 @@
 import pandas as pd
+import os
 import json
 import datetime
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 # Excluded projects in lower case
 exclude_projects = ['LT-DAO', 'LT-DTO', 'LT-constant',
@@ -67,12 +68,45 @@ def get_unique_projects(filename):
     return categorized_projects
 
 
-def print_json_projects(categorized_projects):
+def read_num_value(filename='num_value.json'):
     """
-    Print the categorized projects as a JSON dictionary and return the JSON string.
+    Read the Num value from a file. If the file does not exist, initialize with 0.
     """
+    if os.path.exists(filename):
+        with open(filename, 'r') as file:
+            data = json.load(file)
+            return data.get('num', 0)
+    return 0
+
+
+def write_num_value(num, filename='num_value.json'):
+    """
+    Write the Num value to a file.
+    """
+    with open(filename, 'w') as file:
+        json.dump({'num': num}, file)
+
+
+def add_num_field_and_increment(data, num):
+
+    data['Num'] = num
+
+    # Increment the num value for next time
+
+    return data
+
+
+def print_json_projects(categorized_projects, num_filename):
+    num = read_num_value(num_filename)
+
+    categorized_projects = add_num_field_and_increment(
+        categorized_projects, num)
+
     json_str = json.dumps(categorized_projects, indent=4)
     print(json_str)
+    num += 1
+    write_num_value(num, num_filename)
+
     return json_str
 
 
@@ -86,11 +120,26 @@ def print_projects_by_category(categorized_projects):
             print(project)
 
 
+def save_json_to_file(json_str, filename):
+    # Print current working directory
+    # print(f"Saving JSON to: {os.path.abspath(filename)}")
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.write(json_str)
+
+
+csv_filepath = r"Test/py (QIMA).csv"
+json_filepath = "Test/QIMA_QSP_Deploy/releaseServices.json"
+num_filename = "Test/QIMA_QSP_Deploy/num_value.json"
+
 # Replace with your actual CSV file path
-categorized_projects = get_unique_projects(r"Test/QIMA (4).csv")
+categorized_projects = get_unique_projects(csv_filepath)
 
 # Print JSON dictionary and get the JSON string
-json_output = print_json_projects(categorized_projects)
+json_output = print_json_projects(categorized_projects, num_filename)
+
+# Save JSON output to file
+save_json_to_file(
+    json_output, json_filepath)
 
 # Print projects by category with distinction between Back End and Front End
 # print_projects_by_category(categorized_projects)

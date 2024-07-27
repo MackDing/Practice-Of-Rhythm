@@ -1,0 +1,58 @@
+{
+    "Commons": [
+        "commons"
+    ],
+    "Back End": [
+        "psi-service",
+        "wqs-service",
+        "aims-service",
+        "document-service",
+        "irp-service",
+        "customer-service",
+        "final-report-service",
+        "file-service",
+        "iptb-service"
+    ],
+    "Front End": [
+        "claim-cloud",
+        "aca",
+        "parameter-web",
+        "irp-web",
+        "psi-web",
+        "public-api",
+        "back-office",
+        "aims-web",
+        "program-web",
+        "checklist-web",
+        "gi-web",
+        "cia-new"
+    ],
+    "EKS": [
+        "claim",
+        "claim-cloud",
+        "aca-new",
+        "lt-external-service-cloud",
+        "exchange-service-cloud",
+        "exchange-worker-service-cloud",
+        "finance-service-cloud"
+    ],
+    "Other projects": [
+        "b2b_dt_service",
+        "document-generation-service-cloud",
+        "qrcode-cloud",
+        "dynamic-order-cloud",
+        "ip-template-web",
+        "lt-cloud",
+        "qcore-common-front",
+        "dynamic-order-service-cloud",
+        "factory",
+        "exchange-service",
+        "sample-web",
+        "mail-console",
+        "qimagpt",
+        "ip-service",
+        "checklist-service-cloud",
+        "ip-template-service"
+    ],
+    "Num": 3
+}
