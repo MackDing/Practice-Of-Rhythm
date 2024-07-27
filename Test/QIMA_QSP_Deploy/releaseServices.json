@@ -37,22 +37,22 @@
         "finance-service-cloud"
     ],
     "Other projects": [
-        "b2b_dt_service",
-        "document-generation-service-cloud",
-        "qrcode-cloud",
-        "dynamic-order-cloud",
-        "ip-template-web",
-        "lt-cloud",
         "qcore-common-front",
-        "dynamic-order-service-cloud",
-        "factory",
         "exchange-service",
-        "sample-web",
-        "mail-console",
         "qimagpt",
-        "ip-service",
+        "dynamic-order-cloud",
+        "mail-console",
+        "ip-template-web",
         "checklist-service-cloud",
-        "ip-template-service"
+        "factory",
+        "b2b_dt_service",
+        "sample-web",
+        "ip-service",
+        "ip-template-service",
+        "qrcode-cloud",
+        "dynamic-order-service-cloud",
+        "lt-cloud",
+        "document-generation-service-cloud"
     ],
-    "Num": 3
+    "Num": 4
 }
