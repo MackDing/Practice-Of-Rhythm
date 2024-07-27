@@ -1,47 +1,101 @@
 import os
-import sys
-import csv
-import subprocess
+import requests
+import deepspeech
+import wave
+import numpy as np
+import pandas as pd
+from pydub import AudioSegment
+from moviepy.editor import VideoFileClip
+from hashlib import md5
+from tqdm import tqdm
+
+# 百度翻译API参数⭐
+app_id = '20210918000948984'
+secret_key = 'cG6DmcxorZrgfCvoacgY'
 
 
-def generate_subtitles(source_path):
-    output_srt = source_path.rsplit('.', 1)[0] + '.srt'
-    output_csv = source_path.rsplit('.', 1)[0] + '.csv'
+def extract_audio_from_video(video_path):
+    audio_path = video_path.rsplit('.', 1)[0] + '.wav'
+    if not os.path.exists(audio_path):
+        print(f"正在从视频中提取音频: {video_path}")
+        video = VideoFileClip(video_path)
+        video.audio.write_audiofile(audio_path)
+        print(f"音频已提取并保存到: {audio_path}")
+    else:
+        print(f"音频文件已存在：{audio_path}")
+    return audio_path
 
-    # 检查CSV文件是否已经存在
-    if os.path.exists(output_csv):
-        print("CSV文件已经生成，请删除后重试。")
+
+def convert_samplerate(audio_path, desired_sample_rate=16000):
+    audio = AudioSegment.from_file(audio_path)
+    audio = audio.set_frame_rate(desired_sample_rate)
+    audio_path = "converted.wav"
+    audio.export(audio_path, format="wav")
+    return audio_path
+
+
+def transcribe(audio_file, model_file_path, scorer_file_path):
+    model = deepspeech.Model(model_file_path)
+    model.enableExternalScorer(scorer_file_path)
+    w = wave.open(audio_file, 'r')
+    frames = w.getnframes()
+    buffer = w.readframes(frames)
+    data16 = np.frombuffer(buffer, dtype=np.int16)
+    result = model.stt(data16)
+    return result
+
+
+def recognize_speech_from_audio(audio_path, model_path, scorer_path):
+    audio_path = convert_samplerate(audio_path)
+    return transcribe(audio_path, model_path, scorer_path)
+
+
+def translate_sentence(sentence, app_id, secret_key):
+    url = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
+    salt = str(random.randint(32768, 65536))
+    sign = md5((app_id + sentence + salt +
+               secret_key).encode('utf-8')).hexdigest()
+    params = {
+        'q': sentence,
+        'from': 'en',
+        'to': 'zh',
+        'appid': app_id,
+        'salt': salt,
+        'sign': sign
+    }
+    response = requests.get(url, params=params)
+    result = response.json()
+    return result['trans_result'][0]['dst']
+
+
+def process_video(video_path, model_path, scorer_path):
+    # 文件名
+    audio_path = extract_audio_from_video(video_path)
+    csv_path = video_path.rsplit('.', 1)[0] + '.csv'
+
+    if os.path.exists(csv_path):
+        print(f"CSV文件已存在：{csv_path}，请删除后重试。")
         return
 
-    # 调用命令行工具autosub生成字幕文件并翻译
-    command = f"autosub '{source_path}' -S en -D zh-cn -o '{output_srt}'"
-    subprocess.run(command, shell=True, check=True)
+    # 识别语音
+    sentences = recognize_speech_from_audio(
+        audio_path, model_path, scorer_path).split("\n")
+    translations = [translate_sentence(
+        sentence, app_id, secret_key) for sentence in tqdm(sentences, desc="翻译中")]
 
-    # 读取生成的srt文件并写入csv文件
-    with open(output_srt, 'r', encoding='utf-8') as srt_file, open(output_csv, 'w', newline='', encoding='utf-8') as csv_file:
-        csv_writer = csv.writer(csv_file)
-        csv_writer.writerow(["序号", "英文句子", "中文翻译"])
-
-        lines = srt_file.read().split('\n\n')
-        for i, section in enumerate(lines):
-            if section.strip():  # 忽略空行
-                try:
-                    parts = section.split('\n')
-                    if len(parts) < 3:
-                        continue
-                    text = ' '.join(parts[2:])  # 可能在换行处匹配文本
-                    csv_writer.writerow(
-                        [i + 1, text, parts[-1]])  # 最后一行为翻译后的中文
-                except Exception as e:
-                    print(f"处理第{i+1}段字幕时出错: {e}")
-
-    print("CSV文件已生成:", output_csv)
+    # 存储到CSV
+    data = {
+        "序号": list(range(1, len(sentences) + 1)),
+        "英文句子": sentences,
+        "中文翻译": translations
+    }
+    df = pd.DataFrame(data)
+    df.to_csv(csv_path, index=False, encoding='utf-8-sig')
+    print(f"CSV文件 '{csv_path}' 已成功保存")
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("用法: python generate_subtitles.py <视频文件路径>")
-        sys.exit(1)
-
-    video_path = sys.argv[1]
-    generate_subtitles(video_path)
+    video_path = r"APP/videoToDialogue/哈利波特1：神秘的魔法石BD国英双语中英双字.mkv"
+    model_path = r"APP/videoToDialogue/deepspeech-0.9.3-models.pbmm"
+    scorer_path = r"APP/videoToDialogue/deepspeech-0.9.3-models.scorer"
+    process_video(video_path, model_path, scorer_path)
