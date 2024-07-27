@@ -23,7 +23,7 @@
 
 ### Scrum
 
-- [X] [scrum-guide](https://scrumguides.org/scrum-guide.html)
+- [x] [scrum-guide](https://scrumguides.org/scrum-guide.html)
 
 ### Programming-languages
 
@@ -31,32 +31,32 @@
 
 ### AI
 
-- [X] [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
-- [X] [OpenCV-Python(Video)](https://www.bilibili.com/video/BV16K411W7x9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9 "https://www.bilibili.com/video/BV16K411W7x9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9")
+- [x] [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
+- [x] [OpenCV-Python(Video)](https://www.bilibili.com/video/BV16K411W7x9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9 "https://www.bilibili.com/video/BV16K411W7x9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9")
 - [ ] [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
-- [X] [ultralytics/yolov5](https://github.com/ultralytics/yolov5)
+- [x] [ultralytics/yolov5](https://github.com/ultralytics/yolov5)
 - [ ] [Hello algo](https://www.hello-algo.com/)
 
 ### Web
 
-- [X] [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
-- [X] [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
+- [x] [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
+- [x] [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [HTML+CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
 - [ ] [Github-30-Days-JS](https://github.com/Asabeneh/30-Days-Of-JavaScript)
-- [X] [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
-- [X] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
+- [x] [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
+- [x] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
 - [ ] Vue
 - [ ] React
 
 ### Web3
 
-- [ ] [Solidity-by-Example](https://solidity-by-example.org/mapping/)
+- [x] [Solidity-by-Example](https://solidity-by-example.org/mapping/)
 - [ ] [web3](https://www.bilibili.com/video/BV1E94y1m7J5/?spm_id_from=333.999.0.0)
 
 ### Python
 
-- [X] [Learn-Python3-The-Hard-Way](https://www.bookstack.cn/read/LearnPython3TheHardWay/spilt.1.learn-py3.md)
-- [X] [Learn-OpenCV-3hours](https://www.bilibili.com/video/BV16K411W7x9/?spm_id_from=333.999.0.0)
+- [x] [Learn-Python3-The-Hard-Way](https://www.bookstack.cn/read/LearnPython3TheHardWay/spilt.1.learn-py3.md)
+- [x] [Learn-OpenCV-3hours](https://www.bilibili.com/video/BV16K411W7x9/?spm_id_from=333.999.0.0)
 - [ ] [GitHub-Python-100-Days](https://github.com/jackfrued/Python-100-Days)
 - [ ] [《Python One-Liners: Write Concise, Eloquent Python Like a Professional》](https://github.com/MackDing/practice-of-Rhythm/blob/master/Books/Python%E4%B8%80%E8%A1%8C%E6%B5%81%EF%BC%9A%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%86%99%E4%BB%A3%E7%A0%81.pdf)
 - [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
