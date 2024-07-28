@@ -1,3 +1,7 @@
 moviepy
 pydub
 requests
+deepspeech==0.9.3
+pandas
+tqdm
+tensorflow==2.12.0
