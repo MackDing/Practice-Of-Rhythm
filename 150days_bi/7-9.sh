@@ -8,10 +8,12 @@ I'll think about it
 Thank you,baby
 Guilt and jealousy in the same day
 I slept hard that night
+
 It's weird,right?
 A grown man in his 30s living with my mother
 That is weird
 I thought he was，like，45
+
 Hello,Janice.Hi.
 I'm so glad that you called
 I know I've been acting really weird lately

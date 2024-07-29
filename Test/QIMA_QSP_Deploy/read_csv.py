@@ -13,8 +13,8 @@ exclude_projects = [project.lower() for project in exclude_projects]
 category_dict = {
     'Commons': ['commons'],
     'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service', 'data-service', 'document-service', 'irp-service', 'reports-service', 'customer-service', 'final-report-service', 'file-service', 'iptb-service'],
-    'Front End': ['claim-cloud', 'aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console', 'backoffice-portal-web', 'checklist-web', 'gi-web', 'auditor-app', 'cia-new', 'B2b-service'],
-    'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud', 'lt-external-service-cloud', 'ai-service-cloud', 'e-signature-service-cloud', 'exchange-service-cloud', 'exchange-worker-service-cloud', 'finance-service-cloud']
+    'Front End': ['aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console', 'backoffice-portal-web', 'checklist-web', 'gi-web', 'auditor-app', 'cia-new', 'B2b-service', 'e-signature-web'],
+    'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud', 'lt-external-service-cloud', 'ai-service-cloud', 'e-signature-service-cloud', 'exchange-service-cloud', 'exchange-worker-service-cloud', 'finance-service-cloud', 'e-signature', 'qrcode-cloud']
 }
 category_dict = {category: [project.lower() for project in projects]
                  for category, projects in category_dict.items()}
@@ -127,7 +127,7 @@ def save_json_to_file(json_str, filename):
         file.write(json_str)
 
 
-csv_filepath = r"Test/py (QIMA).csv"
+csv_filepath = r"Test/QIMA_QSP_Deploy/QIMA (2).csv"
 json_filepath = "Test/QIMA_QSP_Deploy/releaseServices.json"
 num_filename = "Test/QIMA_QSP_Deploy/num_value.json"
 
