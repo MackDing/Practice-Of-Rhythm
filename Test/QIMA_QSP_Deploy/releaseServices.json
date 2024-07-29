@@ -6,53 +6,30 @@
         "psi-service",
         "wqs-service",
         "aims-service",
-        "document-service",
-        "irp-service",
-        "customer-service",
-        "final-report-service",
-        "file-service",
-        "iptb-service"
+        "irp-service"
     ],
     "Front End": [
-        "claim-cloud",
         "aca",
-        "parameter-web",
         "irp-web",
         "psi-web",
         "public-api",
         "back-office",
         "aims-web",
-        "program-web",
-        "checklist-web",
-        "gi-web",
-        "cia-new"
+        "exchange-console",
+        "checklist-web"
     ],
     "EKS": [
         "claim",
         "claim-cloud",
         "aca-new",
-        "lt-external-service-cloud",
         "exchange-service-cloud",
-        "exchange-worker-service-cloud",
-        "finance-service-cloud"
+        "e-signature",
+        "qrcode-cloud"
     ],
     "Other projects": [
-        "qcore-common-front",
-        "exchange-service",
-        "qimagpt",
-        "dynamic-order-cloud",
-        "mail-console",
-        "ip-template-web",
-        "checklist-service-cloud",
-        "factory",
-        "b2b_dt_service",
-        "sample-web",
-        "ip-service",
-        "ip-template-service",
-        "qrcode-cloud",
-        "dynamic-order-service-cloud",
-        "lt-cloud",
+        "user-service-cloud",
+        "sso-management",
         "document-generation-service-cloud"
     ],
-    "Num": 4
+    "Num": 5
 }
