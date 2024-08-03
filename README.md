@@ -64,7 +64,7 @@
 
 ### English
 - [x] [Principle-Ray Dalio](https://www.bilibili.com/video/BV1kW411N7Sb?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
-- [ ] [Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [x] [Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [ ] [Professional English for IT v2.0](https://www.bilibili.com/video/BV15Y4y1o7nF?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 
 ### C++
