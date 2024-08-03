@@ -81,11 +81,11 @@
 >
 > [freeCodeCamp.org](https://coderadio.freecodecamp.org/)
 >
-> [pythontutor.com](https://pythontutor.com/)
+> [Pythontutor.com](https://pythontutor.com/)
 >
-> [roadmap](https://roadmap.sh/)
+> [Roadmap](https://roadmap.sh/)
 > 
-> [quick reference](https://quickref.me/)
+> [Quick reference](https://quickref.me/)
 
 - KISS Principle (Keep it simple and easy to understand, avoid over-complexity.)
 - DRY principle (Don't Duplicate Code): Avoid duplicating code, extract shared code sections to build reusable functions or modules.
