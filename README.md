@@ -1,6 +1,6 @@
 ### practice-of-Coding (Time boxing)
 
-![1721633255580](image/README/1721633255580.png)
+![1721633255580](./image/README/Phil%20Karlton.jpg)
 
 ##### Smart People learn from everything and everyone, Average People from their experiences, Stupid People already have all the answers. --Socrates
 
@@ -61,6 +61,11 @@
 - [ ] [《Python One-Liners: Write Concise, Eloquent Python Like a Professional》](https://github.com/MackDing/practice-of-Rhythm/blob/master/Books/Python%E4%B8%80%E8%A1%8C%E6%B5%81%EF%BC%9A%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%86%99%E4%BB%A3%E7%A0%81.pdf)
 - [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
 - [ ] [Playwright](https://playwright.dev/docs/intro)
+
+### English
+- [x] [Principle-Ray Dalio](https://www.bilibili.com/video/BV1kW411N7Sb?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [Professional English for IT v2.0](https://www.bilibili.com/video/BV15Y4y1o7nF?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 
 ### C++
 
