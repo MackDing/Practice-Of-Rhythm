@@ -87,6 +87,8 @@
 > 
 > [Quick reference](https://quickref.me/)
 
+
+
 - KISS Principle (Keep it simple and easy to understand, avoid over-complexity.)
 - DRY principle (Don't Duplicate Code): Avoid duplicating code, extract shared code sections to build reusable functions or modules.
 - YAGNI Principle (You Aren't Gonna Need It): Don't design functionality that you think you might use in the future, but don't need now.
