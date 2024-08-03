@@ -73,7 +73,7 @@
 
 ### Resource
 
-> [huggingface](https://huggingface.co/)
+> [Huggingface](https://huggingface.co/)
 >
 > [MDN](https://developer.mozilla.org/zh-CN/docs/Learn)
 >
