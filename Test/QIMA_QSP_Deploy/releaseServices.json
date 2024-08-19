@@ -27,9 +27,9 @@
         "qrcode-cloud"
     ],
     "Other projects": [
-        "user-service-cloud",
         "sso-management",
+        "user-service-cloud",
         "document-generation-service-cloud"
     ],
-    "Num": 5
+    "Num": 6
 }

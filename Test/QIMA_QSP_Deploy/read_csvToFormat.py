@@ -65,5 +65,6 @@ def print_project_list(categorized_projects):
 
 
 # Replace with your actual CSV file path
-categorized_projects = get_unique_projects(r"Test/QIMA (4).csv")
+categorized_projects = get_unique_projects(
+    r"Test/QIMA_QSP_Deploy/QIMA (4).csv")
 print_project_list(categorized_projects)
