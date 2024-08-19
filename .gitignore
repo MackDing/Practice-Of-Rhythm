@@ -15,3 +15,8 @@ Books/English/Thing Explainer：Complicated Stuff in Simple Words.pdf
 Books/代码大全2中文版.pdf
 150days_bi/摩登家庭全季台词.pdf
 .DS_Store
+*.exe
+*.pkg
+*.zip
+*.node
+Test/videoToGlossary/videos/UdemyJS.mp4
