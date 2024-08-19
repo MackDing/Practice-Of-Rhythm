@@ -1,7 +1,5 @@
 import pandas as pd
 import json
-import datetime
-from datetime import timedelta
 
 # Excluded projects in lower case
 exclude_projects = ['LT-DAO', 'LT-DTO', 'LT-constant',
@@ -41,7 +39,9 @@ def get_unique_projects(filename):
 
     # Initialize categorized projects dict
     categorized_projects = {'Commons': [],
-                            'QSP': [], 'EKS': [], 'Other Services': []}
+                            'QSP': {'Back End': [], 'Front End': []},
+                            'EKS': [],
+                            'Other Services': []}
 
     # Categorize projects
     for category, projects in category_dict.items():
@@ -50,14 +50,15 @@ def get_unique_projects(filename):
                 if category == 'Commons':
                     categorized_projects['Commons'].append(project)
                 elif category == 'Back End' or category == 'Front End':
-                    categorized_projects['QSP'].append(project)
+                    categorized_projects['QSP'][category].append(project)
                 elif category == 'EKS services':
                     categorized_projects['EKS'].append(project)
 
     # Categorize other projects
     for project in filtered_projects:
         if (project not in categorized_projects['Commons'] and
-                project not in categorized_projects['QSP'] and
+                project not in categorized_projects['QSP']['Back End'] and
+                project not in categorized_projects['QSP']['Front End'] and
                 project not in categorized_projects['EKS']):
             categorized_projects['Other Services'].append(project)
 
@@ -75,17 +76,31 @@ def print_projects_by_category(categorized_projects):
     """
     Print projects by category.
     """
-    for category, projects in categorized_projects.items():
-        print(f'\n{category}:')
-        for project in projects:
-            print(project)
+    for category, subprojects in categorized_projects.items():
+        if isinstance(subprojects, dict):  # For QSP
+            print(f'\n{category} (QSP):')
+            for subcategory, projects in subprojects.items():
+                print(f'{subcategory}:')
+                if projects:
+                    for project in projects:
+                        print(f'{project}')
+                else:
+                    print('Null')
+        else:
+            print(f'\n{category}:')
+            if subprojects:
+                for project in subprojects:
+                    print(project)
+            else:
+                print('Null')
 
 
 # Replace with your actual CSV file path
-categorized_projects = get_unique_projects(r"Test/py (QIMA).csv")
+categorized_projects = get_unique_projects(
+    r"Test/QIMA_QSP_Deploy/QIMA (4).csv")
 
 # Print JSON dictionary
-print_json_projects(categorized_projects)
+# print_json_projects(categorized_projects)
 
 # Print projects by category
-# print_projects_by_category(categorized_projects)
+print_projects_by_category(categorized_projects)
