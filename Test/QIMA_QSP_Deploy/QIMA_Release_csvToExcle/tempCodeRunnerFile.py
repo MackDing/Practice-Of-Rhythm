@@ -6,7 +6,7 @@ from ui_dialog import Ui_Form
 import PySide6.QtCore
 import os
 
-# set QT_QPA_PLATFORM_PLUGIN_PATH
+# 设置QT_QPA_PLATFORM_PLUGIN_PATH
 plugin_path = os.path.join(os.path.dirname(
     PySide6.QtCore.__file__), 'plugins', 'platforms')
 os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = plugin_path
@@ -80,16 +80,14 @@ def format_projects_by_category(categorized_projects):
                 for subcategory, projects in subprojects.items():
                     result += f'{subcategory}:\n'
                     if projects:
-                        # Sort projects alphabetically
-                        for project in sorted(projects):
+                        for project in projects:
                             result += f'{project}\n'
                     else:
                         result += 'Null\n'
             else:
                 result += f'\n{category}:\n'
                 if subprojects:
-                    # Sort projects alphabetically
-                    for project in sorted(subprojects):
+                    for project in subprojects:
                         result += f'{project}\n'
                 else:
                     result += 'Null\n'
@@ -122,7 +120,7 @@ class MyApp(QDialog):
 
     def execute(self):
         print("Execute button clicked.")
-        file_path = self.ui.filePath.text()  # change to text()
+        file_path = self.ui.filePath.text()  # 改为使用 text()
         if not file_path:
             self.ui.results.setText(
                 "The file or file path is incorrect, please check")
