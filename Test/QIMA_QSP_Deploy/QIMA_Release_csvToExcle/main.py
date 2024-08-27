@@ -107,7 +107,7 @@ class MyApp(QDialog):
         # self.ui = Ui_Dialog()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.setWindowTitle("QIMA_Release v1.0")
+        self.setWindowTitle("QIMA_Release v1.2")
 
         self.ui.pushButton.clicked.connect(self.load_csv)
         self.ui.pushButton_2.clicked.connect(self.safe_execute)
