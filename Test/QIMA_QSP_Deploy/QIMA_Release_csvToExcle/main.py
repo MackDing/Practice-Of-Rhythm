@@ -6,7 +6,7 @@ from ui_dialog import Ui_Form
 import PySide6.QtCore
 import os
 
-# 设置QT_QPA_PLATFORM_PLUGIN_PATH
+# set QT_QPA_PLATFORM_PLUGIN_PATH
 plugin_path = os.path.join(os.path.dirname(
     PySide6.QtCore.__file__), 'plugins', 'platforms')
 os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = plugin_path
@@ -21,8 +21,8 @@ exclude_projects = [project.lower() for project in exclude_projects]
 category_dict = {
     'Commons': ['commons'],
     'Back End': ['psi-service', 'wqs-service', 'aims-service', 'external-service', 'data-service', 'document-service', 'irp-service', 'reports-service', 'customer-service', 'final-report-service', 'file-service', 'iptb-service'],
-    'Front End': ['aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console', 'backoffice-portal-web', 'checklist-web', 'gi-web', 'auditor-app', 'cia-new', 'B2b-service', 'iptb-web'],
-    'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud', 'lt-external-service-cloud', 'ai-service-cloud', 'e-signature-service-cloud', 'exchange-service-cloud', 'exchange-worker-service-cloud', 'finance-service-cloud', 'report-service-cloud', 'ordercore-service-cloud', 'file-service-cloud', 'payment-service-cloud']
+    'Front End': ['aca', 'parameter-web', 'irp-web', 'psi-web', 'Public-API', 'back-office', 'aims-web', 'program-web', 'exchange-console', 'backoffice-portal-web', 'checklist-web', 'gi-web', 'auditor-app', 'cia-new', 'B2b-service', 'iptb-web', 'b2b_dt_service'],
+    'EKS services': ['claim', 'claim-cloud', 'aca-new', 'parameter-service-legacy-cloud', 'lt-external-service-cloud', 'ai-service-cloud', 'e-signature-service-cloud', 'exchange-service-cloud', 'exchange-worker-service-cloud', 'finance-service-cloud', 'report-service-cloud', 'ordercore-service-cloud', 'file-service-cloud', 'payment-service-cloud', 'mail-service-cloud', 'document-generation-service-cloud']
 }
 category_dict = {category: [project.lower() for project in projects]
                  for category, projects in category_dict.items()}
@@ -80,14 +80,16 @@ def format_projects_by_category(categorized_projects):
                 for subcategory, projects in subprojects.items():
                     result += f'{subcategory}:\n'
                     if projects:
-                        for project in projects:
+                        # Sort projects alphabetically
+                        for project in sorted(projects):
                             result += f'{project}\n'
                     else:
                         result += 'Null\n'
             else:
                 result += f'\n{category}:\n'
                 if subprojects:
-                    for project in subprojects:
+                    # Sort projects alphabetically
+                    for project in sorted(subprojects):
                         result += f'{project}\n'
                 else:
                     result += 'Null\n'
@@ -105,7 +107,7 @@ class MyApp(QDialog):
         # self.ui = Ui_Dialog()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.setWindowTitle("QIMA_Release v1.0")
+        self.setWindowTitle("QIMA_Release v1.2")
 
         self.ui.pushButton.clicked.connect(self.load_csv)
         self.ui.pushButton_2.clicked.connect(self.safe_execute)
@@ -120,7 +122,7 @@ class MyApp(QDialog):
 
     def execute(self):
         print("Execute button clicked.")
-        file_path = self.ui.filePath.text()  # 改为使用 text()
+        file_path = self.ui.filePath.text()  # change to text()
         if not file_path:
             self.ui.results.setText(
                 "The file or file path is incorrect, please check")
