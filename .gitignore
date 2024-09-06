@@ -45,3 +45,6 @@ dist-ssr
 *.sln
 *.sw?
 APP/getReleaseResults.py
+Test/Jira/getReleaseResults.py
+Test/Jira/getJiraAfftectsProjects.py
+Test/Jira/getJiraAfftectsProjects.py
