@@ -36,6 +36,9 @@
 - [ ] [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
 - [x] [ultralytics/yolov5](https://github.com/ultralytics/yolov5)
 - [ ] [Hello algo](https://www.hello-algo.com/)
+- [ ] TensorFlow
+- [ ] LangChain
+- [ ] [LLM101n]https://github.com/karpathy/LLM101n
 
 ### Web
 
@@ -70,6 +73,9 @@
 ### C++
 
 - [ ] [C++](https://www.youtube.com/watch?v=SfGuIVzE_Os&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=5)
+
+### Rust
+
 
 ### Resource
 
