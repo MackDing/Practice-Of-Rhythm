@@ -38,7 +38,7 @@
 - [ ] [Hello algo](https://www.hello-algo.com/)
 - [ ] TensorFlow
 - [ ] LangChain
-- [ ] [LLM101n]https://github.com/karpathy/LLM101n
+- [ ] [LLM101n](https://github.com/karpathy/LLM101n)
 
 ### Web
 
