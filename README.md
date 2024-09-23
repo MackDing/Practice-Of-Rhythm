@@ -45,9 +45,9 @@
 - [x] [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
 - [x] [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [HTML+CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
-- [ ] [Github-30-Days-JS](https://github.com/Asabeneh/30-Days-Of-JavaScript)
 - [x] [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
 - [x] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
+- [x] [Kirby JavaScript](https://www.youtube.com/watch?v=mbljv1EkrRQ)
 - [ ] Vue
 - [ ] React
 
@@ -60,7 +60,6 @@
 
 - [x] [Learn-Python3-The-Hard-Way](https://www.bookstack.cn/read/LearnPython3TheHardWay/spilt.1.learn-py3.md)
 - [x] [Learn-OpenCV-3hours](https://www.bilibili.com/video/BV16K411W7x9/?spm_id_from=333.999.0.0)
-- [ ] [GitHub-Python-100-Days](https://github.com/jackfrued/Python-100-Days)
 - [ ] [《Python One-Liners: Write Concise, Eloquent Python Like a Professional》](https://github.com/MackDing/practice-of-Rhythm/blob/master/Books/Python%E4%B8%80%E8%A1%8C%E6%B5%81%EF%BC%9A%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%86%99%E4%BB%A3%E7%A0%81.pdf)
 - [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
 - [ ] [Playwright](https://playwright.dev/docs/intro)
@@ -69,6 +68,7 @@
 - [x] [Principle-Ray Dalio](https://www.bilibili.com/video/BV1kW411N7Sb?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [x] [Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [ ] [Professional English for IT v2.0](https://www.bilibili.com/video/BV15Y4y1o7nF?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [x] [Building Your English Brain）中英字](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 
 ### C++
 
