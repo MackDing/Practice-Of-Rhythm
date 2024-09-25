@@ -39,6 +39,7 @@
 - [ ] TensorFlow
 - [ ] LangChain
 - [ ] [LLM101n](https://github.com/karpathy/LLM101n)
+- [ ] [bbycroft](https://bbycroft.net/)
 
 ### Web
 
