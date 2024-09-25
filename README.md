@@ -80,19 +80,15 @@
 
 ### Resource
 
-> [roadmap](https://roadmap.sh/)
+> [Roadmap](https://roadmap.sh/)
 >
 > [Huggingface](https://huggingface.co/)
->
-> [MDN](https://developer.mozilla.org/zh-CN/docs/Learn)
 >
 > [Udemy](https://www.udemy.com/)
 >
 > [freeCodeCamp.org](https://coderadio.freecodecamp.org/)
 >
 > [Pythontutor.com](https://pythontutor.com/)
->
-> [Roadmap](https://roadmap.sh/)
 > 
 > [Quick reference](https://quickref.me/)
 
