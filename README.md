@@ -55,6 +55,7 @@
 ### Web3
 
 - [x] [Solidity-by-Example](https://solidity-by-example.org/mapping/)
+- [ ] [Solidity8.0](https://www.bilibili.com/video/BV1oZ4y1B7WS?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [ ] [web3](https://www.bilibili.com/video/BV1E94y1m7J5/?spm_id_from=333.999.0.0)
 
 ### Python
@@ -69,7 +70,7 @@
 - [x] [Principle-Ray Dalio](https://www.bilibili.com/video/BV1kW411N7Sb?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [x] [Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [ ] [Professional English for IT v2.0](https://www.bilibili.com/video/BV15Y4y1o7nF?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
-- [x] [Building Your English Brain）中英字](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [x] [Building Your English Brain](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 
 ### C++
 
