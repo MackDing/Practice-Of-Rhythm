@@ -45,12 +45,12 @@
 
 - [x] [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
 - [x] [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
-- [ ] [HTML+CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
+- [x] [HTML+CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
 - [x] [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
 - [x] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
 - [x] [Kirby JavaScript](https://www.youtube.com/watch?v=mbljv1EkrRQ)
+- [x] [Full React](https://www.bilibili.com/video/BV1Me4y1h7bQ?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [ ] Vue
-- [ ] React
 
 ### Web3
 
