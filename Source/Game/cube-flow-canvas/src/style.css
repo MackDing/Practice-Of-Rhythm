@@ -1,0 +1,36 @@
+body {
+	background-color: #000;
+	font-family: system-ui;
+	font-size: 13px;
+}
+
+canvas {
+	touch-action: none;
+}
+
+.clear-btn,
+.mode-btn {
+	color: rgba(255, 255, 255, 0.75);
+	position: fixed;
+	z-index: 2;
+	padding: 16px;
+	cursor: default;
+	user-select: none;
+}
+
+.clear-btn {
+	right: 0;
+}
+
+.resize-alert {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 12px;
+}
