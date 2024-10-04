@@ -64,6 +64,8 @@ Test/Jira/getJiraAfftectsProjects.py
 *.mp4
 *.mkv
 *.wav
+CV_*.md
+CV_*.pdf
 
 # Miscellaneous
 .pnp
