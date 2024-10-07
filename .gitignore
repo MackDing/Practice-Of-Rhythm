@@ -66,6 +66,8 @@ Test/Jira/app/main.py
 *.mkv
 *.wav
 *.msi
+CV_*.md
+CV_*.pdf
 
 # Logs
 logs
