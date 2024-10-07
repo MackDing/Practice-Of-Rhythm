@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_lockTime",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -25,7 +31,7 @@
 						"type": "address"
 					}
 				],
-				"name": "funderToAmount",
+				"name": "fundersToAmount",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -53,7 +59,27 @@
 				"inputs": [],
 				"name": "getFund",
 				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "refund",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -106,11 +132,11 @@
 			]
 		},
 		"lesson - 3/FundMe.sol": {
-			"keccak256": "0x65f4efb29dbc9a70a6509a80929d6eb1294971acd17d89c74ec5c1deb0c08574",
+			"keccak256": "0xd162067e8960a4965788bb155b47c3cee4576c269be9ff715a1736aa6bfd3786",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a64a9a73198e3a615eb8db172518b516fef70c1d1801c0111a4e697a13fd50ca",
-				"dweb:/ipfs/QmPatDNqxXXtxsacjizYsbkHw9gyp7XkkCcMvxYewuigb2"
+				"bzz-raw://c25d00d63e0026b55727d814f0a49e4a982a82b97073f34225488a902d407f7e",
+				"dweb:/ipfs/QmU3XvE5GuEFURCjQiUEcygWhTTBqt9QYkjw13sFvMHNAU"
 			]
 		}
 	},
