@@ -1,0 +1,21 @@
+{
+  "name": "kriby",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev:browser": "vite",
+    "build:browser": "vite build",
+    "preview:browser": "vite preview",
+    "dev": "tauri dev",
+    "build": "tauri build"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1",
+    "kaplay": "^3001.0.0-alpha.24"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1",
+    "vite": "^5.3.1"
+  }
+}
