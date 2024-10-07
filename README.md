@@ -50,6 +50,7 @@
 - [x] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
 - [x] [Kirby JavaScript](https://www.youtube.com/watch?v=mbljv1EkrRQ)
 - [x] [Full React](https://www.bilibili.com/video/BV1Me4y1h7bQ?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [React 2024](https://www.youtube.com/watch?v=CgkZ7MvWUAA)
 - [ ] Vue
 
 ### Web3
