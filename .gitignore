@@ -30,6 +30,9 @@ lerna-debug.log*
 .env.test.local
 .env.production.local
 
+*secret*
+
+
 # Ignore specific files
 APP/videoToDialogue/deepspeech-0.9.3-models.tflite
 APP/videoToDialogue/deepspeech-0.9.3-models.pbmm
