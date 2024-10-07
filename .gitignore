@@ -52,7 +52,7 @@ Books/代码大全2中文版.pdf
 APP/getReleaseResults.py
 Test/Jira/getReleaseResults.py
 Test/Jira/getJiraAfftectsProjects.py
-
+Test/Jira/
 # Ignore Playwright specific files
 **/playwright-report
 
