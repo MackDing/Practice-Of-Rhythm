@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('getJiraRelease.ui', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
