@@ -24,6 +24,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Environment files
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -49,10 +50,7 @@ Books/代码大全2中文版.pdf
 *.sw?
 
 # Ignore specific scripts and test files
-APP/getReleaseResults.py
-Test/Jira/getReleaseResults.py
-Test/Jira/getJiraAfftectsProjects.py
-Test/Jira/
+
 # Ignore Playwright specific files
 **/playwright-report
 
