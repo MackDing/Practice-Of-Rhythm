@@ -56,6 +56,7 @@
 
 - [x] [Solidity-by-Example](https://solidity-by-example.org/mapping/)
 - [ ] [Web3_tutorial](https://github.com/smartcontractkit/Web3_tutorial_Chinese/tree/main)
+- [ ] [ABI in SOLIDITY](https://www.youtube.com/watch?v=Z7UNjk_roXI&t=1052s)
 - [ ] [Solidity8.0](https://www.bilibili.com/video/BV1oZ4y1B7WS?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [ ] [web3](https://www.bilibili.com/video/BV1E94y1m7J5/?spm_id_from=333.999.0.0)
 
