@@ -32,7 +32,6 @@ lerna-debug.log*
 
 *secret*
 
-
 # Ignore specific files
 APP/videoToDialogue/deepspeech-0.9.3-models.tflite
 APP/videoToDialogue/deepspeech-0.9.3-models.pbmm
@@ -53,6 +52,7 @@ Books/代码大全2中文版.pdf
 *.sw?
 
 # Ignore specific scripts and test files
+Test/Jira/app/main.py
 
 # Ignore Playwright specific files
 **/playwright-report
@@ -74,4 +74,3 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-Test/Jira/app/main.py
