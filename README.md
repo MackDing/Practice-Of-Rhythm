@@ -60,7 +60,9 @@
 - [ ] [ABI in SOLIDITY](https://www.youtube.com/watch?v=Z7UNjk_roXI&t=1052s)
 - [ ] [Solidity8.0](https://www.bilibili.com/video/BV1oZ4y1B7WS?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [ ] [web3](https://www.bilibili.com/video/BV1E94y1m7J5/?spm_id_from=333.999.0.0)
-- [ ] [Learn Solidity Smart Contract Development | Full 2024 Cyfrin Updraft Course](https://www.youtube.com/watch?v=-1GB6m39-rM)
+- [ ] [Learn Solidity, Blockchain Development, & Smart Contracts | Powered By AI - Full Course](https://www.youtube.com/watch?v=umepbfKp5rI)
+- [ ] [北京大学肖臻老师《区块链技术与应用》公开课](https://www.bilibili.com/video/BV1Vt411X7JF?p=2&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [Decentralized Finance https://defi-learning.org/f22](https://www.youtube.com/playlist?list=PLS01nW3RtgorojSlcoLBPRfoNGzQFywaL)
 
 ### Python
 
