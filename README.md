@@ -61,6 +61,7 @@
 - [ ] [Learn Solidity, Blockchain Development, & Smart Contracts | Powered By AI - Full Course](https://www.youtube.com/watch?v=umepbfKp5rI)
 - [ ] [Decentralized Finance https://defi-learning.org/f22](https://www.youtube.com/playlist?list=PLS01nW3RtgorojSlcoLBPRfoNGzQFywaL)
 - [ ] [Solidity8.0](https://www.bilibili.com/video/BV1oZ4y1B7WS?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [Solana Blockchain Application Development web3 | Smart Contracts](https://www.bilibili.com/video/BV1NJ4m187og/?share_source=copy_web&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
       
 
 ### Python
