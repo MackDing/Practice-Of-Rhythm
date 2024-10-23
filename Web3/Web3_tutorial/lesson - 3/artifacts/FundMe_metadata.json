@@ -109,7 +109,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"lesson - 3/FundMe.sol": "FundMe"
+			"lesson - 3/FundMe1.sol": "FundMe"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -131,7 +131,7 @@
 				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
 			]
 		},
-		"lesson - 3/FundMe.sol": {
+		"lesson - 3/FundMe1.sol": {
 			"keccak256": "0xd162067e8960a4965788bb155b47c3cee4576c269be9ff715a1736aa6bfd3786",
 			"license": "MIT",
 			"urls": [

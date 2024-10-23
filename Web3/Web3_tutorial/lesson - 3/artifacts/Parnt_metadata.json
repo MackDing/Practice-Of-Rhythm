@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"lesson - 3/Inhrit.sol": "Name"
+			"lesson - 3/Inhrit.sol": "Parnt"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -33,11 +33,11 @@
 	},
 	"sources": {
 		"lesson - 3/Inhrit.sol": {
-			"keccak256": "0x67e02f7891fd0cfb5590dc4f8ce1a001f909965563de6f53c2c183ab9d2196be",
+			"keccak256": "0x19b109eaaa024cc57bd3cd5e35ae660d745b094949604dea63b6714bdaded41d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://21711bdc3e51fe4a3159de54976062d639684cccc5907054fcbbd41731648e4f",
-				"dweb:/ipfs/QmQPwcEGRLBg1SazK1UJDTx2Tujqp4t39VyHLFVAZuutx6"
+				"bzz-raw://2a7095e3e04950feb8edc9b49d2aa6b8ba9d0a24bc11c41d2b9256447c3dd1f9",
+				"dweb:/ipfs/QmZQVNrkokrkqurf6zaZzLccXka5zyXrJtjP8BYMTKpSpT"
 			]
 		}
 	},

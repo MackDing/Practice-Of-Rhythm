@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "a",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "addOne",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"lesson - 3/Inhrit.sol": "Ch"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"lesson - 3/Inhrit.sol": {
+			"keccak256": "0x6b0ef7f099633e8f8f89deb3a169aea5a1dacf34868da550c64b47e0f58f32f6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://014d1e4ef485b25a09700fe68f816f9bbe5c2ab70f1e4a75c3f58b42903bb321",
+				"dweb:/ipfs/Qmf4i1MqEAjtjfodCvmpKeaU1UfbMdHbK6csyfzg4YVRAn"
+			]
+		}
+	},
+	"version": 1
+}
