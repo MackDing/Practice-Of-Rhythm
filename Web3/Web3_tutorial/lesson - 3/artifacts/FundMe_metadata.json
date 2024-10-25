@@ -64,6 +64,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getFundSuccess",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -78,6 +91,37 @@
 			{
 				"inputs": [],
 				"name": "refund",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_erc20Addr",
+						"type": "address"
+					}
+				],
+				"name": "setErc20Addr",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountToUpdate",
+						"type": "uint256"
+					}
+				],
+				"name": "setFunderToAmount",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -109,7 +153,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"lesson - 3/FundMe1.sol": "FundMe"
+			"lesson - 3/FundMe.sol": "FundMe"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -131,12 +175,12 @@
 				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
 			]
 		},
-		"lesson - 3/FundMe1.sol": {
-			"keccak256": "0xd162067e8960a4965788bb155b47c3cee4576c269be9ff715a1736aa6bfd3786",
+		"lesson - 3/FundMe.sol": {
+			"keccak256": "0xfc5a26d09f59bb3e50f278c8870a5343f245aaaaeafc274b53894b1ca0958853",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c25d00d63e0026b55727d814f0a49e4a982a82b97073f34225488a902d407f7e",
-				"dweb:/ipfs/QmU3XvE5GuEFURCjQiUEcygWhTTBqt9QYkjw13sFvMHNAU"
+				"bzz-raw://3061b9d3b9b830ca663e680103d530de10606d4e25345a6f25defd933d26cda3",
+				"dweb:/ipfs/QmRdSZWZxxKgXrwRsrQR1E4ASiq8BHqJM5ukSEJwbKtfeK"
 			]
 		}
 	},
