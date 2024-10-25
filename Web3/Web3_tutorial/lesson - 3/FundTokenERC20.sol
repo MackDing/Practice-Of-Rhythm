@@ -7,7 +7,7 @@ pragma solidity ^0.8.20;
 // 3. 在使用完成以后, 需要burn 通证
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import {FundMe} from "FundMe.sol";
+import {FundMe} from "./FundMe.sol";
 
 contract FundTokenERC20 is ERC20 {
     FundMe fundMe;
