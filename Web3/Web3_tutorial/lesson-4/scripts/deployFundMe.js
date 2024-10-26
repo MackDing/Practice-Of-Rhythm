@@ -2,7 +2,7 @@
 // create main funciotn
 // execute main function
 
-const { ethers } = require("hardhat");
+const { ethers, run } = require("hardhat");
 
 async function main() {
   // create factory
@@ -13,6 +13,25 @@ async function main() {
   console.log(
     `contract has been deployed successfully, contract address is ${fundMe.target}`
   );
+
+  // verify fundMe
+  if (
+    hre.network.config.chainId == 111551111 &&
+    process.env.ETHERSCAN_API_KEY
+  ) {
+    await fundMe.deloymentTransaction.wait(5);
+    console.log("Waiting for 5 confirmations");
+    await verifyFundMe(fundMe, [10]);
+  } else {
+    console.log("verification skipped..");
+  }
+}
+
+async function verifyFundMe(fundMeAddr, args) {
+  await hre.run("verify:verify", {
+    address: fundMeAddr,
+    constructorArguments: args,
+  });
 }
 
 main()
@@ -21,3 +40,6 @@ main()
     console.error(error);
     process.exit(1);
   });
+
+// npx hardhat run scripts/deployFundMe.js --network sepolia
+// npx hardhat verify --network sepolia 0x1AC55d145062C48ddda47f1AB2C5b7B0129842d5 "10"
