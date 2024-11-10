@@ -1,126 +1,125 @@
-const {
-  time,
-  loadFixture,
-} = require("@nomicfoundation/hardhat-toolbox/network-helpers");
-const { anyValue } = require("@nomicfoundation/hardhat-chai-matchers/withArgs");
-const { expect } = require("chai");
+// import the ethers from hardhat
+const hre = require("hardhat");
+const { ethers } = hre;
 
-describe("Lock", function () {
-  // We define a fixture to reuse the same setup in every test.
-  // We use loadFixture to run this setup once, snapshot that state,
-  // and reset Hardhat Network to that snapshot in every test.
-  async function deployOneYearLockFixture() {
-    const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
-    const ONE_GWEI = 1_000_000_000;
+async function main() {
+  // 获取 FundMe 合约的工厂对象
+  const fundMeFactory = await ethers.getContractFactory("FundMe");
+  console.log("Deploying the contract...");
 
-    const lockedAmount = ONE_GWEI;
-    const unlockTime = (await time.latest()) + ONE_YEAR_IN_SECS;
+  // 部署合约，构造函数参数为 10
+  const fundMe = await fundMeFactory.deploy(10);
+  await fundMe.deployed(); // 确保等待部署完成
+  console.log(
+    `Contract FundMe is deployed successfully at address ${fundMe.address}`
+  );
 
-    // Contracts are deployed using the first signer/account by default
-    const [owner, otherAccount] = await ethers.getSigners();
-
-    const Lock = await ethers.getContractFactory("Lock");
-    const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
-
-    return { lock, unlockTime, lockedAmount, owner, otherAccount };
+  // 如果在 Sepolia 网络上，并且设置了 Etherscan API KEY，则进行验证
+  if (network.config.chainId === 11155111 && process.env.ETHERSCAN_API_KEY) {
+    console.log("Waiting for 3 confirmations...");
+    await fundMe.deployTransaction.wait(3); // 确保等到 3 次确认后
+    console.log("Verifying contract on Etherscan...");
+    await verify(fundMe.address, [10]);
+  } else {
+    console.log("Skipping verification");
   }
 
-  describe("Deployment", function () {
-    it("Should set the right unlockTime", async function () {
-      const { lock, unlockTime } = await loadFixture(deployOneYearLockFixture);
+  // 初始化两个签名者（账户）
+  const [firstAccount, secondAccount] = await ethers.getSigners();
+  console.log(`First account address is ${firstAccount.address}`);
+  console.log(`Second account address is ${secondAccount.address}`);
 
-      expect(await lock.unlockTime()).to.equal(unlockTime);
+  // 进行首次资金存入
+  console.log("Funding the contract...");
+  try {
+    const fundTx = await fundMe.fund({
+      value: ethers.utils.parseEther("0.1"), // 确保使用 ethers.utils.parseEther
     });
+    await fundTx.wait();
+    console.log("Funded the contract");
+  } catch (error) {
+    console.error("Error in funding the contract:", error);
+    return;
+  }
 
-    it("Should set the right owner", async function () {
-      const { lock, owner } = await loadFixture(deployOneYearLockFixture);
+  // 查询合约的余额
+  try {
+    const fundMeBalance = await ethers.provider.getBalance(fundMe.address);
+    console.log(
+      `Balance of the contract FundMe is ${ethers.utils.formatEther(
+        fundMeBalance
+      )} ETH`
+    );
+  } catch (error) {
+    console.error("Error in fetching the balance:", error);
+    return;
+  }
 
-      expect(await lock.owner()).to.equal(owner.address);
+  // 查询第一个账户的资金
+  console.log("Fetching the funds of the first account...");
+  try {
+    const fundsOfFirstAccount = await fundMe.fundersToAmount(
+      firstAccount.address
+    );
+    console.log(
+      `Current funds of the first account is ${ethers.utils.formatEther(
+        fundsOfFirstAccount
+      )} ETH`
+    );
+  } catch (error) {
+    console.error("Error in fetching the funds for the first account:", error);
+    return;
+  }
+
+  // 第二个账户进行资金存入操作
+  console.log("Funding the contract on behalf of the second account...");
+  try {
+    const secondFundTx = await fundMe.connect(secondAccount).fund({
+      value: ethers.utils.parseEther("0.1"),
     });
+    await secondFundTx.wait();
+  } catch (error) {
+    console.error(
+      "Error in funding the contract with the second account:",
+      error
+    );
+    return;
+  }
 
-    it("Should receive and store the funds to lock", async function () {
-      const { lock, lockedAmount } = await loadFixture(
-        deployOneYearLockFixture
-      );
+  // 查询第二个账户的资金
+  console.log("Fetching the funds of the second account...");
+  try {
+    const fundsOfSecondAccount = await fundMe.fundersToAmount(
+      secondAccount.address
+    );
+    console.log(
+      `Current funds of the second account is ${ethers.utils.formatEther(
+        fundsOfSecondAccount
+      )} ETH`
+    );
+  } catch (error) {
+    console.error("Error in fetching the funds for the second account:", error);
+    return;
+  }
+}
 
-      expect(await ethers.provider.getBalance(lock.target)).to.equal(
-        lockedAmount
-      );
+// 验证合约
+async function verify(address, args) {
+  try {
+    await hre.run("verify:verify", {
+      address: address,
+      constructorArguments: args,
     });
+  } catch (e) {
+    console.error("Verification failed:", e);
+  }
+}
 
-    it("Should fail if the unlockTime is not in the future", async function () {
-      // We don't use the fixture here because we want a different deployment
-      const latestTime = await time.latest();
-      const Lock = await ethers.getContractFactory("Lock");
-      await expect(Lock.deploy(latestTime, { value: 1 })).to.be.revertedWith(
-        "Unlock time should be in the future"
-      );
-    });
+// 执行主函数并处理可能的错误
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error("Error:", error);
+    process.exit(1);
+
   });
-
-  describe("Withdrawals", function () {
-    describe("Validations", function () {
-      it("Should revert with the right error if called too soon", async function () {
-        const { lock } = await loadFixture(deployOneYearLockFixture);
-
-        await expect(lock.withdraw()).to.be.revertedWith(
-          "You can't withdraw yet"
-        );
-      });
-
-      it("Should revert with the right error if called from another account", async function () {
-        const { lock, unlockTime, otherAccount } = await loadFixture(
-          deployOneYearLockFixture
-        );
-
-        // We can increase the time in Hardhat Network
-        await time.increaseTo(unlockTime);
-
-        // We use lock.connect() to send a transaction from another account
-        await expect(lock.connect(otherAccount).withdraw()).to.be.revertedWith(
-          "You aren't the owner"
-        );
-      });
-
-      it("Shouldn't fail if the unlockTime has arrived and the owner calls it", async function () {
-        const { lock, unlockTime } = await loadFixture(
-          deployOneYearLockFixture
-        );
-
-        // Transactions are sent using the first signer by default
-        await time.increaseTo(unlockTime);
-
-        await expect(lock.withdraw()).not.to.be.reverted;
-      });
-    });
-
-    describe("Events", function () {
-      it("Should emit an event on withdrawals", async function () {
-        const { lock, unlockTime, lockedAmount } = await loadFixture(
-          deployOneYearLockFixture
-        );
-
-        await time.increaseTo(unlockTime);
-
-        await expect(lock.withdraw())
-          .to.emit(lock, "Withdrawal")
-          .withArgs(lockedAmount, anyValue); // We accept any value as `when` arg
-      });
-    });
-
-    describe("Transfers", function () {
-      it("Should transfer the funds to the owner", async function () {
-        const { lock, unlockTime, lockedAmount, owner } = await loadFixture(
-          deployOneYearLockFixture
-        );
-
-        await time.increaseTo(unlockTime);
-
-        await expect(lock.withdraw()).to.changeEtherBalances(
-          [owner, lock],
-          [lockedAmount, -lockedAmount]
-        );
-      });
-    });
-  });
-});
