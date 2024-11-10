@@ -74,10 +74,12 @@
 
 ### English
 
-- [X] [Principle-Ray Dalio](https://www.bilibili.com/video/BV1kW411N7Sb?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
-- [X] [Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
-- [ ] [Professional English for IT v2.0](https://www.bilibili.com/video/BV15Y4y1o7nF?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [X] [Building Your English Brain](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [a2-english-for-developers](https://www.freecodecamp.org/learn/a2-english-for-developers/)
+- [X] [b1-Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [b1-Professional English for IT v2.0](https://www.bilibili.com/video/BV15Y4y1o7nF?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [b2-English Listening Quickly Improve Workplace Skills Project Management](https://www.bilibili.com/video/BV184411M7Kr/?share_source=copy_web&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+
 
 ### C++
 
