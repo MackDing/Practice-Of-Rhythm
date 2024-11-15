@@ -1,0 +1,13 @@
+{
+	"description": "The blonde beauty looks at you.",
+	"external_url": "https://openseacreatures.io/3",
+	"image": "ipfs://QmWzyZG76ayhmZzM9sdvfknW74WZwvvtRm4ukL5ogQCe3X",
+	"name": "Shiba Inu",
+	"attributes": [{
+		"trait_type": "Breed",
+		"value": "Blonde beauty"
+	}, {
+		"trait_type": "Temperature",
+		"value": "Average"
+	}]
+}
