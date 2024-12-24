@@ -29,7 +29,6 @@
 
 - [ ] [Rust Programming Full Course | Learn ⚙️ ](https://www.youtube.com/watch?v=rQ_J9WH6CGk&t=1304s)
 - [ ] [programming-languages]([https://www.coursera.org/learn/programming-languages](https://www.youtube.com/watch?v=rQ_J9WH6CGk&t=1304s))
-- [ ] 
 
 ### AI
 
