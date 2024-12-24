@@ -25,9 +25,11 @@
 
 - [X] [scrum-guide](https://scrumguides.org/scrum-guide.html)
 
-### Programming-languages
+### Rust
 
-- [ ] [programming-languages](https://www.coursera.org/learn/programming-languages)
+- [ ] [Rust Programming Full Course | Learn ⚙️ ](https://www.youtube.com/watch?v=rQ_J9WH6CGk&t=1304s)
+- [ ] [programming-languages]([https://www.coursera.org/learn/programming-languages](https://www.youtube.com/watch?v=rQ_J9WH6CGk&t=1304s))
+- [ ] 
 
 ### AI
 
@@ -70,7 +72,7 @@
 - [X] [Learn-OpenCV-3hours](https://www.bilibili.com/video/BV16K411W7x9/?spm_id_from=333.999.0.0)
 - [ ] [《Python One-Liners: Write Concise, Eloquent Python Like a Professional》](https://github.com/MackDing/practice-of-Rhythm/blob/master/Books/Python%E4%B8%80%E8%A1%8C%E6%B5%81%EF%BC%9A%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%86%99%E4%BB%A3%E7%A0%81.pdf)
 - [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
-- [ ] [Playwright](https://playwright.dev/docs/intro)
+- [X] [Playwright](https://playwright.dev/docs/intro)
 
 ### English
 
@@ -85,7 +87,7 @@
 
 - [ ] [C++](https://www.youtube.com/watch?v=SfGuIVzE_Os&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=5)
 
-### Rust
+
 
 ### Resource
 
