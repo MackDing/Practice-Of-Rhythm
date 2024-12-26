@@ -21,17 +21,17 @@
 > - Overcome fear and doubt.
 > - Learn resilience.
 
-### Scrum
+### Scrum⚙️
 
 - [X] [scrum-guide](https://scrumguides.org/scrum-guide.html)
 
-### Rust
+### Rust🦀
 
 - [ ] [Rust-by-example](https://doc.rust-lang.org/rust-by-example/)
 - [ ] [Rust Programming Full Course | Learn ⚙️ ](https://www.youtube.com/watch?v=rQ_J9WH6CGk&t=1304s)
 - [ ] [programming-languages]([https://www.coursera.org/learn/programming-languages](https://www.youtube.com/watch?v=rQ_J9WH6CGk&t=1304s))
 
-### AI
+### AI🤖
 
 - [X] [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
 - [X] [OpenCV-Python(Video)](https://www.bilibili.com/video/BV16K411W7x9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9 "https://www.bilibili.com/video/BV16K411W7x9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9")
@@ -43,7 +43,7 @@
 - [ ] [LLM101n](https://github.com/karpathy/LLM101n)
 - [ ] [bbycroft](https://bbycroft.net/)
 
-### Web
+### Web🖥️
 
 - [X] [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
 - [X] [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
@@ -55,7 +55,7 @@
 - [ ] [React 2024](https://www.youtube.com/watch?v=CgkZ7MvWUAA)
 - [ ] Vue
 
-### Web3
+### Web3🫧
 
 - [X] [Solidity-by-Example](https://solidity-by-example.org/mapping/)
 - [X] [17小时最全Web3教程：ERC20，NFT，Hardhat，CCIP跨链](https://www.bilibili.com/video/BV1RFsfe5Ek5?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
@@ -66,7 +66,7 @@
 - [ ] [Solana Blockchain Application Development web3 | Smart Contracts](https://www.bilibili.com/video/BV1NJ4m187og/?share_source=copy_web&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
       
 
-### Python
+### Python🐍
 
 - [X] [Learn-Python3-The-Hard-Way](https://www.bookstack.cn/read/LearnPython3TheHardWay/spilt.1.learn-py3.md)
 - [X] [Learn-OpenCV-3hours](https://www.bilibili.com/video/BV16K411W7x9/?spm_id_from=333.999.0.0)
@@ -74,7 +74,7 @@
 - [ ] [Python Black Magic Handbook](https://magic.iswbm.com/)
 - [X] [Playwright](https://playwright.dev/docs/intro)
 
-### English
+### English🗽
 
 - [X] [Building Your English Brain](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [ ] [a2-english-for-developers](https://www.freecodecamp.org/learn/a2-english-for-developers/)
