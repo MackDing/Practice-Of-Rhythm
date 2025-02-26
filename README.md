@@ -35,15 +35,18 @@
 
 - [X] [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
 - [X] [OpenCV-Python(Video)](https://www.bilibili.com/video/BV16K411W7x9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9 "https://www.bilibili.com/video/BV16K411W7x9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9")
-- [ ] [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
 - [X] [ultralytics/yolov5](https://github.com/ultralytics/yolov5)
+- [ ] [The AI Engineer Course 2025: Complete AI Engineer Bootcamp](https://www.bilibili.com/video/BV1LNALeiEp5/?spm_id_from=333.1387.homepage.video_card.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
+- [ ] [Introduction to Machine Learning Models (AI) Testing](https://www.bilibili.com/video/BV1kMSTYsEt3?spm_id_from=333.788.player.switch&vd_source=6e8bee86f4b9f15cf78dbd4146208095&p=2)
+- [ ] [Masterclass Testing Machine Learning (AI) Models](https://www.bilibili.com/video/BV1SQruYWE8j/?spm_id_from=333.1387.search.video_card.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [Hello algo](https://www.hello-algo.com/)
 - [ ] TensorFlow
 - [ ] LangChain
 - [ ] [LLM101n](https://github.com/karpathy/LLM101n)
 - [ ] [bbycroft](https://bbycroft.net/)
-- [ ] [Introduction to Machine Learning Models (AI) Testing](https://www.bilibili.com/video/BV1kMSTYsEt3?spm_id_from=333.788.player.switch&vd_source=6e8bee86f4b9f15cf78dbd4146208095&p=2)
-- [ ] [Masterclass Testing Machine Learning (AI) Models](https://www.bilibili.com/video/BV1SQruYWE8j/?spm_id_from=333.1387.search.video_card.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
+> Ref:
+> - [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
+>
 
 ### Web🖥️
 
