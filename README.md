@@ -42,6 +42,8 @@
 - [ ] LangChain
 - [ ] [LLM101n](https://github.com/karpathy/LLM101n)
 - [ ] [bbycroft](https://bbycroft.net/)
+- [ ] [Introduction to Machine Learning Models (AI) Testing](https://www.bilibili.com/video/BV1kMSTYsEt3?spm_id_from=333.788.player.switch&vd_source=6e8bee86f4b9f15cf78dbd4146208095&p=2)
+- [ ] [Masterclass Testing Machine Learning (AI) Models](https://www.bilibili.com/video/BV1SQruYWE8j/?spm_id_from=333.1387.search.video_card.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 
 ### Web🖥️
 
