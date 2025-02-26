@@ -25,11 +25,7 @@
 
 - [X] [Scrum-guide](https://scrumguides.org/scrum-guide.html)
 
-### Rust🦀
 
-- [ ] [Rust-by-example](https://doc.rust-lang.org/rust-by-example/)
-- [ ] [Rust Programming Full Course | Learn ⚙️](https://www.youtube.com/watch?v=rQ_J9WH6CGk&t=1304s)
-- [ ] [Programming-languages](https://www.coursera.org/learn/programming-languages)
 
 ### AI🤖
 
@@ -47,6 +43,12 @@
 > Ref:
 > - [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
 >
+
+### Rust🦀
+
+- [ ] [Rust-by-example](https://doc.rust-lang.org/rust-by-example/)
+- [ ] [Rust Programming Full Course | Learn ⚙️](https://www.youtube.com/watch?v=rQ_J9WH6CGk&t=1304s)
+- [ ] [Programming-languages](https://www.coursera.org/learn/programming-languages)
 
 ### Web🖥️
 
