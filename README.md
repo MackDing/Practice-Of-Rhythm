@@ -38,11 +38,10 @@
 - [ ] [Hello algo](https://www.hello-algo.com/)
 - [ ] TensorFlow
 - [ ] LangChain
-- [ ] [LLM101n](https://github.com/karpathy/LLM101n)
-- [ ] [bbycroft](https://bbycroft.net/)
 > Ref:
 > - [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
->
+> - [bbycroft](https://bbycroft.net/)
+> - [LLM101n](https://github.com/karpathy/LLM101n)
 
 ### Rust🦀
 
