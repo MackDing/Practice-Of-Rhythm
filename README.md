@@ -26,7 +26,6 @@
 - [X] [Scrum-guide](https://scrumguides.org/scrum-guide.html)
 
 
-
 ### AI🤖
 
 - [X] [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
@@ -42,6 +41,10 @@
 > - [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
 > - [bbycroft](https://bbycroft.net/)
 > - [LLM101n](https://github.com/karpathy/LLM101n)
+
+### Full-Stack
+- [ ] [FARM Stack Course – Full Stack Development with FastAPI, React MongoDB](https://www.youtube.com/watch?v=PWG7NlUDVaA)
+- [ ] 
 
 ### Rust🦀
 
