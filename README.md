@@ -37,6 +37,7 @@
 - [ ] [Hello algo](https://www.hello-algo.com/)
 - [ ] TensorFlow
 - [ ] LangChain
+- [ ] Dify
 > Ref:
 > - [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
 > - [bbycroft](https://bbycroft.net/)
