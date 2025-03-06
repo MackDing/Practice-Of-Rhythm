@@ -44,7 +44,7 @@
 > - [LLM101n](https://github.com/karpathy/LLM101n)
 
 ### Full-Stack
-- [ ] [FARM Stack Course – Full Stack Development with FastAPI, React MongoDB](https://www.youtube.com/watch?v=PWG7NlUDVaA)
+- [X] [FARM Stack Course – Full Stack Development with FastAPI, React MongoDB](https://www.youtube.com/watch?v=PWG7NlUDVaA)
 - [ ] [Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)](https://www.youtube.com/watch?v=nu_pCVPKzTk&t=377s)
 
 ### Rust🦀
