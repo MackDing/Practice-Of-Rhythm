@@ -45,6 +45,7 @@
 
 ### Full-Stack
 - [X] [FARM Stack Course – Full Stack Development with FastAPI, React MongoDB](https://www.youtube.com/watch?v=PWG7NlUDVaA)
+- [ ] [MERN Stack Tutorial with Deployment](https://www.youtube.com/watch?v=O3BUHwfHf84)
 - [ ] [Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)](https://www.youtube.com/watch?v=nu_pCVPKzTk&t=377s)
 - [ ] [Building Full-Stack Apps with AI - jointakeoff](https://www.bilibili.com/video/BV1uzDLYFEQm/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [The Full Stack Mobile Developer](https://www.bilibili.com/video/BV1tg4y1K7Lw/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
