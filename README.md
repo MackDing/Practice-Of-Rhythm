@@ -6,20 +6,21 @@
 
 > Practice is the sole criterion of truth.
 >
-> - Make English as your working language.
-> - Practice makes perfect.
-> - All experience comes from mistakes.
-> - Talk is cheap show me the code.
-> - Either outstanding or out.
-> - Stay foolish Stay hungry.
-> - Three questions to ask at work: Am I happy? Am I rich? Is it meaningful?
-> - The journey is the reward.
-> - Hindsight leads to better choices.
-> - Embrace failure as a part of success.
-> - Be open to the small things.
 > - Find your why.
-> - Overcome fear and doubt.
 > - Learn resilience.
+> - Practice makes perfect.
+> - Overcome fear and doubt.
+> - Stay foolish Stay hungry.
+> - Either outstanding or out.
+> - The journey is the reward.
+> - Be open to the small things.
+> - Talk is cheap show me the code.
+> - Hindsight leads to better choices.
+> - All experience comes from mistakes.
+> - Embrace failure as a part of success.
+> - Make English as your working language.
+
+> - Three questions to ask at work: Am I happy? Am I rich? Is it meaningful?
 
 ### Scrum⚙️
 
