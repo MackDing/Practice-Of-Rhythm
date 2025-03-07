@@ -19,7 +19,6 @@
 > - All experience comes from mistakes.
 > - Embrace failure as a part of success.
 > - Make English as your working language.
-
 > - Three questions to ask at work: Am I happy? Am I rich? Is it meaningful?
 
 ### Scrum⚙️
