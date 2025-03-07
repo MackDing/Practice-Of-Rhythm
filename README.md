@@ -9,9 +9,9 @@
 > - Find your why.
 > - Learn resilience.
 > - Practice makes perfect.
-> - Overcome fear and doubt.
 > - Stay foolish Stay hungry.
 > - Either outstanding or out.
+> - Overcome fear and doubt.
 > - The journey is the reward.
 > - Be open to the small things.
 > - Talk is cheap show me the code.
