@@ -11,8 +11,8 @@
 > - Practice makes perfect.
 > - Stay foolish Stay hungry.
 > - Either outstanding or out.
-> - Overcome fear and doubt.
 > - The journey is the reward.
+> - Overcome fear and doubt.
 > - Be open to the small things.
 > - Talk is cheap show me the code.
 > - Hindsight leads to better choices.
