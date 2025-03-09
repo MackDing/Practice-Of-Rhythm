@@ -36,11 +36,11 @@
 - [X] [Masterclass Testing Machine Learning (AI) Models](https://www.bilibili.com/video/BV1SQruYWE8j/?spm_id_from=333.1387.search.video_card.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [X] [Build Apps with Windsurf’s AI Coding Agents](https://learn.deeplearning.ai/courses/build-apps-with-windsurfs-ai-coding-agents/lesson/ym8if/introduction?utm_source=home&utm_medium=course-landing-page&utm_campaign=summary-cta-button)
 - [ ] [Automated Testing for LLMOps](https://www.deeplearning.ai/short-courses/automated-testing-llmops/)
-- [ ] [Hello algo](https://www.hello-algo.com/)
 - [ ] TensorFlow
 - [ ] LangChain
 - [ ] Dify
 > Ref:
+> - [Hello algo](https://www.hello-algo.com/)
 > - [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
 > - [bbycroft](https://bbycroft.net/)
 > - [LLM101n](https://github.com/karpathy/LLM101n)
@@ -50,6 +50,8 @@
 - [ ] [MERN Stack Tutorial with Deployment](https://www.youtube.com/watch?v=O3BUHwfHf84)
 - [ ] [MERN Stack Tutorial: Learn MongoDB, Express, React, Node.js](https://www.youtube.com/watch?v=Jcs_2jNPgtE)
 - [ ] [Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)](https://www.youtube.com/watch?v=nu_pCVPKzTk&t=377s)
+- [ ] [Next.js Full Course 2024 | Build and Deploy a Full Stack App Using the Official React Framework](https://www.youtube.com/watch?v=wm5gMKuwSYk)
+- [ ] [NextJS Tutorial - All 12 Concepts You Need to Know](https://www.youtube.com/watch?v=vwSlYG7hFk0)
 - [ ] [Building Full-Stack Apps with AI - jointakeoff](https://www.bilibili.com/video/BV1uzDLYFEQm/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [The Full Stack Mobile Developer](https://www.bilibili.com/video/BV1tg4y1K7Lw/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [FREE Coding Bootcamp - Build 4 Full Stack Projects in 23 Hours](https://www.youtube.com/watch?v=MDZC8VDZnV8)
