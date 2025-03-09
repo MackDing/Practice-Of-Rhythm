@@ -45,7 +45,14 @@
 > - [bbycroft](https://bbycroft.net/)
 > - [LLM101n](https://github.com/karpathy/LLM101n)
 
-### Full-Stack
+### Full-Stack🖥️
+- [X] [Build Responsive Real-World Websites with HTML and CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
+- [X] [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
+- [X] [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
+- [X] [Testing JavaScript with Cypress – Full Course](https://www.youtube.com/watch?v=u8vMu7viCm8)
+- [X] [Build a Desktop Game in JavaScript with Tauri and KAPLAY](https://www.youtube.com/watch?v=mbljv1EkrRQ)
+- [X] [Full React](https://www.bilibili.com/video/BV1Me4y1h7bQ?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [React 2024](https://www.youtube.com/watch?v=CgkZ7MvWUAA)
 - [X] [FARM Stack Course – Full Stack Development with FastAPI, React MongoDB](https://www.youtube.com/watch?v=PWG7NlUDVaA)
 - [ ] [MERN Stack Tutorial with Deployment](https://www.youtube.com/watch?v=O3BUHwfHf84)
 - [ ] [MERN Stack Tutorial: Learn MongoDB, Express, React, Node.js](https://www.youtube.com/watch?v=Jcs_2jNPgtE)
@@ -61,18 +68,6 @@
 - [ ] [Rust-by-example](https://doc.rust-lang.org/rust-by-example/)
 - [ ] [Rust Programming Full Course | Learn ⚙️](https://www.youtube.com/watch?v=rQ_J9WH6CGk&t=1304s)
 - [ ] [Programming-languages](https://www.coursera.org/learn/programming-languages)
-
-### Web🖥️
-
-- [X] [Learn JavaScript - Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg&list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V)
-- [X] [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.bilibili.com/video/BV1vA4y197C7/?spm_id_from=333.999.0.0&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
-- [X] [HTML+CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
-- [X] [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
-- [X] [Cypress freeCodeCamp](https://www.youtube.com/watch?v=u8vMu7viCm8)
-- [X] [Kirby JavaScript](https://www.youtube.com/watch?v=mbljv1EkrRQ)
-- [X] [Full React](https://www.bilibili.com/video/BV1Me4y1h7bQ?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
-- [ ] [React 2024](https://www.youtube.com/watch?v=CgkZ7MvWUAA)
-- [ ] Vue
 
 ### Web3🫧
 
