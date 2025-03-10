@@ -58,6 +58,7 @@
 - [ ] [Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)](https://www.youtube.com/watch?v=nu_pCVPKzTk&t=377s)
 - [ ] [MERN Stack Tutorial: Learn MongoDB, Express, React, Node.js](https://www.youtube.com/watch?v=Jcs_2jNPgtE)
 - [ ] [PERN Stack Course: Build a Product Store with Postgres & React](https://www.youtube.com/watch?v=lx3YJj0nJVk)
+- [ ] [Strapi 5 and Next.js 15 Full Stack Project Course](https://www.youtube.com/watch?v=Q-cPtlYG1cY)
 - [ ] [Next.js Tutorial 2025 - Build a Full Stack Social App with React & Next.js](https://www.youtube.com/watch?v=vUYopHWOURg)
 - [ ] [Next.js Full Course 2024 | Build and Deploy a Full Stack App Using the Official React Framework](https://www.youtube.com/watch?v=wm5gMKuwSYk)
 - [ ] [NextJS Tutorial - All 12 Concepts You Need to Know](https://www.youtube.com/watch?v=vwSlYG7hFk0)
