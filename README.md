@@ -21,10 +21,6 @@
 > - Make English as your working language.
 > - Three questions to ask at work: Am I happy? Am I rich? Is it meaningful?
 
-### Scrum⚙️
-
-- [X] [Scrum-guide](https://scrumguides.org/scrum-guide.html)
-
 
 ### AI🤖
 
@@ -95,6 +91,7 @@
 ### English🗽
 
 - [X] [Building Your English Brain](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [How to Build Your ‘English Brain’ (5 Methods)](https://www.youtube.com/watch?v=EyOBVpx0mdo)
 - [ ] [a2-english-for-developers](https://www.freecodecamp.org/learn/a2-english-for-developers/)
 - [ ] [b1-english-for-developers](https://www.freecodecamp.org/learn/b1-english-for-developers/)
 - [X] [b1-Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
@@ -105,7 +102,11 @@
 ### C++
 
 - [ ] [C++](https://www.youtube.com/watch?v=SfGuIVzE_Os&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=5)
+      
 
+### Scrum⚙️
+
+- [X] [Scrum-guide](https://scrumguides.org/scrum-guide.html)
 
 
 ### Resource
