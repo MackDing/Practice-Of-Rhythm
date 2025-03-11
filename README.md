@@ -62,6 +62,16 @@
 - [ ] [The Full Stack Mobile Developer](https://www.bilibili.com/video/BV1tg4y1K7Lw/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [FREE Coding Bootcamp - Build 4 Full Stack Projects in 23 Hours](https://www.youtube.com/watch?v=MDZC8VDZnV8)
 
+### English🗽
+
+- [X] [Building Your English Brain](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [How to Build Your ‘English Brain’ (5 Methods)]([https://www.youtube.com/watch?v=EyOBVpx0mdo](https://www.bilibili.com/video/BV14NANedEh6/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095))
+- [ ] [a2-english-for-developers](https://www.freecodecamp.org/learn/a2-english-for-developers/)
+- [ ] [b1-english-for-developers](https://www.freecodecamp.org/learn/b1-english-for-developers/)
+- [X] [b1-Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [b1-Professional English for IT v2.0](https://www.bilibili.com/video/BV15Y4y1o7nF?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+- [ ] [b2-English Listening Quickly Improve Workplace Skills Project Management](https://www.bilibili.com/video/BV184411M7Kr/?share_source=copy_web&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
+
 ### Rust🦀
 
 - [ ] [Rust-by-example](https://doc.rust-lang.org/rust-by-example/)
@@ -87,16 +97,6 @@
 - [X] [Playwright](https://playwright.dev/docs/intro)
 - [ ] [FastAPI-A super fast Python Web Framework](https://www.bilibili.com/video/BV1B14y1i7rP/?spm_id_from=333.337.search-card.all.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [Fast-api-the-complete-course](https://www.bilibili.com/video/BV1jS421d7bL/?spm_id_from=333.788.recommend_more_video.3&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
-
-### English🗽
-
-- [X] [Building Your English Brain](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
-- [ ] [How to Build Your ‘English Brain’ (5 Methods)](https://www.youtube.com/watch?v=EyOBVpx0mdo)
-- [ ] [a2-english-for-developers](https://www.freecodecamp.org/learn/a2-english-for-developers/)
-- [ ] [b1-english-for-developers](https://www.freecodecamp.org/learn/b1-english-for-developers/)
-- [X] [b1-Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
-- [ ] [b1-Professional English for IT v2.0](https://www.bilibili.com/video/BV15Y4y1o7nF?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
-- [ ] [b2-English Listening Quickly Improve Workplace Skills Project Management](https://www.bilibili.com/video/BV184411M7Kr/?share_source=copy_web&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 
 
 ### C++
