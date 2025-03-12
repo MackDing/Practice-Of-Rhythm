@@ -34,6 +34,7 @@
 - [ ] [Automated Testing for LLMOps](https://www.deeplearning.ai/short-courses/automated-testing-llmops/)
 - [ ] OpenAI Evals
 - [ ] TensorFlow
+- [ ] PyTorch
 - [ ] LangChain
 - [ ] Dify
 > Ref:
