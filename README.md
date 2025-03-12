@@ -32,6 +32,7 @@
 - [X] [Masterclass Testing Machine Learning (AI) Models](https://www.bilibili.com/video/BV1SQruYWE8j/?spm_id_from=333.1387.search.video_card.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [X] [Build Apps with Windsurf’s AI Coding Agents](https://learn.deeplearning.ai/courses/build-apps-with-windsurfs-ai-coding-agents/lesson/ym8if/introduction?utm_source=home&utm_medium=course-landing-page&utm_campaign=summary-cta-button)
 - [ ] [Automated Testing for LLMOps](https://www.deeplearning.ai/short-courses/automated-testing-llmops/)
+- [ ] OpenAI Evals
 - [ ] TensorFlow
 - [ ] LangChain
 - [ ] Dify
@@ -50,7 +51,7 @@
 - [X] [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)
 - [ ] [React Full Course for free ⚛️ (2024)](https://www.youtube.com/watch?v=CgkZ7MvWUAA)
 - [X] [FARM Stack Course – Full Stack Development with FastAPI, React MongoDB](https://www.youtube.com/watch?v=PWG7NlUDVaA)
-- [ ] [MERN Stack Tutorial with Deployment](https://www.youtube.com/watch?v=O3BUHwfHf84)
+- [X] [MERN Stack Tutorial with Deployment](https://www.youtube.com/watch?v=O3BUHwfHf84)
 - [ ] [Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)](https://www.youtube.com/watch?v=nu_pCVPKzTk&t=377s)
 - [ ] [MERN Stack Tutorial: Learn MongoDB, Express, React, Node.js](https://www.youtube.com/watch?v=Jcs_2jNPgtE)
 - [ ] [PERN Stack Course: Build a Product Store with Postgres & React](https://www.youtube.com/watch?v=lx3YJj0nJVk)
