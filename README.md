@@ -65,7 +65,7 @@
 ### English🗽
 
 - [X] [Building Your English Brain](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
-- [ ] [How to Build Your ‘English Brain’ (5 Methods)]([https://www.youtube.com/watch?v=EyOBVpx0mdo](https://www.bilibili.com/video/BV14NANedEh6/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095))
+- [ ] [How to Build Your ‘English Brain’ (5 Methods)](https://www.bilibili.com/video/BV14NANedEh6/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [a2-english-for-developers](https://www.freecodecamp.org/learn/a2-english-for-developers/)
 - [ ] [b1-english-for-developers](https://www.freecodecamp.org/learn/b1-english-for-developers/)
 - [X] [b1-Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
