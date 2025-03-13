@@ -29,7 +29,7 @@
 - [X] [Masterclass Testing Machine Learning (AI) Models](https://www.bilibili.com/video/BV1SQruYWE8j/?spm_id_from=333.1387.search.video_card.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [X] [Build Apps with Windsurf’s AI Coding Agents](https://learn.deeplearning.ai/courses/build-apps-with-windsurfs-ai-coding-agents/lesson/ym8if/introduction?utm_source=home&utm_medium=course-landing-page&utm_campaign=summary-cta-button)
 - [ ] [Automated Testing for LLMOps](https://www.deeplearning.ai/short-courses/automated-testing-llmops/)
-- [ ] OpenAI Evals
+- [ ] [OpenAI Evals Explained with Examples | AI Voice](https://www.youtube.com/watch?v=HLEZSo-6aTI)
 - [ ] TensorFlow
 - [ ] PyTorch
 - [ ] LangChain
