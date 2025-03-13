@@ -22,8 +22,6 @@
 
 
 ### AI🤖
-
-- [X] [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
 - [X] [Learn-OpenCV-Python](https://www.bilibili.com/video/BV16K411W7x9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [X] [ultralytics/yolov5](https://github.com/ultralytics/yolov5)
 - [ ] [The AI Engineer Course 2025: Complete AI Engineer Bootcamp](https://www.bilibili.com/video/BV1LNALeiEp5/?spm_id_from=333.1387.homepage.video_card.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
@@ -37,6 +35,7 @@
 - [ ] LangChain
 - [ ] Dify
 > Ref:
+> - [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
 > - [Hello algo](https://www.hello-algo.com/)
 > - [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
 > - [bbycroft](https://bbycroft.net/)
