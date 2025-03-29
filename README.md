@@ -56,6 +56,7 @@
 - [X] [Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
 - [X] [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU&t=628s)
 - [ ] [Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)](https://www.youtube.com/watch?v=nu_pCVPKzTk&t=377s)
+- [ ] [50+ HOURS REACT.JS 19 MONSTER CLASS](https://www.youtube.com/watch?v=M9O5AjEFzKw)
 - [ ] [MERN Stack Tutorial: Learn MongoDB, Express, React, Node.js](https://www.youtube.com/watch?v=Jcs_2jNPgtE)
 - [ ] [PERN Stack Course: Build a Product Store with Postgres & React](https://www.youtube.com/watch?v=lx3YJj0nJVk)
 - [ ] [Strapi 5 and Next.js 15 Full Stack Project Course](https://www.youtube.com/watch?v=Q-cPtlYG1cY)
