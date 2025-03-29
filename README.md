@@ -50,6 +50,7 @@
 - [X] [Testing JavaScript with Cypress – Full Course](https://www.youtube.com/watch?v=u8vMu7viCm8)
 - [X] [Build a Desktop Game in JavaScript with Tauri and KAPLAY](https://www.youtube.com/watch?v=mbljv1EkrRQ)
 - [X] [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)
+- [ ] [Learn React With This ONE Project](https://www.youtube.com/watch?v=G6D9cBaLViA)
 - [ ] [React Full Course for free ⚛️ (2024)](https://www.youtube.com/watch?v=CgkZ7MvWUAA)
 - [X] [FARM Stack Course – Full Stack Development with FastAPI, React MongoDB](https://www.youtube.com/watch?v=PWG7NlUDVaA)
 - [X] [MERN Stack Tutorial with Deployment](https://www.youtube.com/watch?v=O3BUHwfHf84)
