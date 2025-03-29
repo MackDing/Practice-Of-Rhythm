@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c2e33f2d-68e9-497c-8a21-2939a0778446)## Practice-of-Coding (Time boxing)
+## Practice-of-Coding (Time boxing)
 
 ![Phil_Karlton](./image/README/Phil%20Karlton.jpg)
 
