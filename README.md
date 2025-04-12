@@ -72,6 +72,8 @@
 
 - [X] [Building Your English Brain](https://www.bilibili.com/video/BV1TD4y1q7u9?vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
 - [ ] [How to Build Your ‘English Brain’ (5 Methods)](https://www.bilibili.com/video/BV14NANedEh6/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
+- [ ] [Introduction to Grammar | Grammar | Khan Academy](https://www.youtube.com/watch?v=O-6q-siuMik&list=PL6CQ7apI_8PjSBN8BxukW5Z76k8lRMQEf)
+- [ ] [Principles For Success by Ray Dalio (In 30 Minutes)](https://www.youtube.com/watch?reload=9&v=B9XGUpQZY38&SID=E0E5B3B442C06FC3D68CEB5B7EABD8F7)
 - [ ] [a2-english-for-developers](https://www.freecodecamp.org/learn/a2-english-for-developers/)
 - [ ] [b1-english-for-developers](https://www.freecodecamp.org/learn/b1-english-for-developers/)
 - [X] [b1-Professional English for IT](https://www.bilibili.com/video/BV1984y1b7xK?p=11&vd_source=0d0e1622a8f0252f0b3d7fbc911fe6e9)
