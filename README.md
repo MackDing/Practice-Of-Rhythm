@@ -36,6 +36,8 @@
 - [ ] PyTorch
 - [ ] LangChain
 - [ ] Dify
+- [ ] n8n
+- [ ] MCP server
 > Ref:
 > - [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
 > - [Hello algo](https://www.hello-algo.com/)
