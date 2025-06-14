@@ -35,6 +35,10 @@
 - [ ] TensorFlow
 - [ ] PyTorch
 - [ ] LangChain
+- [ ] LlamaIndex
+- [ ] Vector Databases
+- [ ] RAG
+- [ ] AI Agent
 - [ ] Dify
 - [ ] n8n
 - [ ] MCP server
