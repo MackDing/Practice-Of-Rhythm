@@ -33,8 +33,10 @@
 - [ ] [OpenAI Evals Explained with Examples | AI Voice](https://www.youtube.com/watch?v=HLEZSo-6aTI)
 - [ ] [Generative AI | NLP | Beginner to Advance | NLTK | #nlp](https://www.youtube.com/watch?v=6LvSJB91Sdg)
 - [ ] TensorFlow
+- [ ] HuggingFace
 - [ ] PyTorch
 - [ ] LangChain
+- [ ] LangGraph
 - [ ] LlamaIndex
 - [ ] Vector Databases
 - [ ] RAG
