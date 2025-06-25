@@ -35,15 +35,15 @@
 - [ ] TensorFlow
 - [ ] HuggingFace
 - [ ] PyTorch
+- [ ] Transformer
 - [ ] LangChain
 - [ ] LangGraph
 - [ ] LlamaIndex
-- [ ] Vector Databases
 - [ ] RAG
 - [ ] AI Agent
-- [ ] Dify
 - [ ] n8n
 - [ ] MCP server
+      
 > Ref:
 > - [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
 > - [Hello algo](https://www.hello-algo.com/)
@@ -58,7 +58,7 @@
 - [X] [Testing JavaScript with Cypress – Full Course](https://www.youtube.com/watch?v=u8vMu7viCm8)
 - [X] [Build a Desktop Game in JavaScript with Tauri and KAPLAY](https://www.youtube.com/watch?v=mbljv1EkrRQ)
 - [X] [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)
-- [ ] [Learn React With This ONE Project](https://www.youtube.com/watch?v=G6D9cBaLViA)
+- [X] [Learn React With This ONE Project](https://www.youtube.com/watch?v=G6D9cBaLViA)
 - [ ] [React Full Course for free ⚛️ (2024)](https://www.youtube.com/watch?v=CgkZ7MvWUAA)
 - [X] [FARM Stack Course – Full Stack Development with FastAPI, React MongoDB](https://www.youtube.com/watch?v=PWG7NlUDVaA)
 - [X] [MERN Stack Tutorial with Deployment](https://www.youtube.com/watch?v=O3BUHwfHf84)
@@ -72,9 +72,12 @@
 - [ ] [Next.js Tutorial 2025 - Build a Full Stack Social App with React & Next.js](https://www.youtube.com/watch?v=vUYopHWOURg)
 - [ ] [Next.js Full Course 2024 | Build and Deploy a Full Stack App Using the Official React Framework](https://www.youtube.com/watch?v=wm5gMKuwSYk)
 - [ ] [NextJS Tutorial - All 12 Concepts You Need to Know](https://www.youtube.com/watch?v=vwSlYG7hFk0)
+- [ ] [FREE Coding Bootcamp - Build 4 Full Stack Projects in 23 Hours](https://www.youtube.com/watch?v=MDZC8VDZnV8)
+- [ ] [NextJS 15 Full Course 2025 | Become a NextJS Pro in 1.5 Hours](https://www.youtube.com/watch?v=6jQdZcYY8OY)
+- [ ] [Next.js 15 Full Tutorial - Beginner to Advanced](https://www.youtube.com/watch?v=k7o9R6eaSes&t=9870s)
 - [ ] [Building Full-Stack Apps with AI - jointakeoff](https://www.bilibili.com/video/BV1uzDLYFEQm/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [ ] [The Full Stack Mobile Developer](https://www.bilibili.com/video/BV1tg4y1K7Lw/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
-- [ ] [FREE Coding Bootcamp - Build 4 Full Stack Projects in 23 Hours](https://www.youtube.com/watch?v=MDZC8VDZnV8)
+      
 
 ### English🗽
 
