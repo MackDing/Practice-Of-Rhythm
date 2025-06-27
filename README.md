@@ -52,6 +52,8 @@
 > - [GPT2 - LLM Visualization](https://bbycroft.net/)
 > - [LLM101n](https://github.com/karpathy/LLM101n)
 > - [TRANSFORMER EXPLAINER](https://poloclub.github.io/transformer-explainer/)
+> - [Huggingface](https://huggingface.co/)
+> - [Scikit-learn](https://scikit-learn.org/)
 
 ### Full-Stack🖥️
 - [X] [Build Responsive Real-World Websites with HTML and CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
@@ -133,8 +135,6 @@
 ### Resource
 
 > [Roadmap](https://roadmap.sh/)
->
-> [Huggingface](https://huggingface.co/)
 >
 > [Udemy](https://www.udemy.com/)
 >
