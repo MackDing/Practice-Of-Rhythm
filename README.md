@@ -141,6 +141,12 @@
 > [Pythontutor.com](https://pythontutor.com/)
 >
 > [Quick reference](https://quickref.me/)
+>
+> [DevDocs](https://devdocs.io/)
+> 
+> [LLM Visualization](https://bbycroft.net/llm)
+>
+> [TRANSFORMER EXPLAINER](https://poloclub.github.io/transformer-explainer/)
 
 - KISS Principle (Keep it simple and easy to understand, avoid over-complexity.)
 - DRY principle (Don't Duplicate Code): Avoid duplicating code, extract shared code sections to build reusable functions or modules.
