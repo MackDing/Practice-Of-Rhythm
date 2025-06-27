@@ -49,7 +49,7 @@
 > - [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
 > - [Hello algo](https://www.hello-algo.com/)
 > - [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
-> - [GPT2 - LLM Visualization](https://bbycroft.net/)
+> - [GPT - LLM Visualization](https://bbycroft.net/)
 > - [LLM101n](https://github.com/karpathy/LLM101n)
 > - [TRANSFORMER EXPLAINER](https://poloclub.github.io/transformer-explainer/)
 > - [Huggingface](https://huggingface.co/)
