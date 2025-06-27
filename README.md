@@ -43,6 +43,7 @@
 - [ ] AI Agent
 - [ ] n8n
 - [ ] MCP server
+- [ ] Scikit-learn
       
 > Ref:
 > - [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
