@@ -30,7 +30,7 @@
 - [X] [Build Apps with Windsurf’s AI Coding Agents](https://learn.deeplearning.ai/courses/build-apps-with-windsurfs-ai-coding-agents/lesson/ym8if/introduction?utm_source=home&utm_medium=course-landing-page&utm_campaign=summary-cta-button)
 - [X] [Generative AI in a Nutshell - how to survive and thrive in the age of AI](https://www.youtube.com/watch?v=2IK3DFHRFfw&t=51s)
 - [ ] [Automated Testing for LLMOps](https://www.deeplearning.ai/short-courses/automated-testing-llmops/)
-- [ ] [OpenAI Evals Explained with Examples | AI Voice](https://www.youtube.com/watch?v=HLEZSo-6aTI)
+- [X] [OpenAI Evals Explained with Examples | AI Voice](https://www.youtube.com/watch?v=HLEZSo-6aTI)
 - [ ] [Generative AI | NLP | Beginner to Advance | NLTK | #nlp](https://www.youtube.com/watch?v=6LvSJB91Sdg)
 - [ ] TensorFlow
 - [ ] HuggingFace
