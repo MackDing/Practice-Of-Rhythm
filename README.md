@@ -31,7 +31,7 @@
 - [X] [Generative AI in a Nutshell - how to survive and thrive in the age of AI](https://www.youtube.com/watch?v=2IK3DFHRFfw&t=51s)
 - [ ] [Automated Testing for LLMOps](https://www.deeplearning.ai/short-courses/automated-testing-llmops/)
 - [X] [OpenAI Evals Explained with Examples | AI Voice](https://www.youtube.com/watch?v=HLEZSo-6aTI)
-- [ ] [Generative AI | NLP | Beginner to Advance | NLTK | #nlp](https://www.youtube.com/watch?v=6LvSJB91Sdg)
+- [ ] [Neural Networks: Zero to Hero - Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
 - [ ] TensorFlow
 - [ ] HuggingFace
 - [ ] PyTorch
