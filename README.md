@@ -49,8 +49,9 @@
 > - [Pytouch Docs](https://pytorch.org/docs/stable/index.html "https://pytorch.org/docs/stable/index.html")
 > - [Hello algo](https://www.hello-algo.com/)
 > - [d2l-ai/d2l-en](https://github.com/d2l-ai/d2l-en)
-> - [bbycroft](https://bbycroft.net/)
+> - [GPT2 - LLM Visualization](https://bbycroft.net/)
 > - [LLM101n](https://github.com/karpathy/LLM101n)
+> - [TRANSFORMER EXPLAINER](https://poloclub.github.io/transformer-explainer/)
 
 ### Full-Stack🖥️
 - [X] [Build Responsive Real-World Websites with HTML and CSS](https://www.bilibili.com/video/BV1A34y1e7wL/?spm_id_from=333.999.0.0)
@@ -144,10 +145,7 @@
 > [Quick reference](https://quickref.me/)
 >
 > [DevDocs](https://devdocs.io/)
-> 
-> [LLM Visualization](https://bbycroft.net/llm)
->
-> [TRANSFORMER EXPLAINER](https://poloclub.github.io/transformer-explainer/)
+
 
 - KISS Principle (Keep it simple and easy to understand, avoid over-complexity.)
 - DRY principle (Don't Duplicate Code): Avoid duplicating code, extract shared code sections to build reusable functions or modules.
