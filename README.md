@@ -32,6 +32,7 @@
 - [ ] [Automated Testing for LLMOps](https://www.deeplearning.ai/short-courses/automated-testing-llmops/)
 - [X] [OpenAI Evals Explained with Examples | AI Voice](https://www.youtube.com/watch?v=HLEZSo-6aTI)
 - [ ] [Neural Networks: Zero to Hero - Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+- [ ] [Combine Vibe Coding & n8n to Build Real AI Apps](https://www.youtube.com/watch?v=qDtVzumlb8M)
 - [ ] TensorFlow
 - [ ] HuggingFace
 - [ ] PyTorch
@@ -81,9 +82,10 @@
 - [ ] [NextJS 15 Full Course 2025 | Become a NextJS Pro in 1.5 Hours](https://www.youtube.com/watch?v=6jQdZcYY8OY)
 - [ ] [Next.js 15 Full Tutorial - Beginner to Advanced](https://www.youtube.com/watch?v=k7o9R6eaSes&t=9870s)
 - [ ] [Building Full-Stack Apps with AI - jointakeoff](https://www.bilibili.com/video/BV1uzDLYFEQm/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
-- [ ] [The Full Stack Mobile Developer - React Native](https://www.bilibili.com/video/BV1tg4y1K7Lw/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 - [X] [Flutter Crash Course by Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9giLVXCHSQmWqlHc9BLXdVx)
 - [X] [The Ultimate Flutter Tutorial for Beginners - 2025 Full Course](https://www.youtube.com/watch?v=3kaGC_DrUnw&t=2s)
+- [ ] [The Full Stack Mobile Developer - React Native](https://www.bilibili.com/video/BV1tg4y1K7Lw/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
+
       
 
 ### English🗽
