@@ -18,6 +18,7 @@
 > - All experience comes from mistakes.
 > - Embrace failure as a part of success.
 > - Make English as your working language.
+> - Either you run the day, or the day runs you.
 > - Three questions to ask at work: Am I happy? Am I rich? Is it meaningful?
 
 
