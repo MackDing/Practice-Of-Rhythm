@@ -65,6 +65,8 @@
 - [X] [Build a Desktop Game in JavaScript with Tauri and KAPLAY](https://www.youtube.com/watch?v=mbljv1EkrRQ)
 - [X] [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)
 - [X] [Learn React With This ONE Project](https://www.youtube.com/watch?v=G6D9cBaLViA)
+- [X] [Flutter Crash Course by Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9giLVXCHSQmWqlHc9BLXdVx)
+- [X] [The Ultimate Flutter Tutorial for Beginners - 2025 Full Course](https://www.youtube.com/watch?v=3kaGC_DrUnw&t=2s)
 - [ ] [React Full Course for free ⚛️ (2024)](https://www.youtube.com/watch?v=CgkZ7MvWUAA)
 - [X] [FARM Stack Course – Full Stack Development with FastAPI, React MongoDB](https://www.youtube.com/watch?v=PWG7NlUDVaA)
 - [X] [MERN Stack Tutorial with Deployment](https://www.youtube.com/watch?v=O3BUHwfHf84)
@@ -83,8 +85,6 @@
 - [ ] [NextJS 15 Full Course 2025 | Become a NextJS Pro in 1.5 Hours](https://www.youtube.com/watch?v=6jQdZcYY8OY)
 - [ ] [Next.js 15 Full Tutorial - Beginner to Advanced](https://www.youtube.com/watch?v=k7o9R6eaSes&t=9870s)
 - [ ] [Building Full-Stack Apps with AI - jointakeoff](https://www.bilibili.com/video/BV1uzDLYFEQm/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
-- [X] [Flutter Crash Course by Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9giLVXCHSQmWqlHc9BLXdVx)
-- [X] [The Ultimate Flutter Tutorial for Beginners - 2025 Full Course](https://www.youtube.com/watch?v=3kaGC_DrUnw&t=2s)
 - [ ] [The Full Stack Mobile Developer - React Native](https://www.bilibili.com/video/BV1tg4y1K7Lw/?spm_id_from=333.1387.favlist.content.click&vd_source=6e8bee86f4b9f15cf78dbd4146208095)
 
       
